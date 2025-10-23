@@ -1,25 +1,20 @@
 <body>
-
     <header>
-
-        
-
     </header>
+
+
 
     <main>
         
         <section>
 
             <article>
-
                 <h1>7</h1>
 
                 <h1>Design and implementation</h1>
-
             </article>    
             
             <article>
-
                 <h2>Objectives</h2>
 
                 <p>
@@ -27,29 +22,22 @@
                 </p>
 
                 <ul>
-
                     <li>understand the most important activities in a general, objectoriented design process;</li>
                     <li>understand some of the different models that may be used to document an object-oriented design;</li>
                     <li>know about the idea of design patterns and how these are a way of reusing design knowledge and experience;</li>
                     <li>have been introduced to key issues that have to be considered when implementing software, including software reuse and open-source development.</li>
-
                 </ul>
-
             </article>
 
             <article>
-
                 <h2>Contents</h2>
 
                 <ol>
-
                     <li>Object-oriented design using the UML</li>
                     <li>Design patterns</li>
                     <li>Implementation issues</li>
                     <li>Open source development</li>
-
                 </ol>
-
             </article>
 
         </section>
@@ -59,13 +47,10 @@
         <section>
 
             <article>
-
                 <p>Chapter 7 Design and implementation <b>177</b></p>
-
             </article>
 
             <article>
-
                 <p>
                 Software design and implementation is the stage in the software engineering process
 at which an executable software system is developed. For some simple systems, software design and implementation
@@ -126,7 +111,6 @@ has two aims:
                 </p>
 
                 <ol>
-
                     <li>
                         To show how system modeling and architectural design (covered in Chapters 5
 and 6) are put into practice in developing an object-oriented software design.
@@ -136,7 +120,6 @@ and 6) are put into practice in developing an object-oriented software design.
 programming books. These include software reuse, configuration management,
 and open source development.
                     </li>
-
                 </ol>
 
                 <p>
@@ -145,10 +128,7 @@ the chapter is not biased towards any particular programming language or
 implementation technology. Therefore, I have presented all examples using the
 UML rather than in a programming language such as Java or Python
                 </p>
-
             </article>
-
-
 
             <article>
 
@@ -178,13 +158,11 @@ there are several things that you need to do:
                 <p>
 
                 <ol>
-
                     <li>Understand and define the context and the external interactions with the system.</li>
                     <li>Design the system architecture.</li>
                     <li>Identify the principal objects in the system.</li>
                     <li>Develop design models.</li>
                     <li>Specify interfaces.</li>
-
                 </ol>
 
                 <p>
@@ -235,7 +213,6 @@ the relationships between a system and its environment:
                 </p>
 
                 <ol>
-
                     <li>
                     A system context model is a structural model that demonstrates the
 other systems in the environment of the system being developed.
@@ -245,7 +222,6 @@ other systems in the environment of the system being developed.
                     An interaction model is a dynamic model that shows how the system interacts
 with its environment as it is used.
                     </li>
-
                 </ol>
 
                 <p>
@@ -1484,8 +1460,8 @@ and with more and more software available in this form.
 
     </main>
 
+
+
     <footer>
-
     </footer>  
-
 </body>

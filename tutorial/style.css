@@ -204,20 +204,11 @@
   .grid {
     display: grid;
   }
-  .table {
-    display: table;
-  }
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
   .w-16 {
     width: calc(var(--spacing) * 16);
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
   }
   .grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -251,10 +242,6 @@
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .bg-amber-100 {
     background-color: var(--color-amber-100);
   }
@@ -284,8 +271,8 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
-  .text-\[\#ffffff\] {
-    color: #ffffff;
+  .text-\[\#da00c0\] {
+    color: #da00c0;
   }
   .text-black {
     color: var(--color-black);
@@ -295,10 +282,6 @@
   }
   .underline {
     text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .transition {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
@@ -311,6 +294,22 @@
     }
     &::selection {
       background-color: #e031f0;
+    }
+  }
+  .selection\:bg-\[\#e73838\] {
+    & *::selection {
+      background-color: #e73838;
+    }
+    &::selection {
+      background-color: #e73838;
+    }
+  }
+  .selection\:text-\[\#ffffff\] {
+    & *::selection {
+      color: #ffffff;
+    }
+    &::selection {
+      color: #ffffff;
     }
   }
   .selection\:text-white {
@@ -326,9 +325,29 @@
       background-color: var(--color-amber-300);
     }
   }
+  .sm\:selection\:bg-\[\#ec7b34\] {
+    @media (width >= 40rem) {
+      & *::selection {
+        background-color: #ec7b34;
+      }
+      &::selection {
+        background-color: #ec7b34;
+      }
+    }
+  }
   .md\:bg-amber-500 {
     @media (width >= 48rem) {
       background-color: var(--color-amber-500);
+    }
+  }
+  .md\:selection\:bg-\[\#efef15\] {
+    @media (width >= 48rem) {
+      & *::selection {
+        background-color: #efef15;
+      }
+      &::selection {
+        background-color: #efef15;
+      }
     }
   }
   .lg\:bg-amber-700 {
@@ -336,14 +355,44 @@
       background-color: var(--color-amber-700);
     }
   }
+  .lg\:selection\:bg-\[\#8fde12\] {
+    @media (width >= 64rem) {
+      & *::selection {
+        background-color: #8fde12;
+      }
+      &::selection {
+        background-color: #8fde12;
+      }
+    }
+  }
   .xl\:bg-amber-900 {
     @media (width >= 80rem) {
       background-color: var(--color-amber-900);
     }
   }
+  .xl\:selection\:bg-\[\#3eb4fd\] {
+    @media (width >= 80rem) {
+      & *::selection {
+        background-color: #3eb4fd;
+      }
+      &::selection {
+        background-color: #3eb4fd;
+      }
+    }
+  }
   .\32 xl\:bg-amber-950 {
     @media (width >= 96rem) {
       background-color: var(--color-amber-950);
+    }
+  }
+  .\32 xl\:selection\:bg-\[\#b237f0\] {
+    @media (width >= 96rem) {
+      & *::selection {
+        background-color: #b237f0;
+      }
+      &::selection {
+        background-color: #b237f0;
+      }
     }
   }
   .dark\:bg-black {
@@ -374,28 +423,16 @@ body {
   inherits: false;
   initial-value: 0;
 }
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-space-y-reverse: 0;
       --tw-space-x-reverse: 0;
-      --tw-border-style: solid;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
     }
   }
 }
