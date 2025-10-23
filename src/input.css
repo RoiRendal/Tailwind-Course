@@ -7,6 +7,10 @@
     src: url('LobsterTwo.ttf');
 }
 
+@theme {
+    --color-grass: #39cf2f;
+}
+
 body {
     font-family: 'lobsterTwo';
 }
