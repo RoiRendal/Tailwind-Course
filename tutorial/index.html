@@ -138,7 +138,6 @@ UML rather than in a programming language such as Java or Python
             </article>
 
             <article>
-
                 <h2>7.1 Object-oriented design using the UML</h2>
 
                 <p>
@@ -189,13 +188,11 @@ for the wilderness weather station that I introduced in Chapter 1. Wilderness we
 deployed in remote areas. Each weather station records local weather information and
 periodically transfers this to a weather information system, using a satellite link.
                 </p>
-
             </article>
 
 
 
             <article>
-
                 <h2>7.1.1 System context and interactions</h2>
 
                 <p>
@@ -243,6 +240,8 @@ is one control system but several weather stations, one satellite, and one gener
 information system.
                 </p>
 
+                <img src="/media/figure7.1.png">
+
                 <p>
                 When you model the interactions of a system with its environment you should use
 an abstract approach that does not include too much detail. One way to do this is to
@@ -260,6 +259,8 @@ explained in Chapter 5, a stick figure is used in the UML to represent other sys
 as well as human users.    
                 </p>
 
+                <img src="/media/figure7.2.png">
+
                 <p>
                 Each of these use cases should be described in structured natural language. This
 helps designers identify objects in the system and gives them an understanding of
@@ -269,6 +270,7 @@ This is shown in Figure 7.3, which describes the Report weather use case from
 Figure 7.2. Examples of some other use cases are on the Web.   
                 </p>
 
+                <img src="/media/figure7.3.png">
             </article>
 
 
@@ -300,6 +302,8 @@ another commonly used architectural style in addition to those described in
 Chapter 6.    
             </p>
 
+            <img src="/media/figure7.4.png">
+
             <p>
             For example, when the communications subsystem receives a control command, such
 as shutdown, the command is picked up by each of the other subsystems, which then shut
@@ -316,6 +320,8 @@ that is collected from the instruments and transmitted to the weather informatio
 system. This arrangement follows the producer-consumer pattern, discussed in
 Chapter 20.    
             </p>       
+
+            <img src="/media/figure7.5.png">
                 
             </article>
 
@@ -383,6 +389,8 @@ Anemometer, and Barometer objects are application domain objects, and the
 WeatherStation and WeatherData objects have been identified from the system
 description and the scenario (use case) description:    
             </p>
+
+            <img src="/media/figure7.6.png">
 
             <ol>
 
@@ -537,6 +545,8 @@ external system requests the summarized data from the weather station. You read
 sequence diagrams from top to bottom:
             </p>
 
+            <img src="/media/figure7.7.png">
+
             <ol>
 
                 <li>
@@ -591,6 +601,8 @@ describe state machine models.
             Figure 7.8 is a state diagram for the weather station system that shows how it
 responds to requests for various services.
             </p>
+
+            <img src="/media/figure7.8.png">
 
             <p>
             You can read this diagram as follows:
@@ -692,6 +704,8 @@ map onto a single method in the WeatherStation object. In this case, the individ
 operations are encoded in the command string associated with the remoteControl
 method, shown in Figure 7.6.
             </p>
+
+            <img src="/media/figure7.9.png">
             
             </article>
 
@@ -791,12 +805,18 @@ displayed from the different forms of presentation. This is illustrated in Figur
 which shows two graphical presentations of the same data set.
             </p>
 
+            <img src="/media/figure7.10.png">
+
+            <img src="/media/figure7.11.png">
+
             <p>
             Graphical representations are normally used to illustrate the object classes in
 patterns and their relationships. These supplement the pattern description and add detail to
 the solution description. Figure 7.12 is the representation in UML of the
 Observer pattern.
             </p>
+
+            <img src="/media/figure7.12.png">
 
             <p>
             To use patterns in your design, you need to recognize that any design problem

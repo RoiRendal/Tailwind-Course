@@ -170,23 +170,8 @@
   .block {
     display: block;
   }
-  .h-20 {
-    height: calc(var(--spacing) * 20);
-  }
-  .w-20 {
-    width: calc(var(--spacing) * 20);
-  }
   .list-disc {
     list-style-type: disc;
-  }
-  .rounded-full {
-    border-radius: calc(infinity * 1px);
-  }
-  .bg-\[\#2a7146\] {
-    background-color: #2a7146;
-  }
-  .text-\[min\(1vw\,15px\)\] {
-    font-size: min(1vw, 15px);
   }
   .transition {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
