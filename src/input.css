@@ -1,14 +1,10 @@
 @import "tailwindcss";
 
-@font-face {
-    /* font-family: 'playfair'; */
-    font-family: 'lobsterTwo';
-    /* src: url('PlayfairDisplay.ttf'); */
-    src: url('LobsterTwo.ttf');
-}
 
-@theme {
-    --color-grass: #39cf2f;
+
+@font-face {
+    font-family: 'lobsterTwo';
+    src: url('LobsterTwo.ttf');
 }
 
 body {
