@@ -24,7 +24,7 @@
             <article>
                 <h2>Objectives</h2>
 
-                <p>
+                <p class="p-5">
                     The objectives of this chapter are to introduce object-oriented software design using the UML and highlight important implementation concerns.When you have read this chapter, you will:
                 </p>
 
@@ -54,11 +54,11 @@
         <section>
 
             <article>
-                <p>Chapter 7 Design and implementation <b>177</b></p>
+                <p class="p-5">Chapter 7 Design and implementation <b>177</b></p>
             </article>
 
             <article>
-                <p>
+                <p class="p-5">
                 Software design and implementation is the stage in the software engineering process
 at which an executable software system is developed. For some simple systems, software design and implementation
 is software engineering, and all other activities are merged with this process. However, for large systems,
@@ -66,7 +66,7 @@ software design and implementation is only one of a set of processes (requiremen
 and validation, etc.) involved in software engineering.
                 </p>
 
-                <p>
+                <p class="p-5">
                 Software design and implementation activities are invariably interleaved.
 Software design is a creative activity in which you identify software components and
 their relationships, based on a customer’s requirements. Implementation is the
@@ -78,7 +78,7 @@ isn’t always necessary or appropriate to describe the design in detail using t
 or other design description language.
                 </p>
 
-                <p>
+                <p class="p-5">
 Design and implementation are closely linked and you should normally take
 implementation issues into account when developing a design. For example, using
 the UML to document a design may be the right thing to do if you are programming
@@ -89,7 +89,7 @@ As I discussed in Chapter 3, agile methods usually work from informal sketches o
 the design and leave many design decisions to programmers.                    
                 </p>
 
-                <p>
+                <p class="p-5">
                 One of the most important implementation decisions that has to be made at an
 early stage of a software project is whether or not you should buy or build the application
 software. In a wide range of domains, it is now possible to buy off-the-shelf
@@ -99,7 +99,7 @@ that is already used in hospitals. It can be cheaper and faster to use this appr
 rather than developing a system in a conventional programming language.    
                 </p>
 
-                <p>
+                <p class="p-5">
                 When you develop an application in this way, the design process
 becomes concerned with how to use the configuration features of that system to
 deliver the system requirements. You don’t usually develop design models of the
@@ -107,7 +107,7 @@ system, such as models of the system objects and their interactions. I discuss
 this COTS-based approach to development in Chapter 16.    
                 </p>
 
-                <p>
+                <p class="p-5">
                 I assume that most readers of this book will have had experience of
 program design and implementation. This is something that you acquire as you learn
 to program and master the elements of a programming language like Java or Python. You
@@ -129,7 +129,7 @@ and open source development.
                     </li>
                 </ol>
 
-                <p>
+                <p class="p-5">
                 As there are a vast number of different development platforms,
 the chapter is not biased towards any particular programming language or
 implementation technology. Therefore, I have presented all examples using the
@@ -140,7 +140,7 @@ UML rather than in a programming language such as Java or Python
             <article>
                 <h2>7.1 Object-oriented design using the UML</h2>
 
-                <p>
+                <p class="p-5">
                 An object-oriented system is made up of interacting objects that maintain their own
 local state and provide operations on that state. The representation of the state is private and
 cannot be accessed directly from outside the object. Object-oriented design processes involve
@@ -149,7 +149,7 @@ objects in the system and their interactions. When the design is realized as an 
 the objects are created dynamically from these class definitions.
                 </p>
 
-                <p>
+                <p class="p-5">
                 Object-oriented systems are easier to change than systems developed using functional
 approaches. Objects include both data and operations to manipulate that data. They may therefore be
 understood and modified as stand-alone entities. Changing the implementation of an object or adding
@@ -158,10 +158,10 @@ is often a clear mapping between real-world entities (such as hardware component
 objects in the system. This improves the understandability, and hence the maintainability, of the design.
                 </p>
 
-                <p>
+                <p class="p-5">
                 To develop a system design from concept to detailed, object-oriented design,
 there are several things that you need to do:
-                <p>
+                <p class="p-5">
 
                 <ol class="list-inside list-decimal">
                     <li>Understand and define the context and the external interactions with the system.</li>
@@ -171,7 +171,7 @@ there are several things that you need to do:
                     <li>Specify interfaces.</li>
                 </ol>
 
-                <p>
+                <p class="p-5">
                 Like all creative activities, design is not a clear-cut, sequential process. You
 develop a design by getting ideas, proposing solutions, and refining these solutions
 as information becomes available. You inevitably have to backtrack and retry when
@@ -182,7 +182,7 @@ be thought of as a neat sequence of activities. In fact, all of the above activi
 interleaved and so influence each other.
                 </p>
 
-                <p>
+                <p class="p-5">
                 I illustrate these process activities by designing part of the software
 for the wilderness weather station that I introduced in Chapter 1. Wilderness weather stations are
 deployed in remote areas. Each weather station records local weather information and
@@ -195,7 +195,7 @@ periodically transfers this to a weather information system, using a satellite l
             <article>
                 <h2>7.1.1 System context and interactions</h2>
 
-                <p>
+                <p class="p-5">
                 The first stage in any software design process is to develop an understanding of the
 relationships between the software that is being designed and its external environment. This is
 essential for deciding how to provide the required system functionality and how to structure the
@@ -203,7 +203,7 @@ system to communicate with its environment. Understanding of the context also le
 boundaries of the system.
                 </p>
 
-                <p>
+                <p class="p-5">
                 Setting the system boundaries helps you decide what features are implemented
 in the system being designed and what features are in other associated systems. In
 this case, you need to decide how functionality is distributed between the control
@@ -211,7 +211,7 @@ system for all of the weather stations, and the embedded software in the weather
 station itself.
                 </p>
 
-                <p>
+                <p class="p-5">
                 System context models and interaction models present complementary views of
 the relationships between a system and its environment:
                 </p>
@@ -228,7 +228,7 @@ with its environment as it is used.
                     </li>
                 </ol>
 
-                <p>
+                <p class="p-5">
                 The context model of a system may be represented using associations. Associations
 simply show that there are some relationships between the entities involved in the
 association. The nature of the relationships is now specified. You may therefore document the
@@ -241,10 +241,10 @@ information system.
                 </p>
 
                 <div class="flex flex-row justify-center">
-                    <img src="/media/figure7.1.png">
+                    <img class="p-5" src="/media/figure7.1.png">
                 </div>
 
-                <p>
+                <p class="p-5">
                 When you model the interactions of a system with its environment you should use
 an abstract approach that does not include too much detail. One way to do this is to
 use a use case model. As I discussed in Chapters 4 and 5, each use case represents an
@@ -252,7 +252,7 @@ interaction with the system. Each possible interaction is named in an ellipse an
 external entity involved in the interaction is represented by a stick figure.    
                 </p>
 
-                <p>
+                <p class="p-5">
                 The use case model for the weather station is shown in Figure 7.2. This shows
 that the weather station interacts with the weather information system to report
 weather data and the status of the weather station hardware. Other interactions are
@@ -262,10 +262,10 @@ as well as human users.
                 </p>
 
                 <div class="flex flex-row justify-center">
-                    <img src="/media/figure7.2.png">
+                    <img class="p-5" src="/media/figure7.2.png">
                 </div>
 
-                <p>
+                <p class="p-5">
                 Each of these use cases should be described in structured natural language. This
 helps designers identify objects in the system and gives them an understanding of
 what the system is intended to do. I use a standard format for this description that
@@ -275,7 +275,7 @@ Figure 7.2. Examples of some other use cases are on the Web.
                 </p>
 
                 <div class="flex flex-row justify-center">
-                    <img src="/media/figure7.3.png">
+                    <img class="p-5" src="/media/figure7.3.png">
                 </div>
             </article>
 
@@ -285,20 +285,20 @@ Figure 7.2. Examples of some other use cases are on the Web.
 
             <h2>7.1.2 Architectural design</h2>
 
-            <p>
+            <p class="p-5">
             Once the interactions between the software system and the system’s environment
 have been defined, you use this information as a basis for designing the system
 architecture. Of course, you need to combine this with your general knowledge of
 the principles of architectural design and with more detailed domain knowledge.
             </p>
 
-            <p>
+            <p class="p-5">
             You identify the major components that make up the system and their interactions,
 and then may organize the components using an architectural pattern such as a layered or
 client–server model. However, this is not essential at this stage.    
             </p>
 
-            <p>
+            <p class="p-5">
             The high-level architectural design for the weather station software is shown in
 Figure 7.4. The weather station is composed of independent subsystems that communicate by
 broadcasting messages on a common infrastructure, shown as the
@@ -309,10 +309,10 @@ Chapter 6.
             </p>
 
             <div class="flex flex-row justify-center">
-                    <img src="/media/figure7.4.png">
+                    <img class="p-5" src="/media/figure7.4.png">
             </div>
 
-            <p>
+            <p class="p-5">
             For example, when the communications subsystem receives a control command, such
 as shutdown, the command is picked up by each of the other subsystems, which then shut
 themselves down in the correct way. The key benefit of this
@@ -320,7 +320,7 @@ architecture is that it is easy to support different configurations of subsystem
 because the sender of a message does not need to address the message to a particular subsystem.    
             </p>
 
-            <p>
+            <p class="p-5">
             Figure 7.5 shows the architecture of the data collection subsystem, which is
 included in Figure 7.4. The Transmitter and Receiver objects are concerned with
 managing communications and the WeatherData object encapsulates the information
@@ -330,7 +330,7 @@ Chapter 20.
             </p>       
 
             <div class="flex flex-row justify-center">
-                    <img src="/media/figure7.5.png">
+                    <img class="p-5" src="/media/figure7.5.png">
             </div>
                 
             </article>
@@ -341,7 +341,7 @@ Chapter 20.
             
             <h2>7.1.3 Object class identification</h2>
 
-            <p>
+            <p class="p-5">
             By this stage in the design process, you should have some ideas about
 the essential objects in the system that you are designing. As your understanding of the
 design develops, you refine these ideas about the system objects. The use case
@@ -354,7 +354,7 @@ use cases. With these objects in mind, you can start to identify the object clas
 in the system.   
             </p>
             
-            <p>
+            <p class="p-5">
             There have been various proposals made about how to identify object classes in
 object-oriented systems:    
             </p>
@@ -380,7 +380,7 @@ and Cunningham, 1989).
                 </li>
             </ol>
 
-            <p>
+            <p class="p-5">
             In practice, you have to use several knowledge sources to discover object classes.
 Object classes, attributes, and operations that are initially identified from the informal
 system description can be a starting point for the design. Further information
@@ -389,7 +389,7 @@ and extend the initial objects. This information can be collected from requireme
 documents, discussions with users, or from analyses of existing systems.    
             </p>
 
-            <p>
+            <p class="p-5">
             In the wilderness weather station, object identification is based on the tangible
 hardware in the system. I don’t have space to include all the system objects here, but
 I have shown five object classes in Figure 7.6. The Ground thermometer,
@@ -398,7 +398,9 @@ WeatherStation and WeatherData objects have been identified from the system
 description and the scenario (use case) description:    
             </p>
 
-            <img src="/media/figure7.6.png">
+            <div class="flex flex-row justify-center">
+                    <img class="p-5" src="/media/figure7.6.png">
+            </div>
 
             <ol class="list-inside list-decimal">
 
@@ -424,7 +426,7 @@ WeatherData object on request.
 
             </ol>
 
-            <p>
+            <p class="p-5">
             You use knowledge of the application domain to identify other objects, attributes,
 and services. We know that weather stations are often located in remote places and
 include various instruments that sometimes go wrong. Instrument failures should be
@@ -433,7 +435,7 @@ the correct functioning of the instruments. There are many remote weather statio
 so each weather station should have its own identifier.
             </p>
 
-            <p>
+            <p class="p-5">
             At this stage in the design process, you should focus on the objects themselves,
 without thinking about how these might be implemented. Once you have identified the
 objects, you then refine the object design. You look for common features and then
@@ -451,7 +453,7 @@ the superclass, such as an attribute that maintains the frequency of data collec
 
             <h2>7.1.4 Design models</h2>
 
-            <p>
+            <p class="p-5">
             Design or system models, as I discussed in Chapter 5, show the objects or object classes
 in a system. They also show the associations and relationships between these entities.
 These models are the bridge between the system requirements and the implementation
@@ -460,7 +462,7 @@ between them and the system requirements. However, they also have to
 include enough detail for programmers to make implementation decisions.
             </p>
 
-            <p>
+            <p class="p-5">
             Generally, you get around this type of conflict by developing models at different
 levels of detail. Where there are close links between requirements engineers, designers, and
 programmers, then abstract models may be all that are required. Specific
@@ -471,7 +473,7 @@ an organization but implemented elsewhere), then more detailed models are likely
 be needed.
             </p>
 
-            <p>
+            <p class="p-5">
             An important step in the design process, therefore, is to decide on the design
 models that you need and the level of detail required in these models. This depends
 on the type of system that is being developed. You design a sequential data-processing system
@@ -481,13 +483,12 @@ discussed in Chapter 5, you rarely use all of these. Minimizing the number of mo
 produced reduces the costs of the design and the time required to complete the design process.
             </p>
 
-            <p>
+            <p class="p-5">
             When you use the UML to develop a design, you will normally develop two kinds
 of design model:
             </p>
 
-            <ol>
-
+            <ol class="list-inside list-decimal">
                 <li>
                 Structural models, which describe the static structure of the system using object
 classes and their relationships. Important relationships that may be documented
@@ -499,16 +500,14 @@ composition relationships
 the interactions between the system objects. Interactions that may be documented include the sequence of service requests made by objects and the state
 changes that are triggered by these object interactions.
                 </li>
-
             </ol>
 
-            <p>
+            <p class="p-5">
             In the early stages of the design process, I think there are three models that are
 particularly useful for adding detail to use case and architectural models: 
             </p>
 
-            <ol>
-
+            <ol class="list-inside list-decimal">
                 <li>
                 Subsystem models, which that show logical groupings of objects into coherent
 subsystems. These are represented using a form of class diagram with each subsystem shown as
@@ -525,10 +524,9 @@ models are dynamic models.
 response to events. These are represented in the UML using state diagrams.
 State machine models are dynamic models.
                 </li>
-
             </ol>
 
-            <p>
+            <p class="p-5">
             A subsystem model is a useful static model as it shows how a design is organized into
 logically related groups of objects. I have already shown this type of model in Figure 7.4
 to show the subsystems in the weather mapping system. As well as subsystem models,
@@ -538,7 +536,7 @@ a danger in doing too much modeling. You should not make detailed decisions abou
 implementation that really should be left to the system programmers.
             </p>
 
-            <p>
+            <p class="p-5">
             Sequence models are dynamic models that describe, for each mode of interaction,
 the sequence of object interactions that take place. When documenting a design, you
 should produce a sequence model for each significant interaction. If you have developed a
@@ -546,17 +544,18 @@ use case model then there should be a sequence model for each use case that
 you have identified.
             </p>
 
-            <p>
+            <p class="p-5">
             Figure 7.7 is an example of a sequence model, shown as a UML sequence diagram.
 This diagram shows the sequence of interactions that take place when an
 external system requests the summarized data from the weather station. You read
 sequence diagrams from top to bottom:
             </p>
 
-            <img src="/media/figure7.7.png">
+            <div class="flex flex-row justify-center">
+                    <img class="p-5" src="/media/figure7.7.png">
+            </div>
 
-            <ol>
-
+            <ol class="list-inside list-decimal">
                 <li>
                 The SatComms object receives a request from the weather information system
 to collect a weather report from a weather station. It acknowledges receipt of this request.
@@ -586,17 +585,16 @@ Commslink object.
 data to the weather information system, through the satellite communications
 system.
                 </li>
-
             </ol>
 
-            <p>
+            <p class="p-5">
             The SatComms and WeatherStation objects may be implemented as concurrent
 processes, whose execution can be suspended and resumed. The SatComms object
 instance listens for messages from the external system, decodes these messages and
 initiates weather station operations.
             </p>
 
-            <p>
+            <p class="p-5">
             Sequence diagrams are used to model the combined behavior of a group of
 objects but you may also want to summarize the behavior of an object or a subsystem
 in response to messages and events. To do this, you can use a state machine model
@@ -605,18 +603,20 @@ receives. The UML includes state diagrams, initially invented by Harel (1987) to
 describe state machine models.
             </p>
 
-            <p>
+            <p class="p-5">
             Figure 7.8 is a state diagram for the weather station system that shows how it
 responds to requests for various services.
             </p>
 
-            <img src="/media/figure7.8.png">
+            <div class="flex flex-row justify-center">
+                    <img class="p-5" src="/media/figure7.8.png">
+            </div>
 
-            <p>
+            <p class="p-5">
             You can read this diagram as follows:
             </p>
 
-            <ol>
+            <ol class="list-inside list-decimal">
 
                 <li>
                 If the system state is Shutdown then it can respond to a restart(), a reconfigure(),
@@ -653,7 +653,7 @@ room. These are not shown on this diagram.
 
             </ol>
 
-            <p>
+            <p class="p-5">
             State diagrams are useful high-level models of a system or an object’s operation.
 You don’t usually need a state diagram for all of the objects in the system. Many of
 the objects in a system are relatively simple and a state model adds unnecessary
@@ -666,14 +666,14 @@ detail to the design.
 
             <h2>7.1.5 Interface specification</h2>
             
-            <p>
+            <p class="p-5">
             An important part of any design process is the specification of the interfaces between
 the components in the design. You need to specify interfaces so that objects and subsystems can be
 designed in parallel. Once an interface has been specified, the developers of other objects may
 assume that interface will be implemented.
             </p>
 
-            <p>
+            <p class="p-5">
             Interface design is concerned with specifying the detail of the interface to an
 object or to a group of objects. This means defining the signatures and semantics of the services
 that are provided by the object or by a group of objects. Interfaces can be
@@ -684,7 +684,7 @@ language (OCL). I explain this in Chapter 17, where I cover component-based soft
 I also show an alternative way to represent interfaces in the UML.
             </p>
 
-            <p>
+            <p class="p-5">
             You should not include details of the data representation in an interface design,
 as attributes are not defined in an interface specification. However, you should
 include operations to access and update data. As the data representation is hidden, it
@@ -695,7 +695,7 @@ that use the stack. By contrast, it often makes sense to expose the attributes i
 static design model, as this is the most compact way of illustrating essential characteristics of the objects.
             </p>
 
-            <p>
+            <p class="p-5">
             There is not a simple 1:1 relationship between objects and interfaces. The same
 object may have several interfaces, each of which is a viewpoint on the methods that
 it provides. This is supported directly in Java, where interfaces are declared separately from
@@ -703,7 +703,7 @@ objects and objects ‘implement’ interfaces. Equally, a group of objects
 may all be accessed through a single interface.
             </p>
 
-            <p>
+            <p class="p-5">
             Figure 7.9 shows two interfaces that may be defined for the weather station. The
 left-hand interface is a reporting interface that defines the operation names that are
 used to generate weather and status reports. These map directly to operations in the
@@ -713,7 +713,9 @@ operations are encoded in the command string associated with the remoteControl
 method, shown in Figure 7.6.
             </p>
 
-            <img src="/media/figure7.9.png">
+            <div class="flex flex-row justify-center">
+                    <img class="p-5" src="/media/figure7.9.png">
+            </div>
             
             </article>
 
@@ -723,7 +725,7 @@ method, shown in Figure 7.6.
 
             <h2>7.2 Implementation issues</h2>
 
-            <p>
+            <p class="p-5">
             Design patterns were derived from ideas put forward by Christopher Alexander
 (Alexander et al., 1977), who suggested that there were certain common patterns of
 building design that were inherently pleasing and effective. The pattern is a description
@@ -733,12 +735,12 @@ as a description of accumulated wisdom and experience, a well-tried solution to 
 
             </p>
 
-            <p>
+            <p class="p-5">
             A quote from the Hillside Group web site (http://hillside.net), which is dedicated
 to maintaining information about patterns, encapsulates their role in reuse:
             </p>
 
-            <p>
+            <p class="p-5">
             <i>
             Patterns and Pattern Languages are ways to describe best practices, good
 designs, and capture experience in a way that it is possible for others to reuse
@@ -746,7 +748,7 @@ this experience.
             </i>
             </p>
 
-            <p>
+            <p class="p-5">
             Patterns have made a huge impact on object-oriented software design. As well as
 being tested solutions to common problems, they have become a vocabulary for talking about a
 design. You can therefore explain your design by describing the patterns
@@ -758,7 +760,7 @@ of books by authors from Siemens, a large European technology company
 and Jain, 2004; Schmidt et al., 2000).
             </p>
 
-            <p>
+            <p class="p-5">
             Design patterns are usually associated with object-oriented design. Published
 patterns often rely on object characteristics such as inheritance and polymorphism to
 provide generality. However, the general principle of encapsulating experience in a pattern
@@ -767,12 +769,12 @@ have configuration patterns for COTS systems. Patterns are a way of reusing the
 knowledge and experience of other designers.
             </p>
 
-            <p>
+            <p class="p-5">
             The four essential elements of design patterns were defined by the ‘Gang of Four’
 in their patterns book:
             </p>
 
-            <ol>
+            <ol class="list-inside list-decimal">
                 
                 <li>
                 A name that is a meaningful reference to the pattern.
@@ -796,14 +798,14 @@ in a particular situation.
 
             </ol>
 
-            <p>
+            <p class="p-5">
             Gamma and his co-authors break down the problem description into motivation
 (a description of why the pattern is useful) and applicability (a description of situations
 in which the pattern may be used). Under the description of the solution, they describe
 the pattern structure, participants, collaborations, and implementation.
             </p>
 
-            <p>
+            <p class="p-5">
             To illustrate pattern description, I use the Observer pattern, taken from the book
 by Gamma et al. (Gamma et al., 1995). This is shown in Figure 7.10. In my description, I use the
 four essential description elements and also include a brief statement
@@ -813,26 +815,32 @@ displayed from the different forms of presentation. This is illustrated in Figur
 which shows two graphical presentations of the same data set.
             </p>
 
-            <img src="/media/figure7.10.png">
+            <div class="flex flex-row justify-center">
+                    <img class="p-5" src="/media/figure7.10.png">
+            </div>
 
-            <img src="/media/figure7.11.png">
+            <div class="flex flex-row justify-center">
+                    <img class="p-5" src="/media/figure7.11.png">
+            </div>
 
-            <p>
+            <p class="p-5">
             Graphical representations are normally used to illustrate the object classes in
 patterns and their relationships. These supplement the pattern description and add detail to
 the solution description. Figure 7.12 is the representation in UML of the
 Observer pattern.
             </p>
 
-            <img src="/media/figure7.12.png">
+            <div class="flex flex-row justify-center">
+                    <img class="p-5" src="/media/figure7.12.png">
+            </div>
 
-            <p>
+            <p class="p-5">
             To use patterns in your design, you need to recognize that any design problem
 you are facing may have an associated pattern that can be applied. Examples of such
 problems, documented in the ‘Gang of Four’s original patterns book, include:
             </p>
 
-            <ol>
+            <ol class="list-inside list-decimal">
                 
                 <li>
                 Tell several objects that the state of some other object has changed (Observer
@@ -853,7 +861,7 @@ run-time (Decorator pattern).
 
             </ol>
 
-            <p>
+            <p class="p-5">
             Patterns support high-level, concept reuse. When you try to reuse executable
 components you are inevitably constrained by detailed design decisions that have
 been made by the implementers of these components. These range from the
@@ -865,7 +873,7 @@ that you reuse the ideas but can adapt the implementation to suit the system tha
 you are developing.
             </p>
 
-            <p>
+            <p class="p-5">
             When you start designing a system, it can be difficult to know, in advance, if you
 will need a particular pattern. Therefore, using patterns in a design process often
 involves developing a design, experiencing a problem, and then recognizing that a
@@ -875,7 +883,7 @@ find it difficult to find an appropriate pattern amongst the hundreds of differe
 have been proposed.
             </p>
 
-            <p>
+            <p class="p-5">
             Patterns are a great idea but you need experience of software design to use them
 effectively. You have to recognize situations where a pattern can be applied.
 Inexperienced programmers, even if they have read the pattern books, will always
@@ -890,7 +898,7 @@ find it hard to decide whether they can reuse a pattern or need to develop a spe
                 
             <h2>7.3 Implementation issues</h2>
             
-            <p>
+            <p class="p-5">
             Software engineering includes all of the activities involved in software development
 from the initial requirements of the system through to maintenance and management of the deployed
 system. A critical stage of this process is, of course, system
@@ -900,7 +908,7 @@ languages or tailoring and adapting generic, off-the-shelf systems to meet the s
 requirements of an organization.
             </p>
 
-            <p>
+            <p class="p-5">
             I assume that most readers of this book will understand programming principles
 and will have some programming experience. As this chapter is intended to offer a
 language-independent approach, I haven’t focused on issues of good programming
@@ -909,7 +917,7 @@ aspects of implementation that are particularly important to software engineerin
 that are often not covered in programming texts. These are:
             </p>
 
-            <ol>
+            <ol class="list-inside list-decimal">
 
                 <li>
                 Reuse Most modern software is constructed by reusing existing components or
@@ -942,7 +950,7 @@ often they are completely different.
 
             <h2>7.3.1 Reuse</h2>
 
-            <p>
+            <p class="p-5">
             From the 1960s to the 1990s, most new software was developed from scratch, by
 writing all code in a high-level programming language. The only significant reuse or software
 was the reuse of functions and objects in programming language libraries.
@@ -953,11 +961,11 @@ now generally used for business systems, scientific software, and, increasingly,
 embedded systems engineering.
             </p>
 
-            <p>
+            <p class="p-5">
             Software reuse is possible at a number of different levels:
             </p>
 
-            <ol>
+            <ol class="list-inside list-decimal">
 
                 <li>
                 The abstraction level At this level, you don’t reuse software directly but rather
@@ -996,14 +1004,14 @@ different systems and integrating these to create a new system.
 
             </ol>
 
-            <p>
+            <p class="p-5">
             By reusing existing software, you can develop new systems more quickly, with
 fewer development risks and also lower costs. As the reused software has been tested
 in other applications, it should be more reliable than new software. However, there
 are costs associated with reuse:
             </p>
 
-            <ol>
+            <ol class="list-inside list-decimal">
 
                 <li>
                 The costs of the time spent in looking for software to reuse and assessing
@@ -1031,7 +1039,7 @@ about how their respective software will be reused.
 
             </ol>
 
-            <p>
+            <p class="p-5">
             How to reuse existing knowledge and software should be the first thing you should
 think about when starting a software development project. You should consider the
 possibilities of reuse before designing the software in detail, as you may wish to adapt
@@ -1039,7 +1047,7 @@ your design to reuse existing software assets. As I discussed in Chapter 2, in a
 requirements and design to make best use of these.
             </p>
 
-            <p>
+            <p class="p-5">
             For a large number of application systems, software engineering really means
 software reuse. I therefore devote several chapters in the software technologies section
 of the book to this topic (Chapters 16, 17, and 19).
@@ -1053,7 +1061,7 @@ of the book to this topic (Chapters 16, 17, and 19).
 
             <h2>7.3.2 Configuration management</h2>
 
-            <p>
+            <p class="p-5">
             In software development, change happens all the time, so change management is
 absolutely essential. When a team of people are developing software, you have to
 make sure that team members don’t interfere with each others’ work. That is, if two
@@ -1065,7 +1073,7 @@ goes wrong with a new version of a system, you have to be able to go back to a w
 version of the system or component.
             </p>
 
-            <p>
+            <p class="p-5">
             Configuration management is the name given to the general process of managing
 a changing software system. The aim of configuration management is to support the
 system integration process so that all developers can access the project code and documents
@@ -1074,7 +1082,7 @@ link components to create a system. There are, therefore, three fundamental conf
 management activities:
             </p>
 
-            <ol>
+            <ol class="list-inside list-decimal">
 
                 <li>
                 Version management, where support is provided to keep track of the different
@@ -1096,7 +1104,7 @@ other problems, and to allow all developers to see who is working on these probl
 
             </ol>
 
-            <p>
+            <p class="p-5">
             Software configuration management tools support each of the above activities.
 These tools may be designed to work together in a comprehensive change management
 system, such as ClearCase (Bellagio and Milligan, 2005). In integrated configuration
@@ -1105,7 +1113,7 @@ tools are designed together. They share a user interface style and are integrate
 a common code repository.
             </p>
 
-            <p>
+            <p class="p-5">
             Alternatively, separate tools, installed in an integrated development environment,
 may be used. Version management may be supported using a version management
 system such as Subversion (Pilato et al., 2008), which can support multi-site, multiteam development.
@@ -1116,7 +1124,7 @@ such as Bugzilla, are used to report bugs and other issues and to keep track of
 whether or not these have been fixed.
             </p>
 
-            <p>
+            <p class="p-5">
             Because of its importance in professional software engineering, I discuss change
 and configuration management in more detail in Chapter 25.
             </p>
@@ -1129,7 +1137,7 @@ and configuration management in more detail in Chapter 25.
                 
             <h2>7.3.3 Host-target development</h2>
 
-            <p>
+            <p class="p-5">
             Most software development is based on a host-target model. Software is developed on
 one computer (the host), but runs on a separate machine (the target). More generally,
 we can talk about a development platform and an execution platform. A platform is
@@ -1138,14 +1146,14 @@ such as a database management system or, for development platforms,
 an interactive development environment.
             </p>
 
-            <p>
+            <p class="p-5">
             Sometimes, the development and execution platforms are the same, making it possible
 to develop the software and test it on the same machine. More commonly, however,
 they are different so that you need to either move your developed software to the execution
 platform for testing or run a simulator on your development machine.
             </p>
 
-            <p>
+            <p class="p-5">
             Simulators are often used when developing embedded systems. You simulate hardware devices,
 such as sensors, and the events in the environment in which the system
 will be deployed. Simulators speed up the development process for embedded systems
@@ -1154,7 +1162,7 @@ software to the target hardware. However, simulators are expensive to develop an
 are only usually available for the most popular hardware architectures.
             </p>
 
-            <p>
+            <p class="p-5">
             If the target system has installed middleware or other software that you need to
 use, then you need to be able to test the system using that software. It may be impractical
 to install that software on your development machine, even if it is the same as
@@ -1162,12 +1170,12 @@ the target platform, because of license restrictions. In those circumstances, yo
 to transfer your developed code to the execution platform to test the system.
             </p>
 
-            <p>
+            <p class="p-5">
             A software development platform should provide a range of tools to support software
 engineering processes. These may include:
             </p>
 
-            <ol>
+            <ol class="list-inside list-decimal">
                 
                 <li>
                 An integrated compiler and syntax-directed editing system that allows you to
@@ -1194,7 +1202,7 @@ projects.
 
             </ol>
 
-            <p>
+            <p class="p-5">
             As well as these standard tools, your development system may include more specialized
 tools such as static analyzers (discussed in Chapter 15). Normally, development
 environments for teams also include a shared server that runs a change and configuration
@@ -1202,7 +1210,7 @@ management system and, perhaps, a system to support requirements
 management.
             </p>
 
-            <p>
+            <p class="p-5">
             Software development tools are often grouped to create an integrated development
 environment (IDE). An IDE is a set of software tools that supports different
 aspects of software development, within some common framework and user interface. Generally,
@@ -1211,7 +1219,7 @@ language such as Java. The language IDE may be developed specially, or may be an
 instantiation of a general-purpose IDE, with specific language-support tools.
             </p>
 
-            <p>
+            <p class="p-5">
             A general-purpose IDE is a framework for hosting software tools that provides data
 management facilities for the software being developed, and integration mechanisms,
 that allow tools to work together. The best-known general-purpose IDE is the Eclipse
@@ -1222,7 +1230,7 @@ adding plug-ins. For example, you may add a set of plug-ins to support networked
 in Java or embedded systems engineering using C.
             </p>
 
-            <p>
+            <p class="p-5">
             As part of the development process, you need to make decisions about how the
 developed software will be deployed on the target platform. This is straightforward
 for embedded systems, where the target is usually a single computer. However, for
@@ -1230,7 +1238,7 @@ distributed systems, you need to decide on the specific platforms where the
 components will be deployed. Issues that you have to consider in making this decision are: 
             </p>
 
-            <ol>
+            <ol class="list-inside list-decimal">
                 
                 <li>
                 The hardware and software requirements of a component If a component is
@@ -1256,13 +1264,13 @@ component and received by another.
 
             </ol>
 
-            <p>
+            <p class="p-5">
             You can document your decisions on hardware and software deployment using UML
 deployment diagrams, which show how software components are distributed across
 hardware platforms.
             </p>
 
-            <p>
+            <p class="p-5">
             If you are developing an embedded system, you may have to take into account
 target characteristics, such as its physical size, power capabilities, the need for realtime
 responses to sensor events, the physical characteristics of actuators, and its realtime
@@ -1277,7 +1285,7 @@ operating system. I discuss embedded systems engineering in Chapter 20.
 
             <h2>7.4 Open source development</h2>
 
-            <p>
+            <p class="p-5">
             Open source development is an approach to software development in which the
 source code of a software system is published and volunteers are invited to participate
 in the development process (Raymond, 2001). Its roots are in the Free Software
@@ -1287,7 +1295,7 @@ they wish. There was an assumption that the code would be controlled and develop
 small core group, rather than users of the code.
             </p>
 
-            <p>
+            <p class="p-5">
             Open source software extended this idea by using the Internet to recruit a much
 larger population of volunteer developers. Many of them are also users of the code.
 In principle at least, any contributor to an open source project may report and fix
@@ -1296,7 +1304,7 @@ open source systems still rely on a core group of developers who control changes
 the software.
             </p>
 
-            <p>
+            <p class="p-5">
             The best-known open source product is, of course, the Linux operating system
 which is widely used as a server system and, increasingly, as a desktop environment.
 Other important open source products are Java, the Apache web server, and the
@@ -1306,7 +1314,7 @@ source products. There are thousands of other, lesser known open source systems
 and components that may also be used.
             </p>
 
-            <p>
+            <p class="p-5">
             It is usually fairly cheap or free to acquire open source software. You
 can normally download open source software without charge. However, if you want
 documentation and support, then you may have to pay for this, but costs are usually fairly
@@ -1317,12 +1325,12 @@ problems to the developer and wait for a new release of the system. Bugs are dis
 and repaired more quickly than is usually possible with proprietary software.
             </p>
 
-            <p>
+            <p class="p-5">
             For a company involved in software development, there are two open source
 issues that have to be considered:
             </p>
 
-            <ol>
+            <ol class="list-inside list-decimal">
 
                 <li>
                 Should the product that is being developed make use of open source components?
@@ -1334,12 +1342,12 @@ issues that have to be considered:
 
             </ol>
 
-            <p>
+            <p class="p-5">
             The answers to these questions depend on the type of software that is being
 developed and the background and experience of the development team.
             </p>
 
-            <p>
+            <p class="p-5">
             If you are developing a software product for sale, then time to market and reduced
 costs are critical. If you are developing in a domain in which there are high-quality
 open source systems available, you can save time and money by using these systems.
@@ -1350,7 +1358,7 @@ open source systems. Even then, however, it could be quicker and cheaper to modi
 the open source system rather than redevelop the functionality that you need.
             </p>
 
-            <p>
+            <p class="p-5">
             More and more product companies are using an open source approach to development.
 Their business model is not reliant on selling a software product but rather on
 selling support for that product. They believe that involving the open source community will
@@ -1359,7 +1367,7 @@ a community of users for the software. Again, however, this is really only appli
 for general software products rather than specific organizational applications.
             </p>
 
-            <p>
+            <p class="p-5">
             Many companies believe that adopting an open source approach will reveal confidential
 business knowledge to their competitors and so are reluctant to adopt this
 development model. However, if you are working in a small company and you open
@@ -1367,7 +1375,7 @@ source your software, this may reassure customers that they will be able to supp
 the software if your company goes out of business.
             </p>
 
-            <p>
+            <p class="p-5">
             Publishing the source code of a system does not mean that people from the wider
 community will necessarily help with its development. Most successful open source products
 have been platform products rather than application systems. There are a
@@ -1383,7 +1391,7 @@ As such, making a software system open source does not guarantee community invol
 
             <h2>7.4.1 Open source licensing</h2>
 
-            <p>
+            <p class="p-5">
             Although a fundamental principle of open-source development is that source code
 should be freely available, this does not mean that anyone can do as they wish with
 that code. Legally, the developer of the code (either a company or an individual) still
@@ -1395,11 +1403,11 @@ allow their code to be used without this restriction. The developed systems may 
 proprietary and sold as closed source systems.
             </p>
 
-            <p>
+            <p class="p-5">
             Most open source licenses are derived from one of three general models:
             </p>
 
-            <ol>
+            <ol class="list-inside list-decimal">
                 
                 <li>
                  The GNU General Public License (GPL). This is a so-called ‘reciprocal’ license
@@ -1424,7 +1432,7 @@ original creator of the code.
 
             </ol>
 
-            <p>
+            <p class="p-5">
             Licensing issues are important because if you use open-source software as part of
 a software product, then you may be obliged by the terms of the license to make your
 own product open source. If you are trying to sell your software, you may wish to
@@ -1432,7 +1440,7 @@ keep it secret. This means that you may wish to avoid using GPL-licensed open
 source software in its development.
             </p>
 
-            <p>
+            <p class="p-5">
             If you are building software that runs on an open source platform, such as Linux,
 then licenses are not a problem. However, as soon as you start including open source
 components in your software you need to set up processes and databases to keep
@@ -1440,7 +1448,7 @@ track of what’s been used and their license conditions. Bayersdorfer (2007) su
 that companies managing projects that use open source should:
             </p>
 
-            <ol>
+            <ol class="list-inside list-decimal">
                 
                 <li>
                 Establish a system for maintaining information about open source components
@@ -1481,7 +1489,7 @@ you should participate in the community and help support their development.
 
             </ol>
 
-            <p>
+            <p class="p-5">
             The business model of software is changing. It is becoming increasingly difficult
 to build a business by selling specialized software systems. Many companies prefer
 to make their software open source and then sell support and consultancy to software
