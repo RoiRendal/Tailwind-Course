@@ -14,6 +14,10 @@
 
 @layer components {
 
+   .heading2-contents-base {
+       @apply mt-8 mb-4 font-bold text-dark-spring-green border-l-4 border-lime-green pl-3;
+   }
+
    .heading3-base {
        @apply font-semibold mt-6 mb-3 border-l-4 pl-9 text-space-cadet;
 
