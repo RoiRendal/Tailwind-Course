@@ -54,4 +54,8 @@
        @apply leading-relaxed pt-0.5;
    }
    /* List Elements */
+
+   .text-fluid {
+       @apply text-[calc(26px-1.5vw)];
+   }
 }

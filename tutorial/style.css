@@ -293,6 +293,9 @@
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
+  .text-\[calc\(26px-1\.5vw\)\] {
+    font-size: calc(26px - 1.5vw);
+  }
   .leading-relaxed {
     --tw-leading: var(--leading-relaxed);
     line-height: var(--leading-relaxed);
@@ -452,6 +455,9 @@
     padding-top: calc(var(--spacing) * 0.5);
     --tw-leading: var(--leading-relaxed);
     line-height: var(--leading-relaxed);
+  }
+  .text-fluid {
+    font-size: calc(26px - 1.5vw);
   }
 }
 @property --tw-space-y-reverse {
