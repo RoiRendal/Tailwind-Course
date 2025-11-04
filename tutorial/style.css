@@ -344,6 +344,16 @@
   }
 }
 @layer components {
+  .heading3-base {
+    margin-top: calc(var(--spacing) * 6);
+    margin-bottom: calc(var(--spacing) * 3);
+    border-left-style: var(--tw-border-style);
+    border-left-width: 4px;
+    padding-left: calc(var(--spacing) * 9);
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-space-cadet);
+  }
   .base-paragraph {
     margin-left: calc(var(--spacing) * 10);
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);

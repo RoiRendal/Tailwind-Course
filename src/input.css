@@ -13,6 +13,12 @@
 }
 
 @layer components {
+
+   .heading3-base {
+       @apply font-semibold mt-6 mb-3 border-l-4 pl-9 text-space-cadet;
+
+   }
+
    .base-paragraph {
        @apply p-10 ml-10
               rounded-xl
@@ -47,7 +53,10 @@
    }
 
    .ol-li-span-num-base {
-       @apply flex-shrink-0 w-8 h-8 rounded-full bg-dark-spring-green text-blanched-almon flex items-center justify-center font-bold leading-none shadow-md;
+       @apply flex-shrink-0 w-8 h-8 rounded-full
+       bg-dark-spring-green text-blanched-almon
+       flex items-center justify-center
+       font-bold leading-none shadow-md;
    }
 
    .ol-li-span-par-base {
