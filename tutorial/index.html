@@ -1167,7 +1167,7 @@ embedded systems engineering.
                 <ol class="ol-base">
                     <li class="ol-li-base">
                         <span class="ol-li-span-num-base">1</span>
-                        <span class="italic">The abstraction level</span>
+                        <span class="italic font-bold">The abstraction level</span>
                         <span class="ol-li-span-par-base">
                         At this level, you don’t reuse software directly but rather
     use knowledge of successful abstractions in the design of your software. Design
@@ -1178,7 +1178,7 @@ embedded systems engineering.
 
                     <li class="ol-li-base">
                         <span class="ol-li-span-num-base">2</span>
-                        <span class="italic">The object level</span>
+                        <span class="italic font-bold">The object level</span>
                         <span class="ol-li-span-par-base">
                         At this level, you directly reuse objects from a library rather
     than writing the code yourself. To implement this type of reuse, you have to find
@@ -1190,7 +1190,7 @@ embedded systems engineering.
 
                     <li class="ol-li-base">
                         <span class="ol-li-span-num-base">3</span>
-                        <span class="italic">The component level</span>
+                        <span class="italic font-bold">The component level</span>
                         <span class="ol-li-span-par-base">
                         Components are collections of objects and object classes
     that operate together to provide related functions and services. You often have to
@@ -1204,7 +1204,7 @@ embedded systems engineering.
 
                     <li class="ol-li-base">
                         <span class="ol-li-span-num-base">4</span>
-                        <span class="italic">The system level</span>
+                        <span class="italic font-bold">The system level</span>
                         <span class="ol-li-span-par-base">
                         At this level, you reuse entire application systems. This usually
     involves some kind of configuration of these systems. This may be done by
@@ -1218,40 +1218,50 @@ embedded systems engineering.
                 </ol>
             </div>
 
-            <p class="base-paragraph">
+            <div class="base-div">
             By reusing existing software, you can develop new systems more quickly, with
 fewer development risks and also lower costs. As the reused software has been tested
 in other applications, it should be more reliable than new software. However, there
 are costs associated with reuse:
-            </p>
 
-            <ol class="list-inside list-decimal">
+                <ol class="ol-base">
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">1</span>
+                        <span class="ol-li-span-par-base">
+                    The costs of the time spent in looking for software to reuse and assessing
+    whether or not it meets your needs. You may have to test the software to make
+    sure that it will work in your environment, especially if this is different from its
+    development environment.
+                        </span>
+                    </li>
 
-                <li>
-                The costs of the time spent in looking for software to reuse and assessing
-whether or not it meets your needs. You may have to test the software to make
-sure that it will work in your environment, especially if this is different from its
-development environment.
-                </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">2</span>
+                        <span class="ol-li-span-par-base">
+                    Where applicable, the costs of buying the reusable software. For large off-the-shelf
+    systems, these costs can be very high.
+                        </span>
+                    </li>
 
-                <li>
-                Where applicable, the costs of buying the reusable software. For large off-the-shelf
-systems, these costs can be very high.
-                </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">3</span>
+                        <span class="ol-li-span-par-base">
+                    The costs of adapting and configuring the reusable software components or systems
+    to reflect the requirements of the system that you are developing.
+                        </span>
+                    </li>
 
-                <li>
-                The costs of adapting and configuring the reusable software components or systems
-to reflect the requirements of the system that you are developing.
-                </li>
-
-                <li>
-                The costs of integrating reusable software elements with each other (if you are
-using software from different sources) and with the new code that you have
-developed. Integrating reusable software from different providers can be difficult and expensive because the providers may make conflicting assumptions
-about how their respective software will be reused.
-                </li>
-
-            </ol>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">4</span>
+                        <span class="ol-li-span-par-base">
+                    The costs of integrating reusable software elements with each other (if you are
+    using software from different sources) and with the new code that you have
+    developed. Integrating reusable software from different providers can be difficult and expensive because the providers may make conflicting assumptions
+    about how their respective software will be reused.
+                        </span>
+                    </li>
+                </ol>
+            </div>
 
             <p class="base-paragraph">
             How to reuse existing knowledge and software should be the first thing you should
@@ -1287,36 +1297,43 @@ goes wrong with a new version of a system, you have to be able to go back to a w
 version of the system or component.
             </p>
 
-            <p class="base-paragraph">
+            <div class="base-div">
             Configuration management is the name given to the general process of managing
 a changing software system. The aim of configuration management is to support the
 system integration process so that all developers can access the project code and documents
 in a controlled way, find out what changes have been made, and compile and
 link components to create a system. There are, therefore, three fundamental configuration
 management activities:
-            </p>
 
-            <ol class="list-inside list-decimal">
+                <ol class="ol-base">
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">1</span>
+                        <span class="ol-li-span-par-base">
+                    Version management, where support is provided to keep track of the different
+    versions of software components. Version management systems include facilities to coordinate
+    development by several programmers. They stop one developer overwriting code that has been
+    submitted to the system by someone else.
+                        </span>
+                    </li>
 
-                <li>
-                Version management, where support is provided to keep track of the different
-versions of software components. Version management systems include facilities to coordinate
-development by several programmers. They stop one developer overwriting code that has been
-submitted to the system by someone else.
-                </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">2</span>
+                        <span class="ol-li-span-par-base">
+                    System integration, where support is provided to help developers define what
+    versions of components are used to create each version of a system. This
+    description is then used to build a system automatically by compiling and linking the required components.
+                        </span>
+                    </li>
 
-                <li>
-                System integration, where support is provided to help developers define what
-versions of components are used to create each version of a system. This
-description is then used to build a system automatically by compiling and linking the required components.
-                </li>
-
-                <li>
-                Problem tracking, where support is provided to allow users to report bugs and
-other problems, and to allow all developers to see who is working on these problems and when they are fixed.
-                </li>
-
-            </ol>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">3</span>
+                        <span class="ol-li-span-par-base">
+                    Problem tracking, where support is provided to allow users to report bugs and
+    other problems, and to allow all developers to see who is working on these problems and when they are fixed.
+                        </span>
+                    </li>
+                </ol>
+            </div>
 
             <p class="base-paragraph">
             Software configuration management tools support each of the above activities.
@@ -1384,37 +1401,50 @@ the target platform, because of license restrictions. In those circumstances, yo
 to transfer your developed code to the execution platform to test the system.
             </p>
 
-            <p class="base-paragraph">
+            <div class="base-div">
             A software development platform should provide a range of tools to support software
 engineering processes. These may include:
-            </p>
 
-            <ol class="list-inside list-decimal">
-                
-                <li>
-                An integrated compiler and syntax-directed editing system that allows you to
-create, edit, and compile code.
-                </li>
+                <ol class="ol-base">
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">1</span>
+                        <span class="ol-li-span-par-base">
+                    An integrated compiler and syntax-directed editing system that allows you to
+    create, edit, and compile code.
+                        </span>
+                    </li>
 
-                <li>
-                A language debugging system.
-                </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">2</span>
+                        <span class="ol-li-span-par-base">
+                    A language debugging system.
+                        </span>
+                    </li>
 
-                <li>
-                Graphical editing tools, such as tools to edit UML models.
-                </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">3</span>
+                        <span class="ol-li-span-par-base">
+                    Graphical editing tools, such as tools to edit UML models.
+                        </span>
+                    </li>
 
-                <li>
-                Testing tools, such as JUnit (Massol, 2003) that can automatically run a set of
-tests on a new version of a program.
-                </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">4</span>
+                        <span class="ol-li-span-par-base">
+                    Testing tools, such as JUnit (Massol, 2003) that can automatically run a set of
+    tests on a new version of a program.
+                        </span>
+                    </li>
 
-                <li>
-                Project support tools that help you organize the code for different development
-projects.
-                </li>
-
-            </ol>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">5</span>
+                        <span class="ol-li-span-par-base">
+                    Project support tools that help you organize the code for different development
+    projects.
+                        </span>
+                    </li>
+                </ol>
+            </div>
 
             <p class="base-paragraph">
             As well as these standard tools, your development system may include more specialized
@@ -1444,39 +1474,46 @@ adding plug-ins. For example, you may add a set of plug-ins to support networked
 in Java or embedded systems engineering using C.
             </p>
 
-            <p class="base-paragraph">
+            <div class="base-div">
             As part of the development process, you need to make decisions about how the
 developed software will be deployed on the target platform. This is straightforward
 for embedded systems, where the target is usually a single computer. However, for
 distributed systems, you need to decide on the specific platforms where the
-components will be deployed. Issues that you have to consider in making this decision are: 
-            </p>
+components will be deployed. Issues that you have to consider in making this decision are:
 
-            <ol class="list-inside list-decimal">
-                
-                <li>
-                The hardware and software requirements of a component If a component is
-designed for a specific hardware architecture, or relies on some other software
-system, it must obviously be deployed on a platform that provides the required
-hardware and software support.
-                </li>
+                <ol class="ol-base">
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">1</span>
+                        <span class="ol-li-span-par-base">
+                    The hardware and software requirements of a component If a component is
+    designed for a specific hardware architecture, or relies on some other software
+    system, it must obviously be deployed on a platform that provides the required
+    hardware and software support.
+                        </span>
+                    </li>
 
-                <li>
-                The availability requirements of the system High-availability systems may
-require components to be deployed on more than one platform. This means that,
-in the event of platform failure, an alternative implementation of the component
-is available.
-                </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">2</span>
+                        <span class="ol-li-span-par-base">
+                    The availability requirements of the system High-availability systems may
+    require components to be deployed on more than one platform. This means that,
+    in the event of platform failure, an alternative implementation of the component
+    is available.
+                        </span>
+                    </li>
 
-                <li>
-                Component communications If there is a high level of communications traffic
-between components, it usually makes sense to deploy them on the same platform or on platforms
-that are physically close to one other. This reduces
-communications latency, the delay between the time a message is sent by one
-component and received by another.
-                </li>
-
-            </ol>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">3</span>
+                        <span class="ol-li-span-par-base">
+                    Component communications If there is a high level of communications traffic
+    between components, it usually makes sense to deploy them on the same platform or on platforms
+    that are physically close to one other. This reduces
+    communications latency, the delay between the time a message is sent by one
+    component and received by another.
+                        </span>
+                    </li>
+                </ol>
+            </div>
 
             <p class="base-paragraph">
             You can document your decisions on hardware and software deployment using UML
@@ -1539,22 +1576,26 @@ problems to the developer and wait for a new release of the system. Bugs are dis
 and repaired more quickly than is usually possible with proprietary software.
             </p>
 
-            <p class="base-paragraph">
+            <div class="base-div">
             For a company involved in software development, there are two open source
 issues that have to be considered:
-            </p>
 
-            <ol class="list-inside list-decimal">
+                <ol class="ol-base">
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">1</span>
+                        <span class="ol-li-span-par-base">
+                    Should the product that is being developed make use of open source components?
+                        </span>
+                    </li>
 
-                <li>
-                Should the product that is being developed make use of open source components?
-                </li>
-
-                <li>
-                Should an open source approach be used for the software’s development?
-                </li>
-
-            </ol>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">2</span>
+                        <span class="ol-li-span-par-base">
+                    Should an open source approach be used for the software’s development?
+                        </span>
+                    </li>
+                </ol>
+            </div>
 
             <p class="base-paragraph">
             The answers to these questions depend on the type of software that is being
@@ -1617,34 +1658,41 @@ allow their code to be used without this restriction. The developed systems may 
 proprietary and sold as closed source systems.
             </p>
 
-            <p class="base-paragraph">
+            <div class="base-div">
             Most open source licenses are derived from one of three general models:
-            </p>
 
-            <ol class="list-inside list-decimal">
-                
-                <li>
-                 The GNU General Public License (GPL). This is a so-called ‘reciprocal’ license
-that, simplistically, means that if you use open source software that is licensed
-under the GPL license, then you must make that software open source.
-                </li>
+                <ol class="ol-base">
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">1</span>
+                        <span class="ol-li-span-par-base">
+                    The GNU General Public License (GPL). This is a so-called ‘reciprocal’ license
+    that, simplistically, means that if you use open source software that is licensed
+    under the GPL license, then you must make that software open source.
+                        </span>
+                    </li>
 
-                <li>
-                The GNU Lesser General Public License (LGPL). This is a variant of the GPL
-license where you can write components that link to open source code without
-having to publish the source of these components. However, if you change the
-licensed component, then you must publish this as open source.
-                </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">2</span>
+                        <span class="ol-li-span-par-base">
+                    The GNU Lesser General Public License (LGPL). This is a variant of the GPL
+    license where you can write components that link to open source code without
+    having to publish the source of these components. However, if you change the
+    licensed component, then you must publish this as open source.
+                        </span>
+                    </li>
 
-                <li>
-                The Berkley Standard Distribution (BSD) License. This is a non-reciprocal
-license, which means you are not obliged to republish any changes or modifications made to
-open source code. You can include the code in proprietary systems
-that are sold. If you use open source components, you must acknowledge the
-original creator of the code.
-                </li>
-
-            </ol>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">3</span>
+                        <span class="ol-li-span-par-base">
+                    The Berkley Standard Distribution (BSD) License. This is a non-reciprocal
+    license, which means you are not obliged to republish any changes or modifications made to
+    open source code. You can include the code in proprietary systems
+    that are sold. If you use open source components, you must acknowledge the
+    original creator of the code.
+                        </span>
+                    </li>
+                </ol>
+            </div>
 
             <p class="base-paragraph">
             Licensing issues are important because if you use open-source software as part of
@@ -1654,54 +1702,69 @@ keep it secret. This means that you may wish to avoid using GPL-licensed open
 source software in its development.
             </p>
 
-            <p class="base-paragraph">
+            <div class="base-div">
             If you are building software that runs on an open source platform, such as Linux,
 then licenses are not a problem. However, as soon as you start including open source
 components in your software you need to set up processes and databases to keep
 track of what’s been used and their license conditions. Bayersdorfer (2007) suggests
 that companies managing projects that use open source should:
-            </p>
 
-            <ol class="list-inside list-decimal">
-                
-                <li>
-                Establish a system for maintaining information about open source components
-that are downloaded and used. You have to keep a copy of the license for each component that
-was valid at the time the component was used. Licenses may
-change so you need to know the conditions that you have agreed to.
+                <ol class="ol-base">                
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">1</span>
+                        <span class="ol-li-span-par-base">
+                    Establish a system for maintaining information about open source components
+    that are downloaded and used. You have to keep a copy of the license for each component that
+    was valid at the time the component was used. Licenses may
+    change so you need to know the conditions that you have agreed to.
+                        </span>
+                    </li>
+                    
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">2</span>
+                        <span class="ol-li-span-par-base">
+                    Be aware of the different types of licenses and understand how a component is
+    licensed before it is used. You may decide to use a component in one system but
+    not in another because you plan to use these systems in different ways.
+                        </span>
+                    </li>
 
-                </li>
-                
-                <li>
-                Be aware of the different types of licenses and understand how a component is
-licensed before it is used. You may decide to use a component in one system but
-not in another because you plan to use these systems in different ways.
-                </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">3</span>
+                        <span class="ol-li-span-par-base">
+                    Be aware of evolution pathways for components. You need to know a bit about
+    the open source project where components are developed to understand how
+    they might change in future.
+                        </span>
+                    </li>
 
-                <li>
-                Be aware of evolution pathways for components. You need to know a bit about
-the open source project where components are developed to understand how
-they might change in future
-                </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">4</span>
+                        <span class="ol-li-span-par-base">
+                    Educate people about open source. It’s not enough to have procedures in place
+    to ensure compliance with license conditions. You also need to educate developers about open
+    source and open source licensing.
+                        </span>
+                    </li>
 
-                <li>
-                Educate people about open source. It’s not enough to have procedures in place
-to ensure compliance with license conditions. You also need to educate developers about open
-source and open source licensing.
-                </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">5</span>
+                        <span class="ol-li-span-par-base">
+                    Have auditing systems in place. Developers, under tight deadlines, might be
+    tempted to break the terms of a license. If possible, you should have software in
+    place to detect and stop this.
+                        </span>
+                    </li>
 
-                <li>
-                Have auditing systems in place. Developers, under tight deadlines, might be
-tempted to break the terms of a license. If possible, you should have software in
-place to detect and stop this.
-                </li>
-
-                <li>
-                Participate in the open source community. If you rely on open source products,
-you should participate in the community and help support their development.
-                </li>
-
-            </ol>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">6</span>
+                        <span class="ol-li-span-par-base">
+                    Participate in the open source community. If you rely on open source products,
+    you should participate in the community and help support their development.
+                        </span>
+                    </li>
+                </ol>
+            </div>
 
             <p class="base-paragraph">
             The business model of software is changing. It is becoming increasingly difficult
