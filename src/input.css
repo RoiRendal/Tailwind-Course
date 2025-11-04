@@ -51,7 +51,7 @@
    }
 
    .ol-li-span-par-base {
-       @apply leading-relaxed pt-0.5;
+       @apply leading-relaxed p-2 rounded-xl bg-space-cadet text-blanched-almon;
    }
    /* List Elements */
 

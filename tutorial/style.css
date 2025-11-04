@@ -449,9 +449,12 @@
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .ol-li-span-par-base {
-    padding-top: calc(var(--spacing) * 0.5);
+    border-radius: var(--radius-xl);
+    background-color: var(--color-space-cadet);
+    padding: calc(var(--spacing) * 2);
     --tw-leading: var(--leading-relaxed);
     line-height: var(--leading-relaxed);
+    color: var(--color-blanched-almon);
   }
   .text-fluid {
     font-size: clamp(16px, calc(32px - 1.5vw), 40px);
