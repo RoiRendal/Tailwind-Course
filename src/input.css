@@ -43,7 +43,7 @@
    }
 
    .ol-li-base {
-       @apply flex gap-4 items-start pl-30;
+       @apply flex gap-4 items-start pl-18;
    }
 
    .ol-li-span-num-base {
@@ -56,6 +56,6 @@
    /* List Elements */
 
    .text-fluid {
-       @apply text-[calc(26px-1.5vw)];
+       @apply text-[clamp(16px,calc(32px-1.5vw),40px)];
    }
 }

@@ -293,9 +293,6 @@
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
-  .text-\[calc\(26px-1\.5vw\)\] {
-    font-size: calc(26px - 1.5vw);
-  }
   .leading-relaxed {
     --tw-leading: var(--leading-relaxed);
     line-height: var(--leading-relaxed);
@@ -432,7 +429,7 @@
     display: flex;
     align-items: flex-start;
     gap: calc(var(--spacing) * 4);
-    padding-left: calc(var(--spacing) * 30);
+    padding-left: calc(var(--spacing) * 18);
   }
   .ol-li-span-num-base {
     display: flex;
@@ -457,7 +454,7 @@
     line-height: var(--leading-relaxed);
   }
   .text-fluid {
-    font-size: calc(26px - 1.5vw);
+    font-size: clamp(16px, calc(32px - 1.5vw), 40px);
   }
 }
 @property --tw-space-y-reverse {
