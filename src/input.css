@@ -14,7 +14,7 @@
 
 @layer components {
    .base-paragraph {
-       @apply p-10
+       @apply p-10 ml-10
               rounded-xl
               bg-bud-green/30
               shadow-sm hover:shadow-md
@@ -26,7 +26,7 @@
    }
 
    .base-div {
-       @apply p-10
+       @apply p-10 ml-10
               rounded-xl
               bg-bud-green/30
               shadow-sm hover:shadow-md
@@ -43,7 +43,7 @@
    }
 
    .ol-li-base {
-       @apply flex gap-4 items-start pl-18;
+       @apply flex gap-4 items-start px-18;
    }
 
    .ol-li-span-num-base {
