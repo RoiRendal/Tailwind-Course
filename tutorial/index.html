@@ -22,9 +22,9 @@
             </article>    
             
             <article class="mb-8">
-                <h2 class=" font-semibold text-[#384166] mb-4 border-b-2 border-[#0CDC2A] pb-1 inline-block">Objectives</h2>
+                <h2 class=" font-semibold text-space-cadet mb-4 border-b-2 border-lime-green pb-1 inline-block">Objectives</h2>
 
-                <p class="p-5 mb-4 text-[#384166] leading-relaxed">
+                <p class="p-5 mb-4 text-space-cadet leading-relaxed">
                     The objectives of this chapter are to introduce object-oriented software design using the UML and highlight important implementation concerns. When you have read this chapter, you will:
                 </p>
 
@@ -220,7 +220,7 @@ UML rather than in a programming language such as Java or Python
             </article>
 
             <article>
-                <h2 class=" font-bold mt-8 mb-4 text-[#0B735F] border-l-4 border-[#0CDC2A] pl-3">7.1 Object-oriented design using the UML</h2>
+                <h2 class=" font-bold mt-8 mb-4 text-dark-spring-green border-l-4 border-lime-green pl-3">7.1 Object-oriented design using the UML</h2>
 
                 <p class="
                     p-10
@@ -274,12 +274,51 @@ objects in the system. This improves the understandability, and hence the mainta
                 To develop a system design from concept to detailed, object-oriented design,
 there are several things that you need to do:
 
-                <ol class="list-inside list-decimal">
-                    <li>Understand and define the context and the external interactions with the system.</li>
-                    <li>Design the system architecture.</li>
-                    <li>Identify the principal objects in the system.</li>
-                    <li>Develop design models.</li>
-                    <li>Specify interfaces.</li>
+                <ol class="space-y-4 mt-5 mb-6">
+                    <li class="flex gap-4 md:gap-6 items-start">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-dark-spring-green text-white flex items-center justify-center font-bold text-sm md:text-base leading-none shadow-md">
+                            1
+                        </span>
+                        <span class="text-dark leading-relaxed pt-0.5">
+                            Understand and define the context and the external interactions with the system.
+                        </span>
+                    </li>
+
+                    <li class="flex gap-4 md:gap-6 items-start">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-dark-spring-green text-white flex items-center justify-center font-bold text-sm md:text-base leading-none shadow-md">
+                            2
+                        </span>
+                        <span class="text-dark leading-relaxed pt-0.5">
+                            Design the system architecture.
+                        </span>
+                    </li>
+
+                    <li class="flex gap-4 md:gap-6 items-start">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-dark-spring-green text-white flex items-center justify-center font-bold text-sm md:text-base leading-none shadow-md">
+                            3
+                        </span>
+                        <span class="text-dark leading-relaxed pt-0.5">
+                            Identify the principal objects in the system.
+                        </span>
+                    </li>
+
+                    <li class="flex gap-4 md:gap-6 items-start">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-dark-spring-green text-white flex items-center justify-center font-bold text-sm md:text-base leading-none shadow-md">
+                            4
+                        </span>
+                        <span class="text-dark leading-relaxed pt-0.5">
+                            Develop design models.
+                        </span>
+                    </li>
+
+                    <li class="flex gap-4 md:gap-6 items-start">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-dark-spring-green text-white flex items-center justify-center font-bold text-sm md:text-base leading-none shadow-md">
+                            5
+                        </span>
+                        <span class="text-dark leading-relaxed pt-0.5">
+                            Specify interfaces.
+                        </span>
+                    </li>
                 </ol>
 
                 <p class="
@@ -324,7 +363,7 @@ periodically transfers this to a weather information system, using a satellite l
 
 
             <article>
-                <h3 class=" font-semibold mt-6 mb-3 border-l-4 pl-9 text-[#384166]">7.1.1 System context and interactions</h3>
+                <h3 class=" font-semibold mt-6 mb-3 border-l-4 pl-9 text-space-cadet">7.1.1 System context and interactions</h3>
 
                 <p class="
                     p-10
@@ -414,9 +453,9 @@ information system.
                 <div class="flex flex-col items-center my-18">
                     <img 
                         src="/media/figure7.1.png"
-                        class="max-w-full h-auto rounded-lg shadow-lg border-2 border-[#0B735F] transition-transform duration-300 hover:scale-105"
+                        class="max-w-full h-auto rounded-lg shadow-lg border-2 border-dark-spring-green transition-transform duration-300 hover:scale-105"
                     >
-                    <p class=" text-sm text-[#384166] mt-2 italic">Figure 7.1: System Context for the Weather Station</p>
+                    <p class=" text-sm text-space-cadet mt-2 italic">Figure 7.1: System Context for the Weather Station</p>
                 </div>
 
                 <p class="
@@ -459,9 +498,9 @@ as well as human users.
                 <div class="flex flex-col items-center my-18">
                     <img 
                         src="/media/figure7.2.png"
-                        class="max-w-full h-auto rounded-lg shadow-lg border-2 border-[#0B735F] transition-transform duration-300 hover:scale-105"
+                        class="max-w-full h-auto rounded-lg shadow-lg border-2 border-dark-spring-green transition-transform duration-300 hover:scale-105"
                     >
-                    <p class=" text-sm text-[#384166] mt-2 italic">Figure 7.2: Weather Station Use Cases</p>
+                    <p class=" text-sm text-space-cadet mt-2 italic">Figure 7.2: Weather Station Use Cases</p>
                 </div>
 
                 <p class="
@@ -486,9 +525,9 @@ Figure 7.2. Examples of some other use cases are on the Web.
                 <div class="flex flex-col items-center my-18">
                     <img 
                         src="/media/figure7.3.png"
-                        class="max-w-full h-auto rounded-lg shadow-lg border-2 border-[#0B735F] transition-transform duration-300 hover:scale-105"
+                        class="max-w-full h-auto rounded-lg shadow-lg border-2 border-dark-spring-green transition-transform duration-300 hover:scale-105"
                     >
-                    <p class=" text-sm text-[#384166] mt-2 italic">Figure 7.3: Use Case Description — Report Weather</p>
+                    <p class=" text-sm text-space-cadet mt-2 italic">Figure 7.3: Use Case Description — Report Weather</p>
                 </div>
             </article>
 
@@ -496,7 +535,7 @@ Figure 7.2. Examples of some other use cases are on the Web.
 
             <article>
 
-            <h3 class=" font-semibold mt-6 mb-3 border-l-4 pl-9 text-[#384166]">7.1.2 Architectural design</h3>
+            <h3 class=" font-semibold mt-6 mb-3 border-l-4 pl-9 text-space-cadet">7.1.2 Architectural design</h3>
 
             <p class="
                     p-10
@@ -554,9 +593,9 @@ Chapter 6.
             <div class="flex flex-col items-center my-18">
                 <img 
                     src="/media/figure7.4.png"
-                    class="max-w-full h-auto rounded-lg shadow-lg border-2 border-[#0B735F] transition-transform duration-300 hover:scale-105"
+                    class="max-w-full h-auto rounded-lg shadow-lg border-2 border-dark-spring-green transition-transform duration-300 hover:scale-105"
                 >
-                <p class=" text-sm text-[#384166] mt-2 italic">Figure 7.4: High-level Architecture of the Weather Station</p>
+                <p class=" text-sm text-space-cadet mt-2 italic">Figure 7.4: High-level Architecture of the Weather Station</p>
             </div>
 
             <p class="
@@ -599,9 +638,9 @@ Chapter 20.
             <div class="flex flex-col items-center my-18">
                 <img 
                     src="/media/figure7.5.png"
-                    class="max-w-full h-auto rounded-lg shadow-lg border-2 border-[#0B735F] transition-transform duration-300 hover:scale-105"
+                    class="max-w-full h-auto rounded-lg shadow-lg border-2 border-dark-spring-green transition-transform duration-300 hover:scale-105"
                 >
-                <p class=" text-sm text-[#384166] mt-2 italic">Figure 7.5: Architecture of Data Collection System</p>
+                <p class=" text-sm text-space-cadet mt-2 italic">Figure 7.5: Architecture of Data Collection System</p>
             </div>
                 
             </article>
@@ -610,7 +649,7 @@ Chapter 20.
 
             <article>
             
-            <h3 class=" font-semibold mt-6 mb-3 border-l-4 pl-9 text-[#384166]">7.1.3 Object class identification</h3>
+            <h3 class=" font-semibold mt-6 mb-3 border-l-4 pl-9 text-space-cadet">7.1.3 Object class identification</h3>
 
             <p class="
                     p-10
@@ -712,9 +751,9 @@ description and the scenario (use case) description:
             <div class="flex flex-col items-center my-18">
                 <img 
                     src="/media/figure7.6.png"
-                    class="max-w-full h-auto rounded-lg shadow-lg border-2 border-[#0B735F] transition-transform duration-300 hover:scale-105"
+                    class="max-w-full h-auto rounded-lg shadow-lg border-2 border-dark-spring-green transition-transform duration-300 hover:scale-105"
                 >
-                <p class=" text-sm text-[#384166] mt-2 italic">Figure 7.6: Weather Station Objects</p>
+                <p class=" text-sm text-space-cadet mt-2 italic">Figure 7.6: Weather Station Objects</p>
             </div>
 
             <ol class="list-inside list-decimal">
@@ -786,7 +825,7 @@ the superclass, such as an attribute that maintains the frequency of data collec
 
             <article>
 
-            <h3 class=" font-semibold mt-6 mb-3 border-l-4 pl-9 text-[#384166]">7.1.4 Design models</h3>
+            <h3 class=" font-semibold mt-6 mb-3 border-l-4 pl-9 text-space-cadet">7.1.4 Design models</h3>
 
             <p class="
                     p-10
@@ -969,9 +1008,9 @@ sequence diagrams from top to bottom:
             <div class="flex flex-col items-center my-18">
                 <img 
                     src="/media/figure7.7.png"
-                    class="max-w-full h-auto rounded-lg shadow-lg border-2 border-[#0B735F] transition-transform duration-300 hover:scale-105"
+                    class="max-w-full h-auto rounded-lg shadow-lg border-2 border-dark-spring-green transition-transform duration-300 hover:scale-105"
                 >
-                <p class=" text-sm text-[#384166] mt-2 italic">Figure 7.7: Sequence Diagram Describing Data Collection</p>
+                <p class=" text-sm text-space-cadet mt-2 italic">Figure 7.7: Sequence Diagram Describing Data Collection</p>
             </div>
 
             <ol class="list-inside list-decimal">
@@ -1060,9 +1099,9 @@ responds to requests for various services.
             <div class="flex flex-col items-center my-18">
                 <img 
                     src="/media/figure7.8.png"
-                    class="max-w-full h-auto rounded-lg shadow-lg border-2 border-[#0B735F] transition-transform duration-300 hover:scale-105"
+                    class="max-w-full h-auto rounded-lg shadow-lg border-2 border-dark-spring-green transition-transform duration-300 hover:scale-105"
                 >
-                <p class=" text-sm text-[#384166] mt-2 italic">Figure 7.8: Weather Station State Diagram</p>
+                <p class=" text-sm text-space-cadet mt-2 italic">Figure 7.8: Weather Station State Diagram</p>
             </div>
 
             <p class="
@@ -1137,7 +1176,7 @@ detail to the design.
 
             <article>
 
-            <h3 class=" font-semibold mt-6 mb-3 border-l-4 pl-9 text-[#384166]">7.1.5 Interface specification</h3>
+            <h3 class=" font-semibold mt-6 mb-3 border-l-4 pl-9 text-space-cadet">7.1.5 Interface specification</h3>
             
             <p class="
                     p-10
@@ -1239,9 +1278,9 @@ method, shown in Figure 7.6.
             <div class="flex flex-col items-center my-18">
                 <img 
                     src="/media/figure7.9.png"
-                    class="max-w-full h-auto rounded-lg shadow-lg border-2 border-[#0B735F] transition-transform duration-300 hover:scale-105"
+                    class="max-w-full h-auto rounded-lg shadow-lg border-2 border-dark-spring-green transition-transform duration-300 hover:scale-105"
                 >
-                <p class=" text-sm text-[#384166] mt-2 italic">Figure 7.9: Weather Station Interfaces</p>
+                <p class=" text-sm text-space-cadet mt-2 italic">Figure 7.9: Weather Station Interfaces</p>
             </div>
             
             </article>
@@ -1250,7 +1289,7 @@ method, shown in Figure 7.6.
 
             <article>
 
-            <h2 class=" font-bold mt-8 mb-4 text-[#0B735F] border-l-4 border-[#0CDC2A] pl-3">7.2 Implementation issues</h2>
+            <h2 class=" font-bold mt-8 mb-4 text-dark-spring-green border-l-4 border-lime-green pl-3">7.2 Implementation issues</h2>
 
             <p class="
                     p-10
@@ -1425,17 +1464,17 @@ which shows two graphical presentations of the same data set.
             <div class="flex flex-col items-center my-18">
                 <img 
                     src="/media/figure7.10.png"
-                    class="max-w-full h-auto rounded-lg shadow-lg border-2 border-[#0B735F] transition-transform duration-300 hover:scale-105"
+                    class="max-w-full h-auto rounded-lg shadow-lg border-2 border-dark-spring-green transition-transform duration-300 hover:scale-105"
                 >
-                <p class=" text-sm text-[#384166] mt-2 italic">Figure 7.10: The Observer Pattern</p>
+                <p class=" text-sm text-space-cadet mt-2 italic">Figure 7.10: The Observer Pattern</p>
             </div>
 
             <div class="flex flex-col items-center my-18">
                 <img 
                     src="/media/figure7.11.png"
-                    class="max-w-full h-auto rounded-lg shadow-lg border-2 border-[#0B735F] transition-transform duration-300 hover:scale-105"
+                    class="max-w-full h-auto rounded-lg shadow-lg border-2 border-dark-spring-green transition-transform duration-300 hover:scale-105"
                 >
-                <p class=" text-sm text-[#384166] mt-2 italic">Figure 7.11: Multiple Displays</p>
+                <p class=" text-sm text-space-cadet mt-2 italic">Figure 7.11: Multiple Displays</p>
             </div>
 
             <p class="
@@ -1458,9 +1497,9 @@ Observer pattern.
             <div class="flex flex-col items-center my-18">
                 <img 
                     src="/media/figure7.12.png"
-                    class="max-w-full h-auto rounded-lg shadow-lg border-2 border-[#0B735F] transition-transform duration-300 hover:scale-105"
+                    class="max-w-full h-auto rounded-lg shadow-lg border-2 border-dark-spring-green transition-transform duration-300 hover:scale-105"
                 >
-                <p class=" text-sm text-[#384166] mt-2 italic">Figure 7.12: A UML Model of the Observer Pattern</p>
+                <p class=" text-sm text-space-cadet mt-2 italic">Figure 7.12: A UML Model of the Observer Pattern</p>
             </div>
 
             <p class="
@@ -1565,7 +1604,7 @@ find it hard to decide whether they can reuse a pattern or need to develop a spe
 
             <article>
                 
-            <h2 class=" font-bold mt-8 mb-4 text-[#0B735F] border-l-4 border-[#0CDC2A] pl-3">7.3 Implementation issues</h2>
+            <h2 class=" font-bold mt-8 mb-4 text-dark-spring-green border-l-4 border-lime-green pl-3">7.3 Implementation issues</h2>
             
             <p class="
                     p-10
@@ -1637,7 +1676,7 @@ often they are completely different.
 
             <article>
 
-            <h3 class=" font-semibold mt-6 mb-3 border-l-4 pl-9 text-[#384166]">7.3.1 Reuse</h3>
+            <h3 class=" font-semibold mt-6 mb-3 border-l-4 pl-9 text-space-cadet">7.3.1 Reuse</h3>
 
             <p class="
                     p-10
@@ -1798,7 +1837,7 @@ of the book to this topic (Chapters 16, 17, and 19).
 
             <article>
 
-            <h3 class=" font-semibold mt-6 mb-3 border-l-4 pl-9 text-[#384166]">7.3.2 Configuration management</h3>
+            <h3 class=" font-semibold mt-6 mb-3 border-l-4 pl-9 text-space-cadet">7.3.2 Configuration management</h3>
 
             <p class="
                     p-10
@@ -1924,7 +1963,7 @@ and configuration management in more detail in Chapter 25.
 
             <article>
                 
-            <h3 class=" font-semibold mt-6 mb-3 border-l-4 pl-9 text-[#384166]">7.3.3 Host-target development</h3>
+            <h3 class=" font-semibold mt-6 mb-3 border-l-4 pl-9 text-space-cadet">7.3.3 Host-target development</h3>
 
             <p class="
                     p-10
@@ -2182,7 +2221,7 @@ operating system. I discuss embedded systems engineering in Chapter 20.
 
             <article>
 
-            <h2 class=" font-bold mt-8 mb-4 text-[#0B735F] border-l-4 border-[#0CDC2A] pl-3">7.4 Open source development</h2>
+            <h2 class=" font-bold mt-8 mb-4 text-dark-spring-green border-l-4 border-lime-green pl-3">7.4 Open source development</h2>
 
             <p class="
                     p-10
@@ -2388,7 +2427,7 @@ As such, making a software system open source does not guarantee community invol
 
             <article>
 
-            <h3 class=" font-semibold mt-6 mb-3 border-l-4 pl-9 text-[#384166]">7.4.1 Open source licensing</h3>
+            <h3 class=" font-semibold mt-6 mb-3 border-l-4 pl-9 text-space-cadet">7.4.1 Open source licensing</h3>
 
             <p class="
                     p-10
