@@ -31,7 +31,7 @@
    }
 
    .ol-li-base {
-       @apply flex gap-4 items-start;
+       @apply flex gap-4 items-start pl-30;
    }
 
    .ol-li-span-num-base {
