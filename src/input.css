@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@tailwind utilities;
+
 @theme {
   --font-display: "mono";
 
@@ -8,4 +10,36 @@
   --color-dark-spring-green: #0B735F;
   --color-space-cadet:       #384166;
   --color-blanched-almon:    #E3DBA9;
+}
+
+@layer components {
+   .base-paragraph {
+       @apply p-10
+              rounded-xl
+              bg-bud-green/30
+              shadow-sm hover:shadow-md
+              border-l-4 border-dark-spring-green
+              text-space-cadet
+              leading-relaxed
+              transition-all duration-300
+              transform hover:-translate-y-0.5;
+   }
+
+   /* List Elements */
+   .ol-base {
+       @apply space-y-4 mt-5 mb-6;
+   }
+
+   .ol-li-base {
+       @apply flex gap-4 items-start;
+   }
+
+   .ol-li-span-num-base {
+       @apply flex-shrink-0 w-8 h-8 rounded-full bg-dark-spring-green text-blanched-almon flex items-center justify-center font-bold leading-none shadow-md;
+   }
+
+   .ol-li-span-par-base {
+       @apply leading-relaxed pt-0.5;
+   }
+   /* List Elements */
 }
