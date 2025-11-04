@@ -109,7 +109,7 @@ system, such as models of the system objects and their interactions. I discuss
 this COTS-based approach to development in Chapter 16.    
                 </p>
 
-                <p class="base-paragraph">
+                <div class="base-div">
                 I assume that most readers of this book will have had experience of
 program design and implementation. This is something that you acquire as you learn
 to program and master the elements of a programming language like Java or Python. You
@@ -117,19 +117,25 @@ will have probably learned about good programming practice in the programming
 languages that you have studied, as well as how to debug programs that you have
 developed. Therefore, I don’t cover programming topics here. Instead, this chapter
 has two aims:
-                </p>
-
-                <ol class="list-inside list-decimal">
-                    <li>
-                        To show how system modeling and architectural design (covered in Chapters 5
-and 6) are put into practice in developing an object-oriented software design.
-                    </li>
-                    <li>
-                        To introduce important implementation issues that are not usually covered in
-programming books. These include software reuse, configuration management,
-and open source development.
-                    </li>
-                </ol>
+                
+                    <ol class="ol-base">
+                        <li class="ol-li-base">
+                            <span class="ol-li-span-num-base">1</span>
+                            <span class="ol-li-span-par-base">
+                            To show how system modeling and architectural design (covered in Chapters 5
+    and 6) are put into practice in developing an object-oriented software design.
+                            </span>
+                        </li>
+                        <li class="ol-li-base">
+                            <span class="ol-li-span-num-base">2</span>
+                            <span class="ol-li-span-par-base">
+                            To introduce important implementation issues that are not usually covered in
+    programming books. These include software reuse, configuration management,
+    and open source development.
+                            </span>
+                        </li>
+                    </ol>
+                </div>
 
                 <p class="base-paragraph">
                 As there are a vast number of different development platforms,
@@ -577,48 +583,63 @@ discussed in Chapter 5, you rarely use all of these. Minimizing the number of mo
 produced reduces the costs of the design and the time required to complete the design process.
             </p>
 
-            <p class="base-paragraph">
+            <div class="base-div">
             When you use the UML to develop a design, you will normally develop two kinds
 of design model:
-            </p>
 
-            <ol class="list-inside list-decimal">
-                <li>
-                Structural models, which describe the static structure of the system using object
-classes and their relationships. Important relationships that may be documented
-at this stage are generalization (inheritance) relationships, uses/used-by relationships, and
-composition relationships
-                </li>
-                <li>
-                Dynamic models, which describe the dynamic structure of the system and show
-the interactions between the system objects. Interactions that may be documented include the sequence of service requests made by objects and the state
-changes that are triggered by these object interactions.
-                </li>
-            </ol>
+                <ol class="ol-base">
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">1</span>
+                        <span class="ol-li-span-par-base">
+                    Structural models, which describe the static structure of the system using object
+    classes and their relationships. Important relationships that may be documented
+    at this stage are generalization (inheritance) relationships, uses/used-by relationships, and
+    composition relationships.
+                        </span>
+                    </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">2</span>
+                        <span class="ol-li-span-par-base">
+                        Dynamic models, which describe the dynamic structure of the system and show
+        the interactions between the system objects. Interactions that may be documented include the sequence of service requests made by objects and the state
+        changes that are triggered by these object interactions.
+                        </span>
+                    </li>
+                </ol>
+            </div>
 
-            <p class="base-paragraph">
+            <div class="base-div">
             In the early stages of the design process, I think there are three models that are
-particularly useful for adding detail to use case and architectural models: 
-            </p>
+particularly useful for adding detail to use case and architectural models:
 
-            <ol class="list-inside list-decimal">
-                <li>
-                Subsystem models, which that show logical groupings of objects into coherent
-subsystems. These are represented using a form of class diagram with each subsystem shown as
-a package with enclosed objects. Subsystem models are static
-(structural) models.
-                </li>
-                <li>
-                 Sequence models, which show the sequence of object interactions. These are
-represented using a UML sequence or a collaboration diagram. Sequence
-models are dynamic models.
-                </li>
-                <li>
-                State machine model, which show how individual objects change their state in
-response to events. These are represented in the UML using state diagrams.
-State machine models are dynamic models.
-                </li>
-            </ol>
+                <ol class="ol-base">
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">1</span>
+                        <span class="ol-li-span-par-base">
+                    Subsystem models, which that show logical groupings of objects into coherent
+    subsystems. These are represented using a form of class diagram with each subsystem shown as
+    a package with enclosed objects. Subsystem models are static
+    (structural) models.
+                        </span>
+                    </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">2</span>
+                        <span class="ol-li-span-par-base">
+                    Sequence models, which show the sequence of object interactions. These are
+    represented using a UML sequence or a collaboration diagram. Sequence
+    models are dynamic models.
+                        </span>
+                    </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">3</span>
+                        <span class="ol-li-span-par-base">
+                    State machine model, which show how individual objects change their state in
+    response to events. These are represented in the UML using state diagrams.
+    State machine models are dynamic models.
+                        </span>
+                    </li>
+                </ol>
+            </div>
 
             <p class="base-paragraph">
             A subsystem model is a useful static model as it shows how a design is organized into
@@ -638,12 +659,62 @@ use case model then there should be a sequence model for each use case that
 you have identified.
             </p>
 
-            <p class="base-paragraph">
+            <div class="base-div">
             Figure 7.7 is an example of a sequence model, shown as a UML sequence diagram.
 This diagram shows the sequence of interactions that take place when an
 external system requests the summarized data from the weather station. You read
 sequence diagrams from top to bottom:
-            </p>
+
+                <ol class="ol-base">
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">1</span>
+                        <span class="ol-li-span-par-base">
+                    The SatComms object receives a request from the weather information system
+    to collect a weather report from a weather station. It acknowledges receipt of this request.
+    The stick arrowhead on the sent message indicates that the external
+    system does not wait for a reply but can carry on with other processing.
+                        </span>
+                    </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">2</span>
+                        <span class="ol-li-span-par-base">
+                    SatComms sends a message to WeatherStation, via a satellite link, to create a
+    summary of the collected weather data. Again, the stick arrowhead indicates
+    that SatComms does not suspend itself waiting for a reply.
+                        </span>
+                    </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">3</span>
+                        <span class="ol-li-span-par-base">
+                    WeatherStation sends a message to a Commslink object to summarize the
+    weather data. In this case, the squared-off style of arrowhead indicates that the
+    instance of the WeatherStation object class waits for a reply.
+                        </span>
+                    </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">4</span>
+                        <span class="ol-li-span-par-base">
+                    Commslink calls the summarize method in the object WeatherData and waits for
+    a reply.
+                        </span>
+                    </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">5</span>
+                        <span class="ol-li-span-par-base">
+                    The weather data summary is computed and returned to WeatherStation via the
+    Commslink object.
+                        </span>
+                    </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">6</span>
+                        <span class="ol-li-span-par-base">
+                    WeatherStation then calls the SatComms object to transmit the summarized
+    data to the weather information system, through the satellite communications
+    system.
+                        </span>
+                    </li>
+                </ol>
+            </div>
 
             <div class="flex flex-col items-center my-18">
                 <img 
@@ -652,38 +723,6 @@ sequence diagrams from top to bottom:
                 >
                 <p class=" text-sm text-space-cadet mt-2 italic">Figure 7.7: Sequence Diagram Describing Data Collection</p>
             </div>
-
-            <ol class="list-inside list-decimal">
-                <li>
-                The SatComms object receives a request from the weather information system
-to collect a weather report from a weather station. It acknowledges receipt of this request.
-The stick arrowhead on the sent message indicates that the external
-system does not wait for a reply but can carry on with other processing.
-                </li>
-                <li>
-                SatComms sends a message to WeatherStation, via a satellite link, to create a
-summary of the collected weather data. Again, the stick arrowhead indicates
-that SatComms does not suspend itself waiting for a reply.
-                </li>
-                <li>
-                WeatherStation sends a message to a Commslink object to summarize the
-weather data. In this case, the squared-off style of arrowhead indicates that the
-instance of the WeatherStation object class waits for a reply.
-                </li>
-                <li>
-                Commslink calls the summarize method in the object WeatherData and waits for
-a reply.
-                </li>
-                <li>
-                The weather data summary is computed and returned to WeatherStation via the
-Commslink object.
-                </li>
-                <li>
-                WeatherStation then calls the SatComms object to transmit the summarized
-data to the weather information system, through the satellite communications
-system.
-                </li>
-            </ol>
 
             <p class="base-paragraph">
             The SatComms and WeatherStation objects may be implemented as concurrent
@@ -714,46 +753,62 @@ responds to requests for various services.
                 <p class=" text-sm text-space-cadet mt-2 italic">Figure 7.8: Weather Station State Diagram</p>
             </div>
 
-            <p class="base-paragraph">
+            <div class="base-div">
             You can read this diagram as follows:
-            </p>
 
-            <ol class="list-inside list-decimal">
-
-                <li>
-                If the system state is Shutdown then it can respond to a restart(), a reconfigure(),
-or a powerSave() message. The unlabeled arrow with the black blob indicates
-that the Shutdown state is the initial state. A restart() message causes a transition
-to normal operation. Both the powerSave() and reconfigure() messages cause a
-transition to a state in which the system reconfigures itself. The state diagram
-shows that reconfiguration is only allowed if the system has been shut down.
-                </li>
-                <li>
-                In the Running state, the system expects further messages. If a shutdown()
-                message is received, the object returns to the shutdown state.
-                </li>
-                <li>
-                 If a reportWeather() message is received, the system moves to the Summarizing
-state. When the summary is complete, the system moves to a Transmitting state
-where the information is transmitted to the remote system. It then returns to the
-Running state.
-                </li>
-                <li>
-                If a reportStatus() message is received, the system moves to the Testing state,
-then the Transmitting state, before returning to the Running state.
-                </li>
-                <li>
-                If a signal from the clock is received, the system moves to the Collecting state,
-where it collects data from the instruments. Each instrument is instructed in turn
-to collect its data from the associated sensors.
-                </li>
-                <li>
-                 If a remoteControl() message is received, the system moves to a controlled state
-in which it responds to a different set of messages from the remote control
-room. These are not shown on this diagram.
-                </li>
-
-            </ol>
+                <ol class="ol-base">
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">1</span>
+                        <span class="ol-li-span-par-base">
+                    If the system state is Shutdown then it can respond to a restart(), a reconfigure(),
+    or a powerSave() message. The unlabeled arrow with the black blob indicates
+    that the Shutdown state is the initial state. A restart() message causes a transition
+    to normal operation. Both the powerSave() and reconfigure() messages cause a
+    transition to a state in which the system reconfigures itself. The state diagram
+    shows that reconfiguration is only allowed if the system has been shut down.
+                        </span>
+                    </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">2</span>
+                        <span class="ol-li-span-par-base">
+                    In the Running state, the system expects further messages. If a shutdown()
+                    message is received, the object returns to the shutdown state.
+                        </span>
+                    </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">3</span>
+                        <span class="ol-li-span-par-base">
+                    If a reportWeather() message is received, the system moves to the Summarizing
+    state. When the summary is complete, the system moves to a Transmitting state
+    where the information is transmitted to the remote system. It then returns to the
+    Running state.
+                        </span>
+                    </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">4</span>
+                        <span class="ol-li-span-par-base">
+                    If a reportStatus() message is received, the system moves to the Testing state,
+    then the Transmitting state, before returning to the Running state.
+                        </span>
+                    </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">5</span>
+                        <span class="ol-li-span-par-base">
+                    If a signal from the clock is received, the system moves to the Collecting state,
+    where it collects data from the instruments. Each instrument is instructed in turn
+    to collect its data from the associated sensors.
+                        </span>
+                    </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">6</span>
+                        <span class="ol-li-span-par-base">
+                    If a remoteControl() message is received, the system moves to a controlled state
+    in which it responds to a different set of messages from the remote control
+    room. These are not shown on this diagram.
+                        </span>
+                    </li>
+                </ol>
+            </div>
 
             <p class="base-paragraph">
             State diagrams are useful high-level models of a system or an object’s operation.
@@ -875,34 +930,44 @@ have configuration patterns for COTS systems. Patterns are a way of reusing the
 knowledge and experience of other designers.
             </p>
 
-            <p class="base-paragraph">
+            <div class="base-div">
             The four essential elements of design patterns were defined by the ‘Gang of Four’
 in their patterns book:
-            </p>
 
-            <ol class="list-inside list-decimal">
-                
-                <li>
-                A name that is a meaningful reference to the pattern.
-                </li>
-                <li>
-                 A description of the problem area that explains when the pattern may be
-applied.
-                </li>
-                <li>
-                 A solution description of the parts of the design solution, their relationships, and
-their responsibilities. This is not a concrete design description. It is a template
-for a design solution that can be instantiated in different ways. This is often
-expressed graphically and shows the relationships between the objects and
-object classes in the solution.
-                </li>
-                <li>
-                A statement of the consequences—the results and trade-offs—of applying the
-pattern. This can help designers understand whether or not a pattern can be used
-in a particular situation.
-                </li>
-
-            </ol>
+                <ol class="ol-base">        
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">1</span>
+                        <span class="ol-li-span-par-base">
+                    A name that is a meaningful reference to the pattern.
+                        </span>
+                    </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">2</span>
+                        <span class="ol-li-span-par-base">
+                    A description of the problem area that explains when the pattern may be
+    applied.
+                        </span>
+                    </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">3</span>
+                        <span class="ol-li-span-par-base">
+                    A solution description of the parts of the design solution, their relationships, and
+    their responsibilities. This is not a concrete design description. It is a template
+    for a design solution that can be instantiated in different ways. This is often
+    expressed graphically and shows the relationships between the objects and
+    object classes in the solution.
+                        </span>
+                    </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">4</span>
+                        <span class="ol-li-span-par-base">
+                    A statement of the consequences—the results and trade-offs—of applying the
+    pattern. This can help designers understand whether or not a pattern can be used
+    in a particular situation.
+                        </span>
+                    </li>
+                </ol>
+            </div>
 
             <p class="base-paragraph">
             Gamma and his co-authors break down the problem description into motivation
@@ -952,32 +1017,42 @@ Observer pattern.
                 <p class=" text-sm text-space-cadet mt-2 italic">Figure 7.12: A UML Model of the Observer Pattern</p>
             </div>
 
-            <p class="base-paragraph">
+            <div class="base-div">
             To use patterns in your design, you need to recognize that any design problem
 you are facing may have an associated pattern that can be applied. Examples of such
 problems, documented in the ‘Gang of Four’s original patterns book, include:
-            </p>
 
-            <ol class="list-inside list-decimal">
-                
-                <li>
-                Tell several objects that the state of some other object has changed (Observer
-pattern).
-                </li>
-                <li>
-                Tidy up the interfaces to a number of related objects that have
-often been developed incrementally (Façade pattern).
-                </li>
-                <li>
-                Provide a standard way of accessing the elements in a collection, irrespective of
-how that collection is implemented (Iterator pattern).
-                </li>
-                <li>
-                Allow for the possibility of extending the functionality of an existing class at
-run-time (Decorator pattern).
-                </li>
-
-            </ol>
+                <ol class="ol-base">
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">1</span>
+                        <span class="ol-li-span-par-base">
+                    Tell several objects that the state of some other object has changed (Observer
+    pattern).
+                        </span>
+                    </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">2</span>
+                        <span class="ol-li-span-par-base">
+                    Tidy up the interfaces to a number of related objects that have
+    often been developed incrementally (Façade pattern).
+                        </span>
+                    </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">3</span>
+                        <span class="ol-li-span-par-base">
+                    Provide a standard way of accessing the elements in a collection, irrespective of
+    how that collection is implemented (Iterator pattern).
+                        </span>
+                    </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">4</span>
+                        <span class="ol-li-span-par-base">
+                    Allow for the possibility of extending the functionality of an existing class at
+    run-time (Decorator pattern).
+                        </span>
+                    </li>
+                </ol>
+            </div>
 
             <p class="base-paragraph">
             Patterns support high-level, concept reuse. When you try to reuse executable
@@ -1026,39 +1101,46 @@ languages or tailoring and adapting generic, off-the-shelf systems to meet the s
 requirements of an organization.
             </p>
 
-            <p class="base-paragraph">
+            <div class="base-div">
             I assume that most readers of this book will understand programming principles
 and will have some programming experience. As this chapter is intended to offer a
 language-independent approach, I haven’t focused on issues of good programming
 practice as this has to use language-specific examples. Instead, I introduce some
 aspects of implementation that are particularly important to software engineering
 that are often not covered in programming texts. These are:
-            </p>
 
-            <ol class="list-inside list-decimal">
+                <ol class="ol-base">
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">1</span>
+                        <span class="ol-li-span-par-base">
+                    Reuse Most modern software is constructed by reusing existing components or
+    systems. When you are developing software, you should make as much use as
+    possible of existing code.
+                        </span>
+                    </li>
 
-                <li>
-                Reuse Most modern software is constructed by reusing existing components or
-systems. When you are developing software, you should make as much use as
-possible of existing code.
-                </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">2</span>
+                        <span class="ol-li-span-par-base">
+                    Configuration management During the development process, many different
+    versions of each software component are created. If you don’t keep track of
+    these versions in a configuration management system, you are liable to include
+    the wrong versions of these components in your system.
+                        </span>
+                    </li>
 
-                <li>
-                Configuration management During the development process, many different
-versions of each software component are created. If you don’t keep track of
-these versions in a configuration management system, you are liable to include
-the wrong versions of these components in your system.
-                </li>
-
-                <li>
-                Host-target development Production software does not usually execute on the
-same computer as the software development environment. Rather, you develop
-it on one computer (the host system) and execute it on a separate computer (the
-target system). The host and target systems are sometimes of the same type but,
-often they are completely different.
-                </li>
-
-            </ol>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">3</span>
+                        <span class="ol-li-span-par-base">
+                    Host-target development Production software does not usually execute on the
+    same computer as the software development environment. Rather, you develop
+    it on one computer (the host system) and execute it on a separate computer (the
+    target system). The host and target systems are sometimes of the same type but,
+    often they are completely different.
+                        </span>
+                    </li>
+                </ol>
+            </div>
 
             </article>
 
@@ -1079,48 +1161,62 @@ now generally used for business systems, scientific software, and, increasingly,
 embedded systems engineering.
             </p>
 
-            <p class="base-paragraph">
+            <div class="base-div">
             Software reuse is possible at a number of different levels:
-            </p>
 
-            <ol class="list-inside list-decimal">
+                <ol class="ol-base">
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">1</span>
+                        <span class="italic">The abstraction level</span>
+                        <span class="ol-li-span-par-base">
+                        At this level, you don’t reuse software directly but rather
+    use knowledge of successful abstractions in the design of your software. Design
+    patterns and architectural patterns (covered in Chapter 6) are ways of representing abstract
+    knowledge for reuse.
+                        </span>
+                    </li>
 
-                <li>
-                The abstraction level At this level, you don’t reuse software directly but rather
-use knowledge of successful abstractions in the design of your software. Design
-patterns and architectural patterns (covered in Chapter 6) are ways of representing abstract
-knowledge for reuse.
-                </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">2</span>
+                        <span class="italic">The object level</span>
+                        <span class="ol-li-span-par-base">
+                        At this level, you directly reuse objects from a library rather
+    than writing the code yourself. To implement this type of reuse, you have to find
+    appropriate libraries and discover if the objects and methods offer the functionality that you need.
+    For example, if you need to process mail messages in a Java
+    program, you may use objects and methods from a JavaMail library.
+                        </span>
+                    </li>
 
-                <li>
-                The object level At this level, you directly reuse objects from a library rather
-than writing the code yourself. To implement this type of reuse, you have to find
-appropriate libraries and discover if the objects and methods offer the functionality that you need.
-For example, if you need to process mail messages in a Java
-program, you may use objects and methods from a JavaMail library.
-                </li>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">3</span>
+                        <span class="italic">The component level</span>
+                        <span class="ol-li-span-par-base">
+                        Components are collections of objects and object classes
+    that operate together to provide related functions and services. You often have to
+    adapt and extend the component by adding some code of your own. An example
+    of component-level reuse is where you build your user interface using a framework. This is a
+    set of general object classes that implement event handling, display management, etc. You add
+    connections to the data to be displayed and
+    write code to define specific display details such as screen layout and colors.
+                        </span>
+                    </li>
 
-                <li>
-                The component level Components are collections of objects and object classes
-that operate together to provide related functions and services. You often have to
-adapt and extend the component by adding some code of your own. An example
-of component-level reuse is where you build your user interface using a framework. This is a
-set of general object classes that implement event handling, display management, etc. You add
-connections to the data to be displayed and
-write code to define specific display details such as screen layout and colors.
-                </li>
-
-                <li>
-                The system level At this level, you reuse entire application systems. This usually
-involves some kind of configuration of these systems. This may be done by
-adding and modifying code (if you are reusing a software product line) or by
-using the system’s own configuration interface. Most commercial systems are
-now built in this way where generic COTS (commercial off-the-shelf) systems
-are adapted and reused. Sometimes this approach may involve reusing several
-different systems and integrating these to create a new system.
-                </li>
-
-            </ol>
+                    <li class="ol-li-base">
+                        <span class="ol-li-span-num-base">4</span>
+                        <span class="italic">The system level</span>
+                        <span class="ol-li-span-par-base">
+                        At this level, you reuse entire application systems. This usually
+    involves some kind of configuration of these systems. This may be done by
+    adding and modifying code (if you are reusing a software product line) or by
+    using the system’s own configuration interface. Most commercial systems are
+    now built in this way where generic COTS (commercial off-the-shelf) systems
+    are adapted and reused. Sometimes this approach may involve reusing several
+    different systems and integrating these to create a new system.
+                        </span>
+                    </li>
+                </ol>
+            </div>
 
             <p class="base-paragraph">
             By reusing existing software, you can develop new systems more quickly, with
