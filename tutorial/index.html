@@ -17,19 +17,19 @@
         <section>
 
             <article>
-                <h1>7</h1>
+                <h1><!-- Chapter --> 7</h1>
 
                 <h1><a>Design and implementation</a></h1>
             </article>    
             
-            <article class="mb-8">
-                <h2 class=" font-semibold text-space-cadet mb-4 border-b-2 border-lime-green pb-1 inline-block">Objectives</h2>
+            <article>
+                <h2>Objectives</h2>
 
-                <p class="p-5 mb-4 text-space-cadet leading-relaxed">
+                <p>
                     The objectives of this chapter are to introduce object-oriented software design using the UML and highlight important implementation concerns. When you have read this chapter, you will:
                 </p>
 
-                <ul class="list-inside list-disc ml-5 space-y-2">
+                <ul>
                     <li>understand the most important activities in a general, object-oriented design process;</li>
                     <li>understand some of the different models that may be used to document an object-oriented design;</li>
                     <li>know about the idea of design patterns and how these are a way of reusing design knowledge and experience;</li>
@@ -40,7 +40,7 @@
             <article>
                 <h2>Contents</h2>
 
-                <ol class="list-inside list-decimal">
+                <ol>
                     <li>Object-oriented design using the UML</li>
                     <li>Design patterns</li>
                     <li>Implementation issues</li>
@@ -55,7 +55,7 @@
         <section>
 
             <article>
-                <p class="base-paragraph">
+                <p class="p-paragraph">
                 Software design and implementation is the stage in the software engineering process
 at which an executable software system is developed. For some simple systems, software design and implementation
 is software engineering, and all other activities are merged with this process. However, for large systems,
@@ -63,7 +63,7 @@ software design and implementation is only one of a set of processes (requiremen
 and validation, etc.) involved in software engineering.
                 </p>
 
-                <p class="base-paragraph">
+                <p class="p-paragraph">
                 Software design and implementation activities are invariably interleaved.
 Software design is a creative activity in which you identify software components and
 their relationships, based on a customer’s requirements. Implementation is the
@@ -75,7 +75,7 @@ isn’t always necessary or appropriate to describe the design in detail using t
 or other design description language.
                 </p>
 
-                <p class="base-paragraph">
+                <p class="p-paragraph">
 Design and implementation are closely linked and you should normally take
 implementation issues into account when developing a design. For example, using
 the UML to document a design may be the right thing to do if you are programming
@@ -86,7 +86,7 @@ As I discussed in Chapter 3, agile methods usually work from informal sketches o
 the design and leave many design decisions to programmers.                    
                 </p>
 
-                <p class="base-paragraph">
+                <p class="p-paragraph">
                 One of the most important implementation decisions that has to be made at an
 early stage of a software project is whether or not you should buy or build the application
 software. In a wide range of domains, it is now possible to buy off-the-shelf
@@ -96,7 +96,7 @@ that is already used in hospitals. It can be cheaper and faster to use this appr
 rather than developing a system in a conventional programming language.    
                 </p>
 
-                <p class="base-paragraph">
+                <p class="p-paragraph">
                 When you develop an application in this way, the design process
 becomes concerned with how to use the configuration features of that system to
 deliver the system requirements. You don’t usually develop design models of the
@@ -104,7 +104,7 @@ system, such as models of the system objects and their interactions. I discuss
 this COTS-based approach to development in Chapter 16.    
                 </p>
 
-                <div class="base-div">
+                <div class="div-paragraph">
                 I assume that most readers of this book will have had experience of
 program design and implementation. This is something that you acquire as you learn
 to program and master the elements of a programming language like Java or Python. You
@@ -114,17 +114,17 @@ developed. Therefore, I don’t cover programming topics here. Instead, this cha
 has two aims:
                 </div>
 
-                    <ol class="ol-base">
-                        <li class="ol-li-base">
-                            <span class="ol-li-span-num-base">1</span>
-                            <span class="ol-li-span-par-base">
+                    <ol class="ol-element">
+                        <li class="ol-li-element">
+                            <span class="ol-li-span-element-number">1</span>
+                            <span class="ol-li-span-element-paragraph">
                             To show how system modeling and architectural design (covered in Chapters 5
     and 6) are put into practice in developing an object-oriented software design.
                             </span>
                         </li>
-                        <li class="ol-li-base">
-                            <span class="ol-li-span-num-base">2</span>
-                            <span class="ol-li-span-par-base">
+                        <li class="ol-li-element">
+                            <span class="ol-li-span-element-number">2</span>
+                            <span class="ol-li-span-element-paragraph">
                             To introduce important implementation issues that are not usually covered in
     programming books. These include software reuse, configuration management,
     and open source development.
@@ -132,7 +132,7 @@ has two aims:
                         </li>
                     </ol>
 
-                <p class="base-paragraph">
+                <p class="p-paragraph">
                 As there are a vast number of different development platforms,
 the chapter is not biased towards any particular programming language or
 implementation technology. Therefore, I have presented all examples using the
@@ -145,9 +145,9 @@ UML rather than in a programming language such as Java or Python
         
         <section>    
             <article>
-                <h2 class="heading2-contents-base">7.1 Object-oriented design using the UML</h2>
+                <h2 class="h2-subchapter">7.1 Object-oriented design using the UML</h2>
 
-                <p class="base-paragraph">
+                <p class="p-paragraph">
                 An object-oriented system is made up of interacting objects that maintain their own
 local state and provide operations on that state. The representation of the state is private and
 cannot be accessed directly from outside the object. Object-oriented design processes involve
@@ -156,7 +156,7 @@ objects in the system and their interactions. When the design is realized as an 
 the objects are created dynamically from these class definitions.
                 </p>
 
-                <p class="base-paragraph">
+                <p class="p-paragraph">
                 Object-oriented systems are easier to change than systems developed using functional
 approaches. Objects include both data and operations to manipulate that data. They may therefore be
 understood and modified as stand-alone entities. Changing the implementation of an object or adding
@@ -165,59 +165,59 @@ is often a clear mapping between real-world entities (such as hardware component
 objects in the system. This improves the understandability, and hence the maintainability, of the design.
                 </p>
 
-                <div class="base-div">
+                <div class="div-paragraph">
                 To develop a system design from concept to detailed, object-oriented design,
 there are several things that you need to do:
                 </div>
 
-                    <ol class="ol-base">
-                        <li class="ol-li-base">
-                            <span class="ol-li-span-num-base">
+                    <ol class="ol-element">
+                        <li class="ol-li-element">
+                            <span class="ol-li-span-element-number">
                                 1
                             </span>
-                            <span class="ol-li-span-par-base">
+                            <span class="ol-li-span-element-paragraph">
                                 Understand and define the context and the external interactions with the system.
                             </span>
                         </li>
 
-                        <li class="ol-li-base">
-                            <span class="ol-li-span-num-base">
+                        <li class="ol-li-element">
+                            <span class="ol-li-span-element-number">
                                 2
                             </span>
-                            <span class="ol-li-span-par-base">
+                            <span class="ol-li-span-element-paragraph">
                                 Design the system architecture.
                             </span>
                         </li>
 
-                        <li class="ol-li-base">
-                            <span class="ol-li-span-num-base">
+                        <li class="ol-li-element">
+                            <span class="ol-li-span-element-number">
                                 3
                             </span>
-                            <span class="ol-li-span-par-base">
+                            <span class="ol-li-span-element-paragraph">
                                 Identify the principal objects in the system.
                             </span>
                         </li>
 
-                        <li class="ol-li-base">
-                            <span class="ol-li-span-num-base">
+                        <li class="ol-li-element">
+                            <span class="ol-li-span-element-number">
                                 4
                             </span>
-                            <span class="ol-li-span-par-base">
+                            <span class="ol-li-span-element-paragraph">
                                 Develop design models.
                             </span>
                         </li>
 
-                        <li class="ol-li-base">
-                            <span class="ol-li-span-num-base">
+                        <li class="ol-li-element">
+                            <span class="ol-li-span-element-number">
                                 5
                             </span>
-                            <span class="ol-li-span-par-base">
+                            <span class="ol-li-span-element-paragraph">
                                 Specify interfaces.
                             </span>
                         </li>
                     </ol>
 
-                <p class="base-paragraph">
+                <p class="p-paragraph">
                 Like all creative activities, design is not a clear-cut, sequential process. You
 develop a design by getting ideas, proposing solutions, and refining these solutions
 as information becomes available. You inevitably have to backtrack and retry when
@@ -228,7 +228,7 @@ be thought of as a neat sequence of activities. In fact, all of the above activi
 interleaved and so influence each other.
                 </p>
 
-                <p class="base-paragraph">
+                <p class="p-paragraph">
                 I illustrate these process activities by designing part of the software
 for the wilderness weather station that I introduced in Chapter 1. Wilderness weather stations are
 deployed in remote areas. Each weather station records local weather information and
@@ -239,9 +239,9 @@ periodically transfers this to a weather information system, using a satellite l
 
 
             <article>
-                <h3 class="heading3-base">7.1.1 System context and interactions</h3>
+                <h3 class="h3-sub-subchapter">7.1.1 System context and interactions</h3>
 
-                <p class="base-paragraph">
+                <p class="p-paragraph"> 
                 The first stage in any software design process is to develop an understanding of the
 relationships between the software that is being designed and its external environment. This is
 essential for deciding how to provide the required system functionality and how to structure the
@@ -249,7 +249,7 @@ system to communicate with its environment. Understanding of the context also le
 boundaries of the system.
                 </p>
 
-                <p class="base-paragraph">
+                <p class="p-paragraph">
                 Setting the system boundaries helps you decide what features are implemented
 in the system being designed and what features are in other associated systems. In
 this case, you need to decide how functionality is distributed between the control
@@ -257,31 +257,31 @@ system for all of the weather stations, and the embedded software in the weather
 station itself.
                 </p>
 
-                <div class="base-div">
+                <div class="div-paragraph">
                 System context models and interaction models present complementary views of
 the relationships between a system and its environment:
                 </div>
 
-                    <ol class="ol-base">
-                        <li class="ol-li-base">
-                            <span class="ol-li-span-num-base">
+                    <ol class="ol-element">
+                        <li class="ol-li-element">
+                            <span class="ol-li-span-element-number">
                                 1
                             </span>
-                            <span class="ol-li-span-par-base">
+                            <span class="ol-li-span-element-paragraph">
                                 A system context model is a structural model that demonstrates the other systems in the environment of the system being developed.
                             </span>
                         </li>
-                        <li class="ol-li-base">
-                            <span class="ol-li-span-num-base">
+                        <li class="ol-li-element">
+                            <span class="ol-li-span-element-number">
                                 2
                             </span>
-                            <span class="ol-li-span-par-base">
+                            <span class="ol-li-span-element-paragraph">
                                 An interaction model is a dynamic model that shows how the system interacts with its environment as it is used.
                             </span>
                         </li>
                     </ol>
 
-                <p class="base-paragraph">
+                <p class="p-paragraph">
                 The context model of a system may be represented using associations. Associations
 simply show that there are some relationships between the entities involved in the
 association. The nature of the relationships is now specified. You may therefore document the
@@ -301,7 +301,7 @@ information system.
                     <p class=" text-sm text-space-cadet mt-2 italic">Figure 7.1: System Context for the Weather Station</p>
                 </div>
 
-                <p class="base-paragraph">
+                <p class="p-paragraph">
                 When you model the interactions of a system with its environment you should use
 an abstract approach that does not include too much detail. One way to do this is to
 use a use case model. As I discussed in Chapters 4 and 5, each use case represents an
@@ -309,7 +309,7 @@ interaction with the system. Each possible interaction is named in an ellipse an
 external entity involved in the interaction is represented by a stick figure.    
                 </p>
 
-                <p class="base-paragraph">
+                <p class="p-paragraph">
                 The use case model for the weather station is shown in Figure 7.2. This shows
 that the weather station interacts with the weather information system to report
 weather data and the status of the weather station hardware. Other interactions are
@@ -326,7 +326,7 @@ as well as human users.
                     <p class=" text-sm text-space-cadet mt-2 italic">Figure 7.2: Weather Station Use Cases</p>
                 </div>
 
-                <p class="base-paragraph">
+                <p class="p-paragraph">
                 Each of these use cases should be described in structured natural language. This
 helps designers identify objects in the system and gives them an understanding of
 what the system is intended to do. I use a standard format for this description that
@@ -348,22 +348,22 @@ Figure 7.2. Examples of some other use cases are on the Web.
 
             <article>
 
-            <h3 class="heading3-base">7.1.2 Architectural design</h3>
+            <h3 class="h3-sub-subchapter">7.1.2 Architectural design</h3>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Once the interactions between the software system and the system’s environment
 have been defined, you use this information as a basis for designing the system
 architecture. Of course, you need to combine this with your general knowledge of
 the principles of architectural design and with more detailed domain knowledge.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             You identify the major components that make up the system and their interactions,
 and then may organize the components using an architectural pattern such as a layered or
 client–server model. However, this is not essential at this stage.    
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             The high-level architectural design for the weather station software is shown in
 Figure 7.4. The weather station is composed of independent subsystems that communicate by
 broadcasting messages on a common infrastructure, shown as the
@@ -381,7 +381,7 @@ Chapter 6.
                 <p class=" text-sm text-space-cadet mt-2 italic">Figure 7.4: High-level Architecture of the Weather Station</p>
             </div>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             For example, when the communications subsystem receives a control command, such
 as shutdown, the command is picked up by each of the other subsystems, which then shut
 themselves down in the correct way. The key benefit of this
@@ -389,7 +389,7 @@ architecture is that it is easy to support different configurations of subsystem
 because the sender of a message does not need to address the message to a particular subsystem.    
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Figure 7.5 shows the architecture of the data collection subsystem, which is
 included in Figure 7.4. The Transmitter and Receiver objects are concerned with
 managing communications and the WeatherData object encapsulates the information
@@ -412,9 +412,9 @@ Chapter 20.
 
             <article>
 
-            <h3 class="heading3-base">7.1.3 Object class identification</h3>
+            <h3 class="h3-sub-subchapter">7.1.3 Object class identification</h3>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             By this stage in the design process, you should have some ideas about
 the essential objects in the system that you are designing. As your understanding of the
 design develops, you refine these ideas about the system objects. The use case
@@ -427,23 +427,23 @@ use cases. With these objects in mind, you can start to identify the object clas
 in the system.   
             </p>
             
-            <div class="base-div">
+            <div class="div-paragraph">
             There have been various proposals made about how to identify object classes in
 object-oriented systems:
             </div>
 
-                <ol class="ol-base">
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">1</span>
-                        <span class="ol-li-span-par-base">
+                <ol class="ol-element">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">1</span>
+                        <span class="ol-li-span-element-paragraph">
                     Use a grammatical analysis of a natural language description of the system to be
     constructed. Objects and attributes are nouns; operations or services are verbs
     (Abbott, 1983).
                         </span>
                     </li>
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">2</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">2</span>
+                        <span class="ol-li-span-element-paragraph">
                     Use tangible entities (things) in the application domain such as aircraft, roles
     such as manager or doctor, events such as requests, interactions such as meetings, locations such
     as offices, organizational units such as companies, and
@@ -451,9 +451,9 @@ object-oriented systems:
     et al., 1990).
                         </span>
                     </li>
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">3</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">3</span>
+                        <span class="ol-li-span-element-paragraph">
                     Use a scenario-based analysis where various scenarios of system use are identified
     and analyzed in turn. As each scenario is analyzed, the team responsible for
     the analysis must identify the required objects, attributes, and operations (Beck
@@ -462,7 +462,7 @@ object-oriented systems:
                     </li>
                 </ol>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             In practice, you have to use several knowledge sources to discover object classes.
 Object classes, attributes, and operations that are initially identified from the informal
 system description can be a starting point for the design. Further information
@@ -471,7 +471,7 @@ and extend the initial objects. This information can be collected from requireme
 documents, discussions with users, or from analyses of existing systems.    
             </p>
 
-            <div class="base-div">
+            <div class="div-paragraph">
             In the wilderness weather station, object identification is based on the tangible
 hardware in the system. I don’t have space to include all the system objects here, but
 I have shown five object classes in Figure 7.6. The Ground thermometer,
@@ -487,10 +487,10 @@ description and the scenario (use case) description:
                     <p class=" text-sm text-space-cadet mt-2 italic">Figure 7.6: Weather Station Objects</p>
                 </div>
 
-                <ol class="ol-base-in">
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">1</span>
-                        <span class="ol-li-span-par-base">
+                <ol class="ol-element-inside">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">1</span>
+                        <span class="ol-li-span-element-paragraph">
                     The WeatherStation object class provides the basic interface of the weather
     station with its environment. Its operations reflect the interactions shown in <a href="#figure7.3" target="_blank">Figure 7.3</a>.
     In this case, I use a single object class to encapsulate all of these interactions, but in
@@ -498,18 +498,18 @@ description and the scenario (use case) description:
                         </span>
                     </li>
 
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">2</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">2</span>
+                        <span class="ol-li-span-element-paragraph">
                     The WeatherData object class is responsible for processing the report weather
     command. It sends the summarized data from the weather station instruments to
     the weather information system.
                         </span>
                     </li>
 
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">3</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">3</span>
+                        <span class="ol-li-span-element-paragraph">
                     The Ground thermometer, Anemometer, and Barometer object classes are
     directly related to instruments in the system. They reflect tangible hardware
     entities in the system and the operations are concerned with controlling that
@@ -521,7 +521,7 @@ description and the scenario (use case) description:
                 </ol>
             </div>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             You use knowledge of the application domain to identify other objects, attributes,
 and services. We know that weather stations are often located in remote places and
 include various instruments that sometimes go wrong. Instrument failures should be
@@ -530,7 +530,7 @@ the correct functioning of the instruments. There are many remote weather statio
 so each weather station should have its own identifier.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             At this stage in the design process, you should focus on the objects themselves,
 without thinking about how these might be implemented. Once you have identified the
 objects, you then refine the object design. You look for common features and then
@@ -546,9 +546,9 @@ the superclass, such as an attribute that maintains the frequency of data collec
 
             <article>
 
-            <h3 class="heading3-base">7.1.4 Design models</h3>
+            <h3 class="h3-sub-subchapter">7.1.4 Design models</h3>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Design or system models, as I discussed in Chapter 5, show the objects or object classes
 in a system. They also show the associations and relationships between these entities.
 These models are the bridge between the system requirements and the implementation
@@ -557,7 +557,7 @@ between them and the system requirements. However, they also have to
 include enough detail for programmers to make implementation decisions.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Generally, you get around this type of conflict by developing models at different
 levels of detail. Where there are close links between requirements engineers, designers, and
 programmers, then abstract models may be all that are required. Specific
@@ -568,7 +568,7 @@ an organization but implemented elsewhere), then more detailed models are likely
 be needed.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             An important step in the design process, therefore, is to decide on the design
 models that you need and the level of detail required in these models. This depends
 on the type of system that is being developed. You design a sequential data-processing system
@@ -578,24 +578,24 @@ discussed in Chapter 5, you rarely use all of these. Minimizing the number of mo
 produced reduces the costs of the design and the time required to complete the design process.
             </p>
 
-            <div class="base-div">
+            <div class="div-paragraph">
             When you use the UML to develop a design, you will normally develop two kinds
 of design model:
             </div>
 
-            <ol class="ol-base">
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">1</span>
-                        <span class="ol-li-span-par-base">
+            <ol class="ol-element">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">1</span>
+                        <span class="ol-li-span-element-paragraph">
                     Structural models, which describe the static structure of the system using object
     classes and their relationships. Important relationships that may be documented
     at this stage are generalization (inheritance) relationships, uses/used-by relationships, and
     composition relationships.
                         </span>
                     </li>
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">2</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">2</span>
+                        <span class="ol-li-span-element-paragraph">
                         Dynamic models, which describe the dynamic structure of the system and show
         the interactions between the system objects. Interactions that may be documented include the sequence of service requests made by objects and the state
         changes that are triggered by these object interactions.
@@ -603,32 +603,32 @@ of design model:
                     </li>
                 </ol>
                 
-            <div class="base-div">
+            <div class="div-paragraph">
             In the early stages of the design process, I think there are three models that are
 particularly useful for adding detail to use case and architectural models:
             </div>
 
-                <ol class="ol-base">
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">1</span>
-                        <span class="ol-li-span-par-base">
+                <ol class="ol-element">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">1</span>
+                        <span class="ol-li-span-element-paragraph">
                     Subsystem models, which that show logical groupings of objects into coherent
     subsystems. These are represented using a form of class diagram with each subsystem shown as
     a package with enclosed objects. Subsystem models are static
     (structural) models.
                         </span>
                     </li>
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">2</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">2</span>
+                        <span class="ol-li-span-element-paragraph">
                     Sequence models, which show the sequence of object interactions. These are
     represented using a UML sequence or a collaboration diagram. Sequence
     models are dynamic models.
                         </span>
                     </li>
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">3</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">3</span>
+                        <span class="ol-li-span-element-paragraph">
                     State machine model, which show how individual objects change their state in
     response to events. These are represented in the UML using state diagrams.
     State machine models are dynamic models.
@@ -636,7 +636,7 @@ particularly useful for adding detail to use case and architectural models:
                     </li>
                 </ol>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             A subsystem model is a useful static model as it shows how a design is organized into
 logically related groups of objects. I have already shown this type of model in Figure 7.4
 to show the subsystems in the weather mapping system. As well as subsystem models,
@@ -646,7 +646,7 @@ a danger in doing too much modeling. You should not make detailed decisions abou
 implementation that really should be left to the system programmers.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Sequence models are dynamic models that describe, for each mode of interaction,
 the sequence of object interactions that take place. When documenting a design, you
 should produce a sequence model for each significant interaction. If you have developed a
@@ -654,7 +654,7 @@ use case model then there should be a sequence model for each use case that
 you have identified.
             </p>
 
-            <div class="base-div">
+            <div class="div-paragraph">
             Figure 7.7 is an example of a sequence model, shown as a UML sequence diagram.
 This diagram shows the sequence of interactions that take place when an
 external system requests the summarized data from the weather station. You read
@@ -668,49 +668,49 @@ sequence diagrams from top to bottom:
                     <p class=" text-sm text-space-cadet mt-2 italic">Figure 7.7: Sequence Diagram Describing Data Collection</p>
                 </div>
 
-                <ol class="ol-base-in">
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">1</span>
-                        <span class="ol-li-span-par-base">
+                <ol class="ol-element-inside">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">1</span>
+                        <span class="ol-li-span-element-paragraph">
                     The SatComms object receives a request from the weather information system
     to collect a weather report from a weather station. It acknowledges receipt of this request.
     The stick arrowhead on the sent message indicates that the external
     system does not wait for a reply but can carry on with other processing.
                         </span>
                     </li>
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">2</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">2</span>
+                        <span class="ol-li-span-element-paragraph">
                     SatComms sends a message to WeatherStation, via a satellite link, to create a
     summary of the collected weather data. Again, the stick arrowhead indicates
     that SatComms does not suspend itself waiting for a reply.
                         </span>
                     </li>
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">3</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">3</span>
+                        <span class="ol-li-span-element-paragraph">
                     WeatherStation sends a message to a Commslink object to summarize the
     weather data. In this case, the squared-off style of arrowhead indicates that the
     instance of the WeatherStation object class waits for a reply.
                         </span>
                     </li>
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">4</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">4</span>
+                        <span class="ol-li-span-element-paragraph">
                     Commslink calls the summarize method in the object WeatherData and waits for
     a reply.
                         </span>
                     </li>
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">5</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">5</span>
+                        <span class="ol-li-span-element-paragraph">
                     The weather data summary is computed and returned to WeatherStation via the
     Commslink object.
                         </span>
                     </li>
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">6</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">6</span>
+                        <span class="ol-li-span-element-paragraph">
                     WeatherStation then calls the SatComms object to transmit the summarized
     data to the weather information system, through the satellite communications
     system.
@@ -719,14 +719,14 @@ sequence diagrams from top to bottom:
                 </ol>
             </div>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             The SatComms and WeatherStation objects may be implemented as concurrent
 processes, whose execution can be suspended and resumed. The SatComms object
 instance listens for messages from the external system, decodes these messages and
 initiates weather station operations.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Sequence diagrams are used to model the combined behavior of a group of
 objects but you may also want to summarize the behavior of an object or a subsystem
 in response to messages and events. To do this, you can use a state machine model
@@ -735,7 +735,7 @@ receives. The UML includes state diagrams, initially invented by Harel (1987) to
 describe state machine models.
             </p>
 
-            <div class="base-div">
+            <div class="div-paragraph">
             <p>Figure 7.8 is a state diagram for the weather station system that shows how it
 responds to requests for various services.</p>
             <p>You can read this diagram as follows:</p>
@@ -748,10 +748,10 @@ responds to requests for various services.</p>
                     <p class=" text-sm text-space-cadet mt-2 italic">Figure 7.8: Weather Station State Diagram</p>
                 </div>
 
-                <ol class="ol-base-in">
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">1</span>
-                        <span class="ol-li-span-par-base">
+                <ol class="ol-element-inside">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">1</span>
+                        <span class="ol-li-span-element-paragraph">
                     If the system state is Shutdown then it can respond to a restart(), a reconfigure(),
     or a powerSave() message. The unlabeled arrow with the black blob indicates
     that the Shutdown state is the initial state. A restart() message causes a transition
@@ -760,40 +760,40 @@ responds to requests for various services.</p>
     shows that reconfiguration is only allowed if the system has been shut down.
                         </span>
                     </li>
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">2</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">2</span>
+                        <span class="ol-li-span-element-paragraph">
                     In the Running state, the system expects further messages. If a shutdown()
                     message is received, the object returns to the shutdown state.
                         </span>
                     </li>
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">3</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">3</span>
+                        <span class="ol-li-span-element-paragraph">
                     If a reportWeather() message is received, the system moves to the Summarizing
     state. When the summary is complete, the system moves to a Transmitting state
     where the information is transmitted to the remote system. It then returns to the
     Running state.
                         </span>
                     </li>
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">4</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">4</span>
+                        <span class="ol-li-span-element-paragraph">
                     If a reportStatus() message is received, the system moves to the Testing state,
     then the Transmitting state, before returning to the Running state.
                         </span>
                     </li>
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">5</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">5</span>
+                        <span class="ol-li-span-element-paragraph">
                     If a signal from the clock is received, the system moves to the Collecting state,
     where it collects data from the instruments. Each instrument is instructed in turn
     to collect its data from the associated sensors.
                         </span>
                     </li>
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">6</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">6</span>
+                        <span class="ol-li-span-element-paragraph">
                     If a remoteControl() message is received, the system moves to a controlled state
     in which it responds to a different set of messages from the remote control
     room. These are not shown on this diagram.
@@ -802,7 +802,7 @@ responds to requests for various services.</p>
                 </ol>
             </div>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             State diagrams are useful high-level models of a system or an object’s operation.
 You don’t usually need a state diagram for all of the objects in the system. Many of
 the objects in a system are relatively simple and a state model adds unnecessary
@@ -815,16 +815,16 @@ detail to the design.
 
             <article>
 
-            <h3 class="heading3-base">7.1.5 Interface specification</h3>
+            <h3 class="h3-sub-subchapter">7.1.5 Interface specification</h3>
             
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             An important part of any design process is the specification of the interfaces between
 the components in the design. You need to specify interfaces so that objects and subsystems can be
 designed in parallel. Once an interface has been specified, the developers of other objects may
 assume that interface will be implemented.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Interface design is concerned with specifying the detail of the interface to an
 object or to a group of objects. This means defining the signatures and semantics of the services
 that are provided by the object or by a group of objects. Interfaces can be
@@ -835,7 +835,7 @@ language (OCL). I explain this in Chapter 17, where I cover component-based soft
 I also show an alternative way to represent interfaces in the UML.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             You should not include details of the data representation in an interface design,
 as attributes are not defined in an interface specification. However, you should
 include operations to access and update data. As the data representation is hidden, it
@@ -846,7 +846,7 @@ that use the stack. By contrast, it often makes sense to expose the attributes i
 static design model, as this is the most compact way of illustrating essential characteristics of the objects.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             There is not a simple 1:1 relationship between objects and interfaces. The same
 object may have several interfaces, each of which is a viewpoint on the methods that
 it provides. This is supported directly in Java, where interfaces are declared separately from
@@ -854,7 +854,7 @@ objects and objects ‘implement’ interfaces. Equally, a group of objects
 may all be accessed through a single interface.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Figure 7.9 shows two interfaces that may be defined for the weather station. The
 left-hand interface is a reporting interface that defines the operation names that are
 used to generate weather and status reports. These map directly to operations in the
@@ -880,9 +880,9 @@ method, shown in <a href="#figure7.6" target="_blank">Figure 7.6</a>.
         <section>
             <article>
 
-            <h2 class="heading2-contents-base">7.2 Design patterns</h2>
+            <h2 class="h2-subchapter">7.2 Design patterns</h2>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Design patterns were derived from ideas put forward by Christopher Alexander
 (Alexander et al., 1977), who suggested that there were certain common patterns of
 building design that were inherently pleasing and effective. The pattern is a description
@@ -892,12 +892,12 @@ as a description of accumulated wisdom and experience, a well-tried solution to 
 
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             A quote from the Hillside Group web site (<a href="http://hillside.net" target="_blank" rel="noopener">http://hillside.net</a>), which is dedicated
 to maintaining information about patterns, encapsulates their role in reuse:
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             <i>
             Patterns and Pattern Languages are ways to describe best practices, good
 designs, and capture experience in a way that it is possible for others to reuse
@@ -905,7 +905,7 @@ this experience.
             </i>
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Patterns have made a huge impact on object-oriented software design. As well as
 being tested solutions to common problems, they have become a vocabulary for talking about a
 design. You can therefore explain your design by describing the patterns
@@ -917,7 +917,7 @@ of books by authors from Siemens, a large European technology company
 and Jain, 2004; Schmidt et al., 2000).
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Design patterns are usually associated with object-oriented design. Published
 patterns often rely on object characteristics such as inheritance and polymorphism to
 provide generality. However, the general principle of encapsulating experience in a pattern
@@ -926,28 +926,28 @@ have configuration patterns for COTS systems. Patterns are a way of reusing the
 knowledge and experience of other designers.
             </p>
 
-            <div class="base-div">
+            <div class="div-paragraph">
             The four essential elements of design patterns were defined by the ‘Gang of Four’
 in their patterns book:
             </div>
 
-                <ol class="ol-base">        
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">1</span>
-                        <span class="ol-li-span-par-base">
+                <ol class="ol-element">        
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">1</span>
+                        <span class="ol-li-span-element-paragraph">
                     A name that is a meaningful reference to the pattern.
                         </span>
                     </li>
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">2</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">2</span>
+                        <span class="ol-li-span-element-paragraph">
                     A description of the problem area that explains when the pattern may be
     applied.
                         </span>
                     </li>
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">3</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">3</span>
+                        <span class="ol-li-span-element-paragraph">
                     A solution description of the parts of the design solution, their relationships, and
     their responsibilities. This is not a concrete design description. It is a template
     for a design solution that can be instantiated in different ways. This is often
@@ -955,9 +955,9 @@ in their patterns book:
     object classes in the solution.
                         </span>
                     </li>
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">4</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">4</span>
+                        <span class="ol-li-span-element-paragraph">
                     A statement of the consequences—the results and trade-offs—of applying the
     pattern. This can help designers understand whether or not a pattern can be used
     in a particular situation.
@@ -965,14 +965,14 @@ in their patterns book:
                     </li>
                 </ol>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Gamma and his co-authors break down the problem description into motivation
 (a description of why the pattern is useful) and applicability (a description of situations
 in which the pattern may be used). Under the description of the solution, they describe
 the pattern structure, participants, collaborations, and implementation.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             To illustrate pattern description, I use the Observer pattern, taken from the book
 by Gamma et al. (Gamma et al., 1995). This is shown in Figure 7.10. In my description, I use the
 four essential description elements and also include a brief statement
@@ -998,7 +998,7 @@ which shows two graphical presentations of the same data set.
                 <p class=" text-sm text-space-cadet mt-2 italic">Figure 7.11: Multiple Displays</p>
             </div>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Graphical representations are normally used to illustrate the object classes in
 patterns and their relationships. These supplement the pattern description and add detail to
 the solution description. Figure 7.12 is the representation in UML of the
@@ -1013,44 +1013,44 @@ Observer pattern.
                 <p class=" text-sm text-space-cadet mt-2 italic">Figure 7.12: A UML Model of the Observer Pattern</p>
             </div>
 
-            <div class="base-div">
+            <div class="div-paragraph">
             To use patterns in your design, you need to recognize that any design problem
 you are facing may have an associated pattern that can be applied. Examples of such
 problems, documented in the ‘Gang of Four’s original patterns book, include:
             </div>
 
-                <ol class="ol-base">
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">1</span>
-                        <span class="ol-li-span-par-base">
+                <ol class="ol-element">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">1</span>
+                        <span class="ol-li-span-element-paragraph">
                     Tell several objects that the state of some other object has changed (Observer
     pattern).
                         </span>
                     </li>
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">2</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">2</span>
+                        <span class="ol-li-span-element-paragraph">
                     Tidy up the interfaces to a number of related objects that have
     often been developed incrementally (Façade pattern).
                         </span>
                     </li>
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">3</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">3</span>
+                        <span class="ol-li-span-element-paragraph">
                     Provide a standard way of accessing the elements in a collection, irrespective of
     how that collection is implemented (Iterator pattern).
                         </span>
                     </li>
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">4</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">4</span>
+                        <span class="ol-li-span-element-paragraph">
                     Allow for the possibility of extending the functionality of an existing class at
     run-time (Decorator pattern).
                         </span>
                     </li>
                 </ol>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Patterns support high-level, concept reuse. When you try to reuse executable
 components you are inevitably constrained by detailed design decisions that have
 been made by the implementers of these components. These range from the
@@ -1062,7 +1062,7 @@ that you reuse the ideas but can adapt the implementation to suit the system tha
 you are developing.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             When you start designing a system, it can be difficult to know, in advance, if you
 will need a particular pattern. Therefore, using patterns in a design process often
 involves developing a design, experiencing a problem, and then recognizing that a
@@ -1072,7 +1072,7 @@ find it difficult to find an appropriate pattern amongst the hundreds of differe
 have been proposed.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Patterns are a great idea but you need experience of software design to use them
 effectively. You have to recognize situations where a pattern can be applied.
 Inexperienced programmers, even if they have read the pattern books, will always
@@ -1087,9 +1087,9 @@ find it hard to decide whether they can reuse a pattern or need to develop a spe
         <section>
             <article>
                 
-            <h2 class="heading2-contents-base">7.3 Implementation issues</h2>
+            <h2 class="h2-subchapter">7.3 Implementation issues</h2>
             
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Software engineering includes all of the activities involved in software development
 from the initial requirements of the system through to maintenance and management of the deployed
 system. A critical stage of this process is, of course, system
@@ -1099,7 +1099,7 @@ languages or tailoring and adapting generic, off-the-shelf systems to meet the s
 requirements of an organization.
             </p>
 
-            <div class="base-div">
+            <div class="div-paragraph">
             I assume that most readers of this book will understand programming principles
 and will have some programming experience. As this chapter is intended to offer a
 language-independent approach, I haven’t focused on issues of good programming
@@ -1108,19 +1108,19 @@ aspects of implementation that are particularly important to software engineerin
 that are often not covered in programming texts. These are:
             </div>
 
-                <ol class="ol-base">
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">1</span>
-                        <span class="ol-li-span-par-base">
+                <ol class="ol-element">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">1</span>
+                        <span class="ol-li-span-element-paragraph">
                     Reuse Most modern software is constructed by reusing existing components or
     systems. When you are developing software, you should make as much use as
     possible of existing code.
                         </span>
                     </li>
 
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">2</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">2</span>
+                        <span class="ol-li-span-element-paragraph">
                     Configuration management During the development process, many different
     versions of each software component are created. If you don’t keep track of
     these versions in a configuration management system, you are liable to include
@@ -1128,9 +1128,9 @@ that are often not covered in programming texts. These are:
                         </span>
                     </li>
 
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">3</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">3</span>
+                        <span class="ol-li-span-element-paragraph">
                     Host-target development Production software does not usually execute on the
     same computer as the software development environment. Rather, you develop
     it on one computer (the host system) and execute it on a separate computer (the
@@ -1146,9 +1146,9 @@ that are often not covered in programming texts. These are:
 
             <article>
 
-            <h3 class="heading3-base">7.3.1 Reuse</h3>
+            <h3 class="h3-sub-subchapter">7.3.1 Reuse</h3>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             From the 1960s to the 1990s, most new software was developed from scratch, by
 writing all code in a high-level programming language. The only significant reuse or software
 was the reuse of functions and objects in programming language libraries.
@@ -1159,15 +1159,15 @@ now generally used for business systems, scientific software, and, increasingly,
 embedded systems engineering.
             </p>
 
-            <div class="base-div">
+            <div class="div-paragraph">
             Software reuse is possible at a number of different levels:
             </div>
 
-                <ol class="ol-base">
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">1</span>
+                <ol class="ol-element">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">1</span>
                         <span class="italic font-bold text-[1.1em]">The abstraction level</span>
-                        <span class="ol-li-span-par-base">
+                        <span class="ol-li-span-element-paragraph">
                         At this level, you don’t reuse software directly but rather
     use knowledge of successful abstractions in the design of your software. Design
     patterns and architectural patterns (covered in Chapter 6) are ways of representing abstract
@@ -1175,10 +1175,10 @@ embedded systems engineering.
                         </span>
                     </li>
 
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">2</span>
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">2</span>
                         <span class="italic font-bold text-[1.1em]">The object level</span>
-                        <span class="ol-li-span-par-base">
+                        <span class="ol-li-span-element-paragraph">
                         At this level, you directly reuse objects from a library rather
     than writing the code yourself. To implement this type of reuse, you have to find
     appropriate libraries and discover if the objects and methods offer the functionality that you need.
@@ -1187,10 +1187,10 @@ embedded systems engineering.
                         </span>
                     </li>
 
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">3</span>
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">3</span>
                         <span class="italic font-bold text-[1.1em]">The component level</span>
-                        <span class="ol-li-span-par-base">
+                        <span class="ol-li-span-element-paragraph">
                         Components are collections of objects and object classes
     that operate together to provide related functions and services. You often have to
     adapt and extend the component by adding some code of your own. An example
@@ -1201,10 +1201,10 @@ embedded systems engineering.
                         </span>
                     </li>
 
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">4</span>
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">4</span>
                         <span class="italic font-bold text-[1.1em]">The system level</span>
-                        <span class="ol-li-span-par-base">
+                        <span class="ol-li-span-element-paragraph">
                         At this level, you reuse entire application systems. This usually
     involves some kind of configuration of these systems. This may be done by
     adding and modifying code (if you are reusing a software product line) or by
@@ -1216,17 +1216,17 @@ embedded systems engineering.
                     </li>
                 </ol>
 
-            <div class="base-div">
+            <div class="div-paragraph">
             By reusing existing software, you can develop new systems more quickly, with
 fewer development risks and also lower costs. As the reused software has been tested
 in other applications, it should be more reliable than new software. However, there
 are costs associated with reuse:
             </div>
 
-                <ol class="ol-base">
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">1</span>
-                        <span class="ol-li-span-par-base">
+                <ol class="ol-element">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">1</span>
+                        <span class="ol-li-span-element-paragraph">
                     The costs of the time spent in looking for software to reuse and assessing
     whether or not it meets your needs. You may have to test the software to make
     sure that it will work in your environment, especially if this is different from its
@@ -1234,25 +1234,25 @@ are costs associated with reuse:
                         </span>
                     </li>
 
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">2</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">2</span>
+                        <span class="ol-li-span-element-paragraph">
                     Where applicable, the costs of buying the reusable software. For large off-the-shelf
     systems, these costs can be very high.
                         </span>
                     </li>
 
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">3</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">3</span>
+                        <span class="ol-li-span-element-paragraph">
                     The costs of adapting and configuring the reusable software components or systems
     to reflect the requirements of the system that you are developing.
                         </span>
                     </li>
 
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">4</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">4</span>
+                        <span class="ol-li-span-element-paragraph">
                     The costs of integrating reusable software elements with each other (if you are
     using software from different sources) and with the new code that you have
     developed. Integrating reusable software from different providers can be difficult and expensive because the providers may make conflicting assumptions
@@ -1261,7 +1261,7 @@ are costs associated with reuse:
                     </li>
                 </ol>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             How to reuse existing knowledge and software should be the first thing you should
 think about when starting a software development project. You should consider the
 possibilities of reuse before designing the software in detail, as you may wish to adapt
@@ -1269,7 +1269,7 @@ your design to reuse existing software assets. As I discussed in Chapter 2, in a
 requirements and design to make best use of these.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             For a large number of application systems, software engineering really means
 software reuse. I therefore devote several chapters in the software technologies section
 of the book to this topic (Chapters 16, 17, and 19).
@@ -1281,9 +1281,9 @@ of the book to this topic (Chapters 16, 17, and 19).
 
             <article>
 
-            <h3 class="heading3-base">7.3.2 Configuration management</h3>
+            <h3 class="h3-sub-subchapter">7.3.2 Configuration management</h3>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             In software development, change happens all the time, so change management is
 absolutely essential. When a team of people are developing software, you have to
 make sure that team members don’t interfere with each others’ work. That is, if two
@@ -1295,7 +1295,7 @@ goes wrong with a new version of a system, you have to be able to go back to a w
 version of the system or component.
             </p>
 
-            <div class="base-div">
+            <div class="div-paragraph">
             Configuration management is the name given to the general process of managing
 a changing software system. The aim of configuration management is to support the
 system integration process so that all developers can access the project code and documents
@@ -1304,10 +1304,10 @@ link components to create a system. There are, therefore, three fundamental conf
 management activities:
             </div>
 
-                <ol class="ol-base">
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">1</span>
-                        <span class="ol-li-span-par-base">
+                <ol class="ol-element">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">1</span>
+                        <span class="ol-li-span-element-paragraph">
                     Version management, where support is provided to keep track of the different
     versions of software components. Version management systems include facilities to coordinate
     development by several programmers. They stop one developer overwriting code that has been
@@ -1315,25 +1315,25 @@ management activities:
                         </span>
                     </li>
 
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">2</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">2</span>
+                        <span class="ol-li-span-element-paragraph">
                     System integration, where support is provided to help developers define what
     versions of components are used to create each version of a system. This
     description is then used to build a system automatically by compiling and linking the required components.
                         </span>
                     </li>
 
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">3</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">3</span>
+                        <span class="ol-li-span-element-paragraph">
                     Problem tracking, where support is provided to allow users to report bugs and
     other problems, and to allow all developers to see who is working on these problems and when they are fixed.
                         </span>
                     </li>
                 </ol>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Software configuration management tools support each of the above activities.
 These tools may be designed to work together in a comprehensive change management
 system, such as ClearCase (Bellagio and Milligan, 2005). In integrated configuration
@@ -1342,7 +1342,7 @@ tools are designed together. They share a user interface style and are integrate
 a common code repository.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Alternatively, separate tools, installed in an integrated development environment,
 may be used. Version management may be supported using a version management
 system such as Subversion (Pilato et al., 2008), which can support multi-site, multiteam development.
@@ -1353,7 +1353,7 @@ such as Bugzilla, are used to report bugs and other issues and to keep track of
 whether or not these have been fixed.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Because of its importance in professional software engineering, I discuss change
 and configuration management in more detail in Chapter 25.
             </p>
@@ -1364,9 +1364,9 @@ and configuration management in more detail in Chapter 25.
 
             <article>
                 
-            <h3 class="heading3-base">7.3.3 Host-target development</h3>
+            <h3 class="h3-sub-subchapter">7.3.3 Host-target development</h3>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Most software development is based on a host-target model. Software is developed on
 one computer (the host), but runs on a separate machine (the target). More generally,
 we can talk about a development platform and an execution platform. A platform is
@@ -1375,14 +1375,14 @@ such as a database management system or, for development platforms,
 an interactive development environment.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Sometimes, the development and execution platforms are the same, making it possible
 to develop the software and test it on the same machine. More commonly, however,
 they are different so that you need to either move your developed software to the execution
 platform for testing or run a simulator on your development machine.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Simulators are often used when developing embedded systems. You simulate hardware devices,
 such as sensors, and the events in the environment in which the system
 will be deployed. Simulators speed up the development process for embedded systems
@@ -1391,7 +1391,7 @@ software to the target hardware. However, simulators are expensive to develop an
 are only usually available for the most popular hardware architectures.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             If the target system has installed middleware or other software that you need to
 use, then you need to be able to test the system using that software. It may be impractical
 to install that software on your development machine, even if it is the same as
@@ -1399,52 +1399,52 @@ the target platform, because of license restrictions. In those circumstances, yo
 to transfer your developed code to the execution platform to test the system.
             </p>
 
-            <div class="base-div">
+            <div class="div-paragraph">
             A software development platform should provide a range of tools to support software
 engineering processes. These may include:
             </div>
 
-                <ol class="ol-base">
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">1</span>
-                        <span class="ol-li-span-par-base">
+                <ol class="ol-element">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">1</span>
+                        <span class="ol-li-span-element-paragraph">
                     An integrated compiler and syntax-directed editing system that allows you to
     create, edit, and compile code.
                         </span>
                     </li>
 
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">2</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">2</span>
+                        <span class="ol-li-span-element-paragraph">
                     A language debugging system.
                         </span>
                     </li>
 
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">3</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">3</span>
+                        <span class="ol-li-span-element-paragraph">
                     Graphical editing tools, such as tools to edit UML models.
                         </span>
                     </li>
 
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">4</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">4</span>
+                        <span class="ol-li-span-element-paragraph">
                     Testing tools, such as JUnit (Massol, 2003) that can automatically run a set of
     tests on a new version of a program.
                         </span>
                     </li>
 
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">5</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">5</span>
+                        <span class="ol-li-span-element-paragraph">
                     Project support tools that help you organize the code for different development
     projects.
                         </span>
                     </li>
                 </ol>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             As well as these standard tools, your development system may include more specialized
 tools such as static analyzers (discussed in Chapter 15). Normally, development
 environments for teams also include a shared server that runs a change and configuration
@@ -1452,7 +1452,7 @@ management system and, perhaps, a system to support requirements
 management.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Software development tools are often grouped to create an integrated development
 environment (IDE). An IDE is a set of software tools that supports different
 aspects of software development, within some common framework and user interface. Generally,
@@ -1461,7 +1461,7 @@ language such as Java. The language IDE may be developed specially, or may be an
 instantiation of a general-purpose IDE, with specific language-support tools.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             A general-purpose IDE is a framework for hosting software tools that provides data
 management facilities for the software being developed, and integration mechanisms,
 that allow tools to work together. The best-known general-purpose IDE is the Eclipse
@@ -1472,7 +1472,7 @@ adding plug-ins. For example, you may add a set of plug-ins to support networked
 in Java or embedded systems engineering using C.
             </p>
 
-            <div class="base-div">
+            <div class="div-paragraph">
             As part of the development process, you need to make decisions about how the
 developed software will be deployed on the target platform. This is straightforward
 for embedded systems, where the target is usually a single computer. However, for
@@ -1480,10 +1480,10 @@ distributed systems, you need to decide on the specific platforms where the
 components will be deployed. Issues that you have to consider in making this decision are:
             </div>
 
-                <ol class="ol-base">
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">1</span>
-                        <span class="ol-li-span-par-base">
+                <ol class="ol-element">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">1</span>
+                        <span class="ol-li-span-element-paragraph">
                     The hardware and software requirements of a component If a component is
     designed for a specific hardware architecture, or relies on some other software
     system, it must obviously be deployed on a platform that provides the required
@@ -1491,9 +1491,9 @@ components will be deployed. Issues that you have to consider in making this dec
                         </span>
                     </li>
 
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">2</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">2</span>
+                        <span class="ol-li-span-element-paragraph">
                     The availability requirements of the system High-availability systems may
     require components to be deployed on more than one platform. This means that,
     in the event of platform failure, an alternative implementation of the component
@@ -1501,9 +1501,9 @@ components will be deployed. Issues that you have to consider in making this dec
                         </span>
                     </li>
 
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">3</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">3</span>
+                        <span class="ol-li-span-element-paragraph">
                     Component communications If there is a high level of communications traffic
     between components, it usually makes sense to deploy them on the same platform or on platforms
     that are physically close to one other. This reduces
@@ -1513,13 +1513,13 @@ components will be deployed. Issues that you have to consider in making this dec
                     </li>
                 </ol>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             You can document your decisions on hardware and software deployment using UML
 deployment diagrams, which show how software components are distributed across
 hardware platforms.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             If you are developing an embedded system, you may have to take into account
 target characteristics, such as its physical size, power capabilities, the need for realtime
 responses to sensor events, the physical characteristics of actuators, and its realtime
@@ -1534,9 +1534,9 @@ operating system. I discuss embedded systems engineering in Chapter 20.
         <section>
             <article>
 
-            <h2 class="heading2-contents-base">7.4 Open source development</h2>
+            <h2 class="h2-subchapter">7.4 Open source development</h2>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Open source development is an approach to software development in which the
 source code of a software system is published and volunteers are invited to participate
 in the development process (Raymond, 2001). Its roots are in the Free Software
@@ -1546,7 +1546,7 @@ they wish. There was an assumption that the code would be controlled and develop
 small core group, rather than users of the code.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Open source software extended this idea by using the Internet to recruit a much
 larger population of volunteer developers. Many of them are also users of the code.
 In principle at least, any contributor to an open source project may report and fix
@@ -1555,7 +1555,7 @@ open source systems still rely on a core group of developers who control changes
 the software.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             The best-known open source product is, of course, the Linux operating system
 which is widely used as a server system and, increasingly, as a desktop environment.
 Other important open source products are Java, the Apache web server, and the
@@ -1565,7 +1565,7 @@ source products. There are thousands of other, lesser known open source systems
 and components that may also be used.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             It is usually fairly cheap or free to acquire open source software. You
 can normally download open source software without charge. However, if you want
 documentation and support, then you may have to pay for this, but costs are usually fairly
@@ -1576,33 +1576,33 @@ problems to the developer and wait for a new release of the system. Bugs are dis
 and repaired more quickly than is usually possible with proprietary software.
             </p>
 
-            <div class="base-div">
+            <div class="div-paragraph">
             For a company involved in software development, there are two open source
 issues that have to be considered:
             </div>
 
-                <ol class="ol-base">
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">1</span>
-                        <span class="ol-li-span-par-base">
+                <ol class="ol-element">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">1</span>
+                        <span class="ol-li-span-element-paragraph">
                     Should the product that is being developed make use of open source components?
                         </span>
                     </li>
 
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">2</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">2</span>
+                        <span class="ol-li-span-element-paragraph">
                     Should an open source approach be used for the software’s development?
                         </span>
                     </li>
                 </ol>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             The answers to these questions depend on the type of software that is being
 developed and the background and experience of the development team.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             If you are developing a software product for sale, then time to market and reduced
 costs are critical. If you are developing in a domain in which there are high-quality
 open source systems available, you can save time and money by using these systems.
@@ -1613,7 +1613,7 @@ open source systems. Even then, however, it could be quicker and cheaper to modi
 the open source system rather than redevelop the functionality that you need.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             More and more product companies are using an open source approach to development.
 Their business model is not reliant on selling a software product but rather on
 selling support for that product. They believe that involving the open source community will
@@ -1622,7 +1622,7 @@ a community of users for the software. Again, however, this is really only appli
 for general software products rather than specific organizational applications.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Many companies believe that adopting an open source approach will reveal confidential
 business knowledge to their competitors and so are reluctant to adopt this
 development model. However, if you are working in a small company and you open
@@ -1630,7 +1630,7 @@ source your software, this may reassure customers that they will be able to supp
 the software if your company goes out of business.
             </p>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Publishing the source code of a system does not mean that people from the wider
 community will necessarily help with its development. Most successful open source products
 have been platform products rather than application systems. There are a
@@ -1644,9 +1644,9 @@ As such, making a software system open source does not guarantee community invol
 
             <article>
 
-            <h3 class="heading3-base">7.4.1 Open source licensing</h3>
+            <h3 class="h3-sub-subchapter">7.4.1 Open source licensing</h3>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Although a fundamental principle of open-source development is that source code
 should be freely available, this does not mean that anyone can do as they wish with
 that code. Legally, the developer of the code (either a company or an individual) still
@@ -1658,23 +1658,23 @@ allow their code to be used without this restriction. The developed systems may 
 proprietary and sold as closed source systems.
             </p>
 
-            <div class="base-div">
+            <div class="div-paragraph">
             Most open source licenses are derived from one of three general models:
             </div>
 
-                <ol class="ol-base">
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">1</span>
-                        <span class="ol-li-span-par-base">
+                <ol class="ol-element">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">1</span>
+                        <span class="ol-li-span-element-paragraph">
                     The GNU General Public License (GPL). This is a so-called ‘reciprocal’ license
     that, simplistically, means that if you use open source software that is licensed
     under the GPL license, then you must make that software open source.
                         </span>
                     </li>
 
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">2</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">2</span>
+                        <span class="ol-li-span-element-paragraph">
                     The GNU Lesser General Public License (LGPL). This is a variant of the GPL
     license where you can write components that link to open source code without
     having to publish the source of these components. However, if you change the
@@ -1682,9 +1682,9 @@ proprietary and sold as closed source systems.
                         </span>
                     </li>
 
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">3</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">3</span>
+                        <span class="ol-li-span-element-paragraph">
                     The Berkley Standard Distribution (BSD) License. This is a non-reciprocal
     license, which means you are not obliged to republish any changes or modifications made to
     open source code. You can include the code in proprietary systems
@@ -1694,7 +1694,7 @@ proprietary and sold as closed source systems.
                     </li>
                 </ol>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             Licensing issues are important because if you use open-source software as part of
 a software product, then you may be obliged by the terms of the license to make your
 own product open source. If you are trying to sell your software, you may wish to
@@ -1702,7 +1702,7 @@ keep it secret. This means that you may wish to avoid using GPL-licensed open
 source software in its development.
             </p>
 
-            <div class="base-div">
+            <div class="div-paragraph">
             If you are building software that runs on an open source platform, such as Linux,
 then licenses are not a problem. However, as soon as you start including open source
 components in your software you need to set up processes and databases to keep
@@ -1710,10 +1710,10 @@ track of what’s been used and their license conditions. Bayersdorfer (2007) su
 that companies managing projects that use open source should:
             </div>
 
-                <ol class="ol-base">                
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">1</span>
-                        <span class="ol-li-span-par-base">
+                <ol class="ol-element">                
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">1</span>
+                        <span class="ol-li-span-element-paragraph">
                     Establish a system for maintaining information about open source components
     that are downloaded and used. You have to keep a copy of the license for each component that
     was valid at the time the component was used. Licenses may
@@ -1721,52 +1721,52 @@ that companies managing projects that use open source should:
                         </span>
                     </li>
                     
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">2</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">2</span>
+                        <span class="ol-li-span-element-paragraph">
                     Be aware of the different types of licenses and understand how a component is
     licensed before it is used. You may decide to use a component in one system but
     not in another because you plan to use these systems in different ways.
                         </span>
                     </li>
 
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">3</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">3</span>
+                        <span class="ol-li-span-element-paragraph">
                     Be aware of evolution pathways for components. You need to know a bit about
     the open source project where components are developed to understand how
     they might change in future.
                         </span>
                     </li>
 
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">4</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">4</span>
+                        <span class="ol-li-span-element-paragraph">
                     Educate people about open source. It’s not enough to have procedures in place
     to ensure compliance with license conditions. You also need to educate developers about open
     source and open source licensing.
                         </span>
                     </li>
 
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">5</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">5</span>
+                        <span class="ol-li-span-element-paragraph">
                     Have auditing systems in place. Developers, under tight deadlines, might be
     tempted to break the terms of a license. If possible, you should have software in
     place to detect and stop this.
                         </span>
                     </li>
 
-                    <li class="ol-li-base">
-                        <span class="ol-li-span-num-base">6</span>
-                        <span class="ol-li-span-par-base">
+                    <li class="ol-li-element">
+                        <span class="ol-li-span-element-number">6</span>
+                        <span class="ol-li-span-element-paragraph">
                     Participate in the open source community. If you rely on open source products,
     you should participate in the community and help support their development.
                         </span>
                     </li>
                 </ol>
 
-            <p class="base-paragraph">
+            <p class="p-paragraph">
             The business model of software is changing. It is becoming increasingly difficult
 to build a business by selling specialized software systems. Many companies prefer
 to make their software open source and then sell support and consultancy to software

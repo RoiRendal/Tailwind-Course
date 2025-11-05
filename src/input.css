@@ -14,16 +14,16 @@
 
 @layer components {
 
-   .heading2-contents-base {
+   .h2-subchapter {
        @apply mt-32 mb-6 font-bold text-[2rem] text-dark-spring-green border-l-4 border-lime-green pl-3;
    }
 
-   .heading3-base {
+   .h3-sub-subchapter {
        @apply font-semibold text-[1.4rem] mt-24 mb-4 ml-10 border-l-4 pl-9 text-space-cadet;
 
    }
 
-   .base-paragraph {
+   .p-paragraph {
        @apply p-7
               ml-1 sm:ml-10 md:ml-20 lg:ml-25 xl:ml-30 2xl:ml-40
               rounded-xl
@@ -36,7 +36,7 @@
               transform hover:-translate-x-2.5;
    }
 
-   .base-div {
+   .div-paragraph {
        @apply p-7
               ml-1 sm:ml-10 md:ml-20 lg:ml-25 xl:ml-30 2xl:ml-40
               rounded-xl
@@ -50,16 +50,16 @@
    }
 
    /* List Elements */
-   .ol-base {
+   .ol-element {
        @apply ml-1 sm:ml-10 md:ml-20 lg:ml-25 xl:ml-30 2xl:ml-40 
               space-y-4 mt-5 mb-18;
    }
 
-   .ol-base-in {
+   .ol-element-inside {
        @apply space-y-4 mt-5 mb-18;
    }
 
-   .ol-li-base {
+   .ol-li-element {
        @apply flex gap-4 items-start
        px-1 sm:px-5 md:px-9 lg:px-18
        text-[0.9em] font-semibold
@@ -67,21 +67,21 @@
        transform hover:-translate-x-2.5;
    }
 
-   .ol-li-span-num-base {
+   .ol-li-span-element-number {
        @apply flex-shrink-0 w-8 h-8 rounded-full
        bg-dark-spring-green text-blanched-almon
        flex items-center justify-center
        font-bold leading-none shadow-md;
    }
 
-   .ol-li-span-par-base {
+   .ol-li-span-element-paragraph {
        @apply leading-relaxed p-2 rounded-xl bg-space-cadet text-blanched-almon;
    }
    /* List Elements */
 
 
 
-   /* Back Matter Section Styling */
+   /* Back Matter Section */
   .back-matter-div-green {
     @apply mt-20 pt-12 rounded-xl border-t-18 border-lime-green/30 font-semibold;
   }
@@ -124,7 +124,7 @@
   .references .reference-item {
     @apply p-4 rounded-lg hover:bg-bud-green/10 transition-colors;
   }
-  /* Back Matter Section Styling */
+  /* Back Matter Section */
 
   /* Fluid Text */
    .text-fluid {
