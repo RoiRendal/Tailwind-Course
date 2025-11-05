@@ -15,11 +15,11 @@
 @layer components {
 
    .heading2-contents-base {
-       @apply mt-8 mb-4 font-bold text-dark-spring-green border-l-4 border-lime-green pl-3;
+       @apply mt-32 mb-16 font-bold text-dark-spring-green border-l-4 border-lime-green pl-3;
    }
 
    .heading3-base {
-       @apply font-semibold mt-6 mb-3 border-l-4 pl-9 text-space-cadet;
+       @apply font-semibold mt-24 mb-12 ml-15 border-l-4 pl-9 text-space-cadet;
 
    }
 
@@ -57,6 +57,7 @@
    .ol-li-base {
        @apply flex gap-4 items-start
        px-1 sm:px-5 md:px-9 lg:px-18
+       transition-all duration-300
        transform hover:-translate-x-2.5;
    }
 
@@ -72,9 +73,11 @@
    }
    /* List Elements */
 
+
+
    /* Back Matter Section Styling */
   .back-matter-section {
-    @apply mt-20 pt-12 border-t-2 border-lime-green/30 font-semibold;
+    @apply mt-20 pt-12 rounded-xl border-t-18 border-lime-green/30 font-semibold;
   }
   
   .back-matter-heading {
@@ -82,7 +85,7 @@
   }
   
   .key-points li {
-    @apply flex items-start gap-3 hover:bg-bud-green/10 p-4 rounded-lg transition-all;
+    @apply flex items-start gap-3 hover:bg-bud-green/20 p-4 rounded-lg transition-all;
   }
   
   .key-points-span {
@@ -132,7 +135,7 @@
 
   /* Fluid Text */
    .text-fluid {
-       @apply text-[clamp(9px,calc(9px+0.5vw),16px)];
+       @apply text-[clamp(16px,calc(22px-0.5vw),22px)];
    }
   /* Fluid Text */ 
 }
