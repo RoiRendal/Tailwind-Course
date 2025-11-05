@@ -76,8 +76,12 @@
 
 
    /* Back Matter Section Styling */
-  .back-matter-section {
+  .back-matter-div-green {
     @apply mt-20 pt-12 rounded-xl border-t-18 border-lime-green/30 font-semibold;
+  }
+
+  .back-matter-div-blue {
+    @apply mt-20 pt-12 rounded-xl border-t-18 border-space-cadet/60 font-semibold;
   }
   
   .back-matter-heading {

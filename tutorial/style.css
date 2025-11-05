@@ -246,12 +246,6 @@
   .items-center {
     align-items: center;
   }
-  .items-start {
-    align-items: flex-start;
-  }
-  .gap-2 {
-    gap: calc(var(--spacing) * 2);
-  }
   .space-y-2 {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0;
@@ -624,7 +618,7 @@
     line-height: var(--leading-relaxed);
     color: var(--color-blanched-almon);
   }
-  .back-matter-section {
+  .back-matter-div-green {
     margin-top: calc(var(--spacing) * 20);
     border-radius: var(--radius-xl);
     border-top-style: var(--tw-border-style);
@@ -633,6 +627,21 @@
     @supports (color: color-mix(in lab, red, red)) {
       & {
         border-color: color-mix(in oklab, var(--color-lime-green) 30%, transparent);
+      }
+    }
+    padding-top: calc(var(--spacing) * 12);
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .back-matter-div-blue {
+    margin-top: calc(var(--spacing) * 20);
+    border-radius: var(--radius-xl);
+    border-top-style: var(--tw-border-style);
+    border-top-width: 18px;
+    border-color: color-mix(in srgb, #384166 60%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      & {
+        border-color: color-mix(in oklab, var(--color-space-cadet) 60%, transparent);
       }
     }
     padding-top: calc(var(--spacing) * 12);
