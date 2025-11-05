@@ -32,7 +32,7 @@
               text-space-cadet
               leading-relaxed
               transition-all duration-300
-              transform hover:-translate-y-0.5;
+              transform hover:-translate-y-1.5;
    }
 
    .base-div {
@@ -44,7 +44,7 @@
               text-space-cadet
               leading-relaxed
               transition-all duration-300
-              transform hover:-translate-y-0.5;
+              transform hover:-translate-y-1.5;
    }
 
    /* List Elements */
@@ -53,7 +53,7 @@
    }
 
    .ol-li-base {
-       @apply flex gap-4 items-start px-18;
+       @apply flex gap-4 items-start px-18 transform hover:-translate-y-1.5;
    }
 
    .ol-li-span-num-base {
@@ -69,6 +69,6 @@
    /* List Elements */
 
    .text-fluid {
-       @apply text-[clamp(16px,calc(32px-1.5vw),40px)];
+       @apply text-[clamp(9px,calc(9px+0.5vw),16px)];
    }
 }
