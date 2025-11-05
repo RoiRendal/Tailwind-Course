@@ -1778,7 +1778,205 @@ and with more and more software available in this form.
 
         </section>
 
+
+
+        <!-- CONCLUSION, EXERCISES, BIBLIOGRAPHY, ETC. -->
+        <section>
+
+            <!-- KEY POINTS -->
+            <article>
+                <h2>KEY POINTS</h2>
+
+                <ul>
+                    <li>
+                        Software design and implementation are interleaved activities. The level of
+    detail in the design depends on the type of system being developed and whether you are using a
+    plan-driven or agile approach.
+                    </li>
+                    
+                    <li>
+                        The process of object-oriented design includes activities to design the system architecture,
+    identify objects in the system, describe the design using different object models, and document
+    the component interfaces.
+                    </li>
+                    
+                    <li>
+                        A range of different models may be produced during an object-oriented design process. These
+    include static models (class models, generalization models, association models) and dynamic
+    models (sequence models, state machine models).
+                    </li>
+                    
+                    <li>
+                        Component interfaces must be defined precisely so that other objects can use them. A UML
+    interface stereotype may be used to define interfaces.
+                    </li>
+                    
+                    <li>
+                        When developing software, you should always consider the possibility of reusing existing
+    software, either as components, services, or complete systems.
+                    </li>
+                    
+                    <li>
+                        Configuration management is the process of managing changes to an evolving software system.
+    It is essential when a team of people are cooperating to develop software.
+                    </li>
+                    
+                    <li>
+                        Most software development is host-target development. You use an IDE on a host machine to
+    develop the software, which is transferred to a target machine for execution.
+                    </li>
+                    
+                    <li>
+                        Open source development involves making the source code of a system publicly available. This
+    means that many people can propose changes and improvements to the software.
+                    </li>
+                    
+                    <li>
+                        Open source development involves making the source code of a system publicly available. This
+    means that many people can propose changes and improvements to the software.
+                    </li>
+                </ul>
+            </article>
+            <!-- KEY POINTS -->
+
+            <!-- FURTHER READING -->
+            <article>
+                <h2>FURTHER READING</h2>
+
+                <p>
+                    Design Patterns: Elements of Reusable Object-oriented Software. This is the original software
+patterns handbook that introduced software patterns to a wide community. (E. Gamma, R. Helm, 
+R. Johnson and J. Vlissides, Addison-Wesley, 1995.)
+                </p>
+                <p>
+                    Applying UML and Patterns: An Introduction to Object-oriented Analysis and Design and Iterative
+Development, 3rd edition. Larman writes clearly on object-oriented design and, as well as
+discussing the use of the UML. This is a good introduction to using patterns in the design process.
+(C. Larman, Prentice Hall, 2004.)
+                </p>
+                <p>
+                    Producing Open Source Software: How to Run a Successful Free Software Project. His book is a
+comprehensive guide to the background to open source software, licensing issues, and the
+practicalities of running an open source development project. (K. Fogel, O’Reilly Media Inc., 2008.)
+                </p>
+                <p>
+                    Further reading on software reuse is suggested in Chapter 16 and on configuration management 
+in Chapter 25.
+                </p>
+            </article>
+            <!-- FURTHER READING -->
+
+            <!-- EXERCISES -->
+            <article>
+                <h2>EXERCISES</h2>
+
+                <ol>
+                    <li>
+                        Using the structured notation shown in Figure 7.3, specify the weather station use cases for
+Report status and Reconfigure. You should make reasonable assumptions about the
+functionality that is required here.
+                    </li>
+                    
+                    <li>
+                        Assume that the MHC-PMS is being developed using an object-oriented approach. Draw a use
+case diagram showing at least six possible use cases for this system.
+                    </li>
+                    
+                    <li>
+                        Using the UML graphical notation for object classes, design the following object classes,
+identifying attributes and operations. Use your own experience to decide on the attributes
+and operations that should be associated with these objects.
+                        <ul>
+                            <li>a telephone</li>
+                            <li>a printer for a personal computer</li>
+                            <li>a personal stereo system</li>
+                            <li>a bank account</li>
+                            <li>a library catalog</li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        Using the weather station objects identified in Figure 7.6 as a starting point, identify further
+objects that may be used in this system. Design an inheritance hierarchy for the objects that
+you have identified.
+                    </li>
+                    
+                    <li>
+                        Develop the design of the weather station to show the interaction between the data collection
+subsystem and the instruments that collect weather data. Use sequence diagrams to show
+this interaction.
+                    </li>
+                    
+                    <li>
+                        Identify possible objects in the following systems and develop an object-oriented design for
+them. You may make any reasonable assumptions about the systems when deriving the design.
+                        <ul>
+                            <li>
+                                A group diary and time management system is intended to support the timetabling of
+meetings and appointments across a group of co-workers. When an appointment is to be
+made that involves a number of people, the system finds a common slot in each of their
+diaries and arranges the appointment for that time. If no common slots are available, it
+interacts with the user to rearrange his or her personal diary to make room for the
+appointment.
+                            </li>
+
+                            <li>
+                                A filling station (gas station) is to be set up for fully automated operation. Drivers 
+swipe their credit card through a reader connected to the pump; the card is verified by
+communication with a credit company computer, and a fuel limit is established. The driver
+may then take the fuel required. When fuel delivery is complete and the pump hose is
+returned to its holster, the driver’s credit card account is debited with the cost of the fuel
+taken. The credit card is returned after debiting. If the card is invalid, the pump returns it
+before fuel is dispensed.
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        Draw a sequence diagram showing the interactions of objects in a group diary system when a
+group of people are arranging a meeting.
+                    </li>
+                    
+                    <li>
+                        Draw a UML state diagram showing the possible state changes in either the group diary or the
+filling station system.
+                    </li>
+                    
+                    <li>
+                        Using examples, explain why configuration management is important when a team of people
+are developing a software product.
+                    </li>
+                    
+                    <li>
+                        A small company has developed a specialized product that it configures specially for each
+customer. New customers usually have specific requirements to be incorporated into their
+system, and they pay for these to be developed. The company has an opportunity to bid for a new
+contract, which would more than double its customer base. The new customer also wishes to
+have some involvement in the configuration of the system. Explain why, in these circumstances, it
+might be a good idea for the company owning the software to make it open source.
+                    </li>
+                </ol>
+            </article>
+            <!-- EXERCISES -->
+
+        </section>
+        <!-- CONCLUSION, EXERCISES, BIBLIOGRAPHY, ETC. -->
+
+
+
         <p class="text-[#ffffff] sm:text-[#69d621] md:text-[#1cace0] lg:text-[#b821d6] xl:text-[#d62121]">Hello</p>
+
+        <h1 class="bg-gradient-to-r 
+           from-[#ff0000] 
+           via-[#ff8800] 
+           via-[#ffff00] 
+           via-[#00ff00] 
+           via-[#0088ff] 
+           to-[#8800ff] 
+           bg-clip-text text-transparent 
+           text-4xl font-bold">
+            The quick brown fox jumps over the lazy dog.
+        </h1>
 
     </main>
 

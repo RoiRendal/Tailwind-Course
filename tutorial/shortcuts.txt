@@ -1,3 +1,0 @@
-<span class="ol-li-span-num-base"></span>
-
-<span class="ol-li-span-par-base">
