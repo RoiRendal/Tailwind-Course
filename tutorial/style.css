@@ -818,7 +818,7 @@
     }
   }
   .text-fluid {
-    font-size: clamp(16px, calc(22px - 0.5vw), 22px);
+    font-size: clamp(16px, calc(22px - 0.375vw), 22px);
   }
 }
 @property --tw-space-y-reverse {
