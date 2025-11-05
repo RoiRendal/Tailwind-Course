@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-white: #fff;
     --spacing: 0.25rem;
     --text-xs: 0.75rem;
     --text-xs--line-height: calc(1 / 0.75);
@@ -434,22 +433,24 @@
 @layer components {
   .heading2-contents-base {
     margin-top: calc(var(--spacing) * 32);
-    margin-bottom: calc(var(--spacing) * 16);
+    margin-bottom: calc(var(--spacing) * 6);
     border-left-style: var(--tw-border-style);
     border-left-width: 4px;
     border-color: var(--color-lime-green);
     padding-left: calc(var(--spacing) * 3);
+    font-size: 2rem;
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
     color: var(--color-dark-spring-green);
   }
   .heading3-base {
     margin-top: calc(var(--spacing) * 24);
-    margin-bottom: calc(var(--spacing) * 12);
-    margin-left: calc(var(--spacing) * 15);
+    margin-bottom: calc(var(--spacing) * 4);
+    margin-left: calc(var(--spacing) * 10);
     border-left-style: var(--tw-border-style);
     border-left-width: 4px;
     padding-left: calc(var(--spacing) * 9);
+    font-size: 1.4rem;
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
     color: var(--color-space-cadet);
@@ -772,28 +773,6 @@
           & {
             background-color: color-mix(in oklab, var(--color-bud-green) 10%, transparent);
           }
-        }
-      }
-    }
-  }
-  @media print {
-    .back-matter-section {
-      margin-top: calc(var(--spacing) * 10);
-      border-top-style: var(--tw-border-style);
-      border-top-width: 1px;
-      padding-top: calc(var(--spacing) * 6);
-    }
-    .back-matter-heading {
-      border-left-style: var(--tw-border-style);
-      border-left-width: 2px;
-      padding-left: calc(var(--spacing) * 2);
-    }
-    .key-points li, .further-reading .reading-item, .exercises .exercise-item, .references .reference-item {
-      background-color: var(--color-white);
-      &:hover {
-        @media (hover: hover) {
-          --tw-shadow: 0 0 #0000;
-          box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
         }
       }
     }

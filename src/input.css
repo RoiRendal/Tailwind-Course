@@ -15,11 +15,11 @@
 @layer components {
 
    .heading2-contents-base {
-       @apply mt-32 mb-16 font-bold text-dark-spring-green border-l-4 border-lime-green pl-3;
+       @apply mt-32 mb-6 font-bold text-[2rem] text-dark-spring-green border-l-4 border-lime-green pl-3;
    }
 
    .heading3-base {
-       @apply font-semibold mt-24 mb-12 ml-15 border-l-4 pl-9 text-space-cadet;
+       @apply font-semibold text-[1.4rem] mt-24 mb-4 ml-10 border-l-4 pl-9 text-space-cadet;
 
    }
 
@@ -115,23 +115,6 @@
     @apply p-4 rounded-lg hover:bg-bud-green/10 transition-colors;
   }
   /* Back Matter Section Styling */
-  
-  /* Print-Friendly Adjustments */
-  @media print {
-    .back-matter-section {
-      @apply mt-10 pt-6 border-t-1;
-    }
-    
-    .back-matter-heading {
-      @apply border-l-2 pl-2;
-    }
-    
-    .key-points li, .further-reading .reading-item, 
-    .exercises .exercise-item, .references .reference-item {
-      @apply bg-white hover:shadow-none;
-    }
-  }
-  /* Print-Friendly Adjustments */
 
   /* Fluid Text */
    .text-fluid {
