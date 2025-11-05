@@ -72,7 +72,67 @@
    }
    /* List Elements */
 
+   /* Back Matter Section Styling */
+  .back-matter-section {
+    @apply mt-20 pt-12 border-t-2 border-lime-green/30 font-semibold;
+  }
+  
+  .back-matter-heading {
+    @apply text-2xl font-bold text-dark-spring-green border-l-4 border-lime-green pl-3 mb-6 pb-2;
+  }
+  
+  .key-points li {
+    @apply flex items-start gap-3 hover:bg-bud-green/10 p-4 rounded-lg transition-all;
+  }
+  
+  .key-points-span {
+    @apply flex-shrink-0 w-8 h-8 rounded-full bg-dark-spring-green text-blanched-almon 
+           flex items-center justify-center font-bold mt-1;
+  }
+  
+  .further-reading .reading-item {
+    @apply bg-bud-green/10 p-5 rounded-xl border-l-4 border-dark-spring-green hover:shadow-md transition-shadow;
+  }
+  
+  .exercises .exercise-item {
+    @apply bg-bud-green/5 p-4 rounded-lg border-l-2 border-lime-green/50 
+        transition-all duration-200 hover:bg-bud-green/15;
+  }
+  
+  .exercises .nested-exercise li {
+    @apply flex items-start gap-2;
+  }
+  
+  .exercises .nested-exercise span {
+    @apply flex-shrink-0 w-4 h-4 rounded-full bg-dark-spring-green text-blanched-almon 
+        flex items-center justify-center text-xs mt-1;
+  }
+  
+  .references .reference-item {
+    @apply p-4 rounded-lg hover:bg-bud-green/10 transition-colors;
+  }
+  /* Back Matter Section Styling */
+  
+  /* Print-Friendly Adjustments */
+  @media print {
+    .back-matter-section {
+      @apply mt-10 pt-6 border-t-1;
+    }
+    
+    .back-matter-heading {
+      @apply border-l-2 pl-2;
+    }
+    
+    .key-points li, .further-reading .reading-item, 
+    .exercises .exercise-item, .references .reference-item {
+      @apply bg-white hover:shadow-none;
+    }
+  }
+  /* Print-Friendly Adjustments */
+
+  /* Fluid Text */
    .text-fluid {
        @apply text-[clamp(9px,calc(9px+0.5vw),16px)];
    }
+  /* Fluid Text */ 
 }
