@@ -47,7 +47,7 @@
               mb-12 leading-relaxed;
    }
   
-   /* Objectives section */
+        /* Objectives section */
    .objectives-section-container {
        @apply bg-bud-green/10 rounded-xl p-7 mb-14;
    }
@@ -75,8 +75,9 @@
    .objective-content {
        @apply font-semibold text-space-cadet;
    }
+        /* Objectives section */
   
-   /* Contents section */
+        /* Contents section */
    .contents-section-container {
        @apply bg-space-cadet/5 rounded-xl p-7;
    }
@@ -105,17 +106,18 @@
    .contents-item-title {
        @apply font-semibold text-xl text-space-cadet;
    }
+        /* Contents section */
     /* Front Matter Section */
 
 
 
-   /* Figure 7.3 */
+    /* Figure 7.3 & 7.10 */
    .info-box {
        @apply bg-[#E6F3FA] p-6 mt-10 rounded-md shadow-sm w-full md:w-3/4 mx-auto leading-relaxed;
    }
 
    .info-row {
-       @apply flex flex-col md:flex-row md:space-x-4 mb-2;
+       @apply flex flex-col md:flex-row md:space-x-4 mb-8;
    }
 
    .info-label {
@@ -125,11 +127,11 @@
    .info-content {
        @apply text-[#333333] flex-1;
    }
-   /* Figure 7.3 */
+    /* Figure 7.3 & 7.10 */
 
 
 
-   /* Subchapter & Sub Subchapter Labels */
+    /* Subchapter & Sub Subchapter Labels */
    .h2-subchapter {
        @apply mt-32 mb-6 font-bold text-[2rem] text-dark-spring-green border-l-4 border-lime-green pl-3;
    }
@@ -138,11 +140,11 @@
        @apply font-semibold text-[1.4rem] mt-24 mb-4 ml-10 border-l-4 pl-9 text-space-cadet;
 
    }
-   /* Subchapter & Sub Subchapter Labels */
+    /* Subchapter & Sub Subchapter Labels */
 
 
 
-   /* Paragraphs */
+    /* Paragraphs */
    .p-paragraph {
        @apply p-7
               ml-1 sm:ml-10 md:ml-20 lg:ml-25 xl:ml-30 2xl:ml-40
@@ -168,11 +170,11 @@
               transition-all duration-300
               transform hover:-translate-x-2.5;
    }
-   /* Paragraphs */
+    /* Paragraphs */
 
 
 
-   /* List Elements */
+    /* List Elements */
    .ol-element {
        @apply ml-1 sm:ml-10 md:ml-20 lg:ml-25 xl:ml-30 2xl:ml-40 
               space-y-4 mt-5 mb-18;
@@ -200,7 +202,7 @@
    .ol-li-span-element-paragraph {
        @apply leading-relaxed p-2 rounded-xl bg-space-cadet text-blanched-almon;
    }
-   /* List Elements */
+    /* List Elements */
 
 
 

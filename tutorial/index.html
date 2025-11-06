@@ -1044,13 +1044,68 @@ displayed from the different forms of presentation. This is illustrated in Figur
 which shows two graphical presentations of the same data set.
             </p>
 
-            <div class="flex flex-col items-center my-18">
-                <img 
-                    src="/media/figure7.10.png"
-                    class="max-w-full h-auto rounded-lg shadow-lg border-2 border-dark-spring-green transition-transform duration-300 hover:scale-105"
-                >
-                <p class="text-[0.9em] mt-2 italic">Figure 7.10: The Observer Pattern</p>
-            </div>
+                <div class="info-box">
+                    <div class="info-row">
+                        <span class="info-label">Pattern Name:</span>
+                        <span class="info-content">Observer</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Description:</span>
+                        <span class="info-content">
+                        Separates the display of the state of an object from the object itself and allows alternative displays
+to be provided. When the object state changes, all displays are automatically notified and updated to reflect
+the change.
+                        </span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Problem Description:</span>
+                        <span class="info-content">
+                        In many situations, you have to provide multiple displays of state information, 
+such as a graphical display and a tabular display. Not all of these may be known when the information is
+specified. All alternative presentations should support interaction and, when the state is changed, all displays
+must be updated.
+                        </span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label"></span>
+                        <span class="info-content">
+                        This pattern may be used in all situations where more than one display format for state information is
+required and where it is not necessary for the object that maintains the state information to know about the
+specific display formats used.
+                        </span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Solution Description:</span>
+                        <span class="info-content">
+                        This involves two abstract objects, Subject and Observer, and two concrete objects,
+ConcreteSubject and ConcreteObject, which inherit the attributes of the related abstract objects. The abstract
+objects include general operations that are applicable in all situations. The state to be displayed is
+maintained in ConcreteSubject, which inherits operations from Subject allowing it to add and remove
+Observers (each observer corresponds to a display) and to issue a notification when the state has changed.
+                        </span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label"></span>
+                        <span class="info-content">
+                        The ConcreteObserver maintains a copy of the state of ConcreteSubject and implements the Update()
+interface of Observer that allows these copies to be kept in step. The ConcreteObserver automatically
+displays the state and reflects changes whenever the state is updated.
+The UML model of the pattern is shown in Figure 7.12.
+                        </span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Consequences:</span>
+                        <span class="info-content">
+                        The subject only knows the abstract Observer and does not know details of the concrete class.
+Therefore there is minimal coupling between these objects. Because of this lack of knowledge, optimizations
+that enhance display performance are impractical. Changes to the subject may cause a set of linked updates
+to observers to be generated, some of which may not be necessary.
+                        </span>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center my-1">
+                    <p class="text-[0.9em] mt-2 italic">Figure 7.10: The Observer Pattern</p>
+                </div>
 
             <div class="flex flex-col items-center my-18">
                 <img 
