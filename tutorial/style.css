@@ -37,6 +37,7 @@
     --color-dark-spring-green: #0B735F;
     --color-space-cadet: #384166;
     --color-blanched-almon: #E3DBA9;
+    --color-almost-white: #E6F3FA;
   }
 }
 @layer base {
@@ -564,7 +565,7 @@
     margin-top: calc(var(--spacing) * 10);
     width: 100%;
     border-radius: var(--radius-md);
-    background-color: #E6F3FA;
+    background-color: var(--color-almost-white);
     padding: calc(var(--spacing) * 6);
     --tw-leading: var(--leading-relaxed);
     line-height: var(--leading-relaxed);
@@ -606,11 +607,11 @@
     width: calc(var(--spacing) * 32);
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
-    color: #1a1a1a;
+    color: var(--color-space-cadet);
   }
   .info-content {
     flex: 1;
-    color: #333333;
+    color: var(--color-space-cadet);
   }
   .structured-card {
     margin-inline: auto;
