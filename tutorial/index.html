@@ -6,13 +6,14 @@
   <link href="./style.css" rel="stylesheet">
 </head>
 
-<body class="min-h-screen bg-blanched-almon font-mono text-space-cadet text-fluid leading-relaxed m-16">
+<body>
+
     <header>
     </header>
 
 
 
-    <main>
+    <main class="min-h-screen font-mono text-space-cadet text-fluid leading-relaxed m-16">
 
         <!-- FRONT MATTER -->
         <section class="chapter-front-matter">
@@ -30,7 +31,7 @@
                     <div class="flex flex-row items-center justify-center">
                     <h2 class="objectives-heading-display">Learning Objectives</h2>
                     </div>
-                    <div class="objectives-grid">
+                    <div class="objectives-grid card-glass">
                         <div class="objective-card">
                             <div class="objective-number-badge">1</div>
                             <p class="objective-content">Understand the most important activities in a general, object-oriented design process</p>
@@ -386,7 +387,7 @@ is one control system but several weather stations, one satellite, and one gener
 information system.
                 </p>
 
-                <div class="image-placement">
+                <div class="image-placement card-glass">
                     <img 
                         src="/media/figure7.1.png"
                         class="max-w-full h-auto rounded-lg shadow-lg border-2 border-dark-spring-green transition-transform duration-300 hover:scale-105"
@@ -411,7 +412,7 @@ explained in Chapter 5, a stick figure is used in the UML to represent other sys
 as well as human users.    
                 </p>
 
-                <div class="image-placement">
+                <div class="image-placement card-glass">
                     <img 
                         src="/media/figure7.2.png"
                         class="max-w-full h-auto rounded-lg shadow-lg border-2 border-dark-spring-green transition-transform duration-300 hover:scale-105"
@@ -428,52 +429,54 @@ This is shown in Figure 7.3, which describes the Report weather use case from
 Figure 7.2. Examples of some other use cases are on the Web.   
                 </p>
 
-                <div class="info-box" id="figure7.3">
-                    <div class="info-row">
-                        <span class="info-label">System:</span>
-                        <span class="info-content">Weather station</span>
+                <div class="card-glass mt-10">
+                    <div class="info-box" id="figure7.3">
+                        <div class="info-row">
+                            <span class="info-label">System:</span>
+                            <span class="info-content">Weather station</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Use Case:</span>
+                            <span class="info-content">Report weather</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Actors:</span>
+                            <span class="info-content">Weather information system, Weather station</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Data:</span>
+                            <span class="info-content">
+                            The weather station sends a summary of the weather data that has been collected from
+                            the instruments in the collection period to the weather information system. The data sent
+                            are the maximum, minimum, and average ground and air temperatures; the maximum, minimum,
+                            and average air pressures; the maximum, minimum, and average wind speeds; the total rainfall;
+                            and the wind direction as sampled at five-minute intervals.
+                            </span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Stimulus:</span>
+                            <span class="info-content">
+                            The weather information system establishes a satellite communication link with the
+                            weather station and requests transmission of the data.
+                            </span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Response:</span>
+                            <span class="info-content">
+                            The summarized data are sent to the weather information system.
+                            </span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Comments:</span>
+                            <span class="info-content">
+                            Weather stations are usually asked to report once per hour but this frequency may differ
+                            from one station to another and may be modified in the future.
+                            </span>
+                        </div>
                     </div>
-                    <div class="info-row">
-                        <span class="info-label">Use Case:</span>
-                        <span class="info-content">Report weather</span>
+                    <div class="flex flex-col items-center my-1">
+                        <p class="figure-label">Figure 7.3: Use Case Description — Report Weather</p>
                     </div>
-                    <div class="info-row">
-                        <span class="info-label">Actors:</span>
-                        <span class="info-content">Weather information system, Weather station</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">Data:</span>
-                        <span class="info-content">
-                        The weather station sends a summary of the weather data that has been collected from
-                        the instruments in the collection period to the weather information system. The data sent
-                        are the maximum, minimum, and average ground and air temperatures; the maximum, minimum,
-                        and average air pressures; the maximum, minimum, and average wind speeds; the total rainfall;
-                        and the wind direction as sampled at five-minute intervals.
-                        </span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">Stimulus:</span>
-                        <span class="info-content">
-                        The weather information system establishes a satellite communication link with the
-                        weather station and requests transmission of the data.
-                        </span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">Response:</span>
-                        <span class="info-content">
-                        The summarized data are sent to the weather information system.
-                        </span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">Comments:</span>
-                        <span class="info-content">
-                        Weather stations are usually asked to report once per hour but this frequency may differ
-                        from one station to another and may be modified in the future.
-                        </span>
-                    </div>
-                </div>
-                <div class="flex flex-col items-center my-1">
-                    <p class="figure-label">Figure 7.3: Use Case Description — Report Weather</p>
                 </div>
 
             </article>
@@ -507,7 +510,7 @@ another commonly used architectural style in addition to those described in
 Chapter 6.    
             </p>
 
-            <div class="image-placement">
+            <div class="image-placement card-glass">
                 <img 
                     src="/media/figure7.4.png"
                     class="max-w-full h-auto rounded-lg shadow-lg border-2 border-dark-spring-green transition-transform duration-300 hover:scale-105"
@@ -532,7 +535,7 @@ system. This arrangement follows the producer-consumer pattern, discussed in
 Chapter 20.    
             </p>       
 
-            <div class="image-placement">
+            <div class="image-placement card-glass">
                 <img 
                     src="/media/figure7.5.png"
                     class="max-w-full h-auto rounded-lg shadow-lg border-2 border-dark-spring-green transition-transform duration-300 hover:scale-105"
@@ -613,7 +616,7 @@ Anemometer, and Barometer objects are application domain objects, and the
 WeatherStation and WeatherData objects have been identified from the system
 description and the scenario (use case) description:
 
-                <div class="image-placement" id="figure7.6">
+                <div class="image-placement card-glass" id="figure7.6">
                     <img 
                         src="/media/figure7.6.png"
                         class="max-w-full h-auto rounded-lg shadow-lg border-2 border-dark-spring-green transition-transform duration-300 hover:scale-105"
@@ -794,7 +797,7 @@ This diagram shows the sequence of interactions that take place when an
 external system requests the summarized data from the weather station. You read
 sequence diagrams from top to bottom:
 
-                <div class="image-placement">
+                <div class="image-placement card-glass">
                     <img 
                         src="/media/figure7.7.png"
                         class="max-w-full h-auto rounded-lg shadow-lg border-2 border-dark-spring-green transition-transform duration-300 hover:scale-105"
@@ -874,7 +877,7 @@ describe state machine models.
 responds to requests for various services.</p>
             <p>You can read this diagram as follows:</p>
 
-                <div class="image-placement">
+                <div class="image-placement card-glass">
                     <img 
                         src="/media/figure7.8.png"
                         class="max-w-full h-auto rounded-lg shadow-lg border-2 border-dark-spring-green transition-transform duration-300 hover:scale-105"
@@ -998,7 +1001,7 @@ operations are encoded in the command string associated with the remoteControl
 method, shown in <a class="underline" href="#figure7.6" target="_blank">Figure 7.6</a>.
             </p>
 
-            <div class="image-placement">
+            <div class="image-placement card-glass">
                 <img 
                     src="/media/figure7.9.png"
                     class="max-w-full h-auto rounded-lg shadow-lg border-2 border-dark-spring-green transition-transform duration-300 hover:scale-105"
@@ -1116,70 +1119,72 @@ displayed from the different forms of presentation. This is illustrated in Figur
 which shows two graphical presentations of the same data set.
             </p>
 
-                <div class="info-box">
-                    <div class="info-row">
-                        <span class="info-label">Pattern Name:</span>
-                        <span class="info-content">Observer</span>
+                <div class="card-glass mt-10">
+                    <div class="info-box">
+                        <div class="info-row">
+                            <span class="info-label">Pattern Name:</span>
+                            <span class="info-content">Observer</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Description:</span>
+                            <span class="info-content">
+                            Separates the display of the state of an object from the object itself and allows alternative displays
+    to be provided. When the object state changes, all displays are automatically notified and updated to reflect
+    the change.
+                            </span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Problem Description:</span>
+                            <span class="info-content">
+                            In many situations, you have to provide multiple displays of state information, 
+    such as a graphical display and a tabular display. Not all of these may be known when the information is
+    specified. All alternative presentations should support interaction and, when the state is changed, all displays
+    must be updated.
+                            </span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label"></span>
+                            <span class="info-content">
+                            This pattern may be used in all situations where more than one display format for state information is
+    required and where it is not necessary for the object that maintains the state information to know about the
+    specific display formats used.
+                            </span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Solution Description:</span>
+                            <span class="info-content">
+                            This involves two abstract objects, Subject and Observer, and two concrete objects,
+    ConcreteSubject and ConcreteObject, which inherit the attributes of the related abstract objects. The abstract
+    objects include general operations that are applicable in all situations. The state to be displayed is
+    maintained in ConcreteSubject, which inherits operations from Subject allowing it to add and remove
+    Observers (each observer corresponds to a display) and to issue a notification when the state has changed.
+                            </span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label"></span>
+                            <span class="info-content">
+                            The ConcreteObserver maintains a copy of the state of ConcreteSubject and implements the Update()
+    interface of Observer that allows these copies to be kept in step. The ConcreteObserver automatically
+    displays the state and reflects changes whenever the state is updated.
+    The UML model of the pattern is shown in Figure 7.12.
+                            </span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Consequences:</span>
+                            <span class="info-content">
+                            The subject only knows the abstract Observer and does not know details of the concrete class.
+    Therefore there is minimal coupling between these objects. Because of this lack of knowledge, optimizations
+    that enhance display performance are impractical. Changes to the subject may cause a set of linked updates
+    to observers to be generated, some of which may not be necessary.
+                            </span>
+                        </div>
                     </div>
-                    <div class="info-row">
-                        <span class="info-label">Description:</span>
-                        <span class="info-content">
-                        Separates the display of the state of an object from the object itself and allows alternative displays
-to be provided. When the object state changes, all displays are automatically notified and updated to reflect
-the change.
-                        </span>
+                    <div class="flex flex-col items-center my-1">
+                        <p class="figure-label">Figure 7.10: The Observer Pattern</p>
                     </div>
-                    <div class="info-row">
-                        <span class="info-label">Problem Description:</span>
-                        <span class="info-content">
-                        In many situations, you have to provide multiple displays of state information, 
-such as a graphical display and a tabular display. Not all of these may be known when the information is
-specified. All alternative presentations should support interaction and, when the state is changed, all displays
-must be updated.
-                        </span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label"></span>
-                        <span class="info-content">
-                        This pattern may be used in all situations where more than one display format for state information is
-required and where it is not necessary for the object that maintains the state information to know about the
-specific display formats used.
-                        </span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">Solution Description:</span>
-                        <span class="info-content">
-                        This involves two abstract objects, Subject and Observer, and two concrete objects,
-ConcreteSubject and ConcreteObject, which inherit the attributes of the related abstract objects. The abstract
-objects include general operations that are applicable in all situations. The state to be displayed is
-maintained in ConcreteSubject, which inherits operations from Subject allowing it to add and remove
-Observers (each observer corresponds to a display) and to issue a notification when the state has changed.
-                        </span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label"></span>
-                        <span class="info-content">
-                        The ConcreteObserver maintains a copy of the state of ConcreteSubject and implements the Update()
-interface of Observer that allows these copies to be kept in step. The ConcreteObserver automatically
-displays the state and reflects changes whenever the state is updated.
-The UML model of the pattern is shown in Figure 7.12.
-                        </span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">Consequences:</span>
-                        <span class="info-content">
-                        The subject only knows the abstract Observer and does not know details of the concrete class.
-Therefore there is minimal coupling between these objects. Because of this lack of knowledge, optimizations
-that enhance display performance are impractical. Changes to the subject may cause a set of linked updates
-to observers to be generated, some of which may not be necessary.
-                        </span>
-                    </div>
-                </div>
-                <div class="flex flex-col items-center my-1">
-                    <p class="figure-label">Figure 7.10: The Observer Pattern</p>
                 </div>
 
-            <div class="image-placement">
+            <div class="image-placement card-glass">
                 <img 
                     src="/media/figure7.11.png"
                     class="max-w-full h-auto rounded-lg shadow-lg border-2 border-dark-spring-green transition-transform duration-300 hover:scale-105"
@@ -1194,7 +1199,7 @@ the solution description. Figure 7.12 is the representation in UML of the
 Observer pattern.
             </p>
 
-            <div class="image-placement">
+            <div class="image-placement card-glass">
                 <img 
                     src="/media/figure7.12.png"
                     class="max-w-full h-auto rounded-lg shadow-lg border-2 border-dark-spring-green transition-transform duration-300 hover:scale-105"
@@ -1998,58 +2003,58 @@ and with more and more software available in this form.
                 <h2 class="back-matter-heading">KEY POINTS</h2>
 
                 <ul class="space-y-4 pl-6">
-                    <li class="key-points group">
+                    <li class="key-points group card-glass card-glass">
                         <span class="key-points group-span">•</span>
                         Software design and implementation are interleaved activities. The level of
     detail in the design depends on the type of system being developed and whether you are using a
     plan-driven or agile approach.
                     </li>
                     
-                    <li class="key-points group">
+                    <li class="key-points group card-glass">
                         <span class="key-points group-span">•</span>
                         The process of object-oriented design includes activities to design the system architecture,
     identify objects in the system, describe the design using different object models, and document
     the component interfaces.
                     </li>
                     
-                    <li class="key-points group">
+                    <li class="key-points group card-glass">
                         <span class="key-points group-span">•</span>
                         A range of different models may be produced during an object-oriented design process. These
     include static models (class models, generalization models, association models) and dynamic
     models (sequence models, state machine models).
                     </li>
                     
-                    <li class="key-points group">
+                    <li class="key-points group card-glass">
                         <span class="key-points group-span">•</span>
                         Component interfaces must be defined precisely so that other objects can use them. A UML
     interface stereotype may be used to define interfaces.
                     </li>
                     
-                    <li class="key-points group">
+                    <li class="key-points group card-glass">
                         <span class="key-points group-span">•</span>
                         When developing software, you should always consider the possibility of reusing existing
     software, either as components, services, or complete systems.
                     </li>
                     
-                    <li class="key-points group">
+                    <li class="key-points group card-glass">
                         <span class="key-points group-span">•</span>
                         Configuration management is the process of managing changes to an evolving software system.
     It is essential when a team of people are cooperating to develop software.
                     </li>
                     
-                    <li class="key-points group">
+                    <li class="key-points group card-glass">
                         <span class="key-points group-span">•</span>
                         Most software development is host-target development. You use an IDE on a host machine to
     develop the software, which is transferred to a target machine for execution.
                     </li>
                     
-                    <li class="key-points group">
+                    <li class="key-points group card-glass">
                         <span class="key-points group-span">•</span>
                         Open source development involves making the source code of a system publicly available. This
     means that many people can propose changes and improvements to the software.
                     </li>
                     
-                    <li class="key-points group">
+                    <li class="key-points group card-glass">
                         <span class="key-points group-span">•</span>
                         Open source development involves making the source code of a system publicly available. This
     means that many people can propose changes and improvements to the software.

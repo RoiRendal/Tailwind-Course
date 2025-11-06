@@ -19,9 +19,15 @@
   --color-almost-white:      #E6F3FA;
 }
 
-
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-blanched-almon via-almost-white via-dark-spring-green/20 to-bud-green/20;
+    background-attachment: fixed;
+  }
+}
 
 @layer utilities {
+
   .animate-pulse-once {
     animation: pulse-once 1.5s cubic-bezier(0.4, 0, 0.6, 1) forwards;
   }
@@ -44,17 +50,24 @@
   }
 
   .h2-subchapter::before {
-    content: "➡️";
-    display: inline-block;
-    margin-right: 0.75rem;
-    transform: translateX(-5.5em);
-    opacity: 0;
-    transition: opacity 0.2s ease, transform 0.2s ease;
+    content: '';
+    @apply absolute -left-10 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 
+            translate-x-2 group-hover:translate-x-0 transition-all duration-300 md:opacity-100;
+  }
+
+  .h2-subchapter::after {
+    content: '';
+    @apply absolute bottom-[-4px] left-0 w-0 h-1 bg-gradient-to-r from-transparent via-lime-green to-transparent;
+    transition: width 0.4s ease;
   }
 
   .h2-subchapter:hover::before {
     opacity: 1;
     transform: translateX(0);
+  }
+
+  .h2-subchapter:hover::after {
+    @apply w-110;
   }
 
   .h2-subchapter {
@@ -67,9 +80,18 @@
 
 @layer components {
 
+    /* Additional Effects */
+   .card-glass {
+       @apply relative backdrop-blur-sm bg-almost-white/60 dark:bg-black/20 
+              border border-lime-green/20 rounded-xl p-6 shadow-lg;
+   }
+    /* Additional Effects */
+
+
+
     /* Fluid Text */
    .text-fluid {
-       @apply text-[clamp(1rem,1.5vw,1.375rem)] leading-tight;
+       @apply text-[clamp(1.1rem,1.05vw,1.375rem)] leading-tight;
    }   
     /* Fluid Text */
 
