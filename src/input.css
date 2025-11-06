@@ -175,6 +175,22 @@
 
 
 
+    /* Image Placement */
+   .image-placement {
+       @apply flex flex-col items-center my-18;
+   }
+    /* Image Placement */
+
+
+
+    /* Figure Labels */
+   .figure-label {
+       @apply text-[0.9em] mt-2 italic;
+   }
+    /* Figure Labels */
+
+
+
     /* List Elements */
    .ol-element {
        @apply ml-1 sm:ml-10 md:ml-20 lg:ml-25 xl:ml-30 2xl:ml-40 
