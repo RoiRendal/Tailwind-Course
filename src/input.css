@@ -16,7 +16,7 @@
 
     /* Fluid Text */
    .text-fluid {
-       @apply text-[clamp(18px,calc(22px-0.325vw),22px)];
+       @apply text-[clamp(18px,calc(22px-0.2vw),22px)];
    }
     /* Fluid Text */
 
@@ -43,7 +43,7 @@
   
    .chapter-intro {
        @apply max-w-4xl mx-auto text-lg sm:text-xl text-space-cadet 
-              mb-12 /* text-fluid */ leading-relaxed;
+              mb-12 leading-relaxed;
    }
   
    /* Objectives section */
@@ -106,6 +106,28 @@
    }
 
     /* Front Matter Section */
+
+
+
+   /* Figure 7.3 */
+   .info-box {
+       @apply bg-[#E6F3FA] p-6 rounded-md shadow-sm w-full md:w-3/4 mx-auto text-sm md:text-base leading-relaxed;
+   }
+
+   .info-row {
+       @apply flex flex-col md:flex-row md:space-x-4 mb-2;
+   }
+
+   .info-label {
+       @apply font-semibold w-32 text-[#1a1a1a];
+   }
+
+   .info-content {
+       @apply text-[#333333] flex-1;
+   }
+   /* Figure 7.3 */
+
+
 
    .h2-subchapter {
        @apply mt-32 mb-6 font-bold text-[2rem] text-dark-spring-green border-l-4 border-lime-green pl-3;

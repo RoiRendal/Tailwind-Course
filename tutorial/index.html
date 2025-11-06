@@ -28,22 +28,22 @@
                 <section class="objectives-section-container">
                     <h2 class="objectives-heading-display">Learning Objectives</h2>
                     <div class="objectives-grid">
-                    <div class="objective-card">
-                        <div class="objective-number-badge">1</div>
-                        <p class="objective-content">Understand the most important activities in a general, object-oriented design process</p>
-                    </div>
-                    <div class="objective-card">
-                        <div class="objective-number-badge">2</div>
-                        <p class="objective-content">Understand different models that may be used to document an object-oriented design</p>
-                    </div>
-                    <div class="objective-card">
-                        <div class="objective-number-badge">3</div>
-                        <p class="objective-content">Know about design patterns and how they enable reuse of design knowledge</p>
-                    </div>
-                    <div class="objective-card">
-                        <div class="objective-number-badge">4</div>
-                        <p class="objective-content">Be introduced to key issues in software implementation, including software reuse and open-source development</p>
-                    </div>
+                        <div class="objective-card">
+                            <div class="objective-number-badge">1</div>
+                            <p class="objective-content">Understand the most important activities in a general, object-oriented design process</p>
+                        </div>
+                        <div class="objective-card">
+                            <div class="objective-number-badge">2</div>
+                            <p class="objective-content">Understand different models that may be used to document an object-oriented design</p>
+                        </div>
+                        <div class="objective-card">
+                            <div class="objective-number-badge">3</div>
+                            <p class="objective-content">Know about design patterns and how they enable reuse of design knowledge</p>
+                        </div>
+                        <div class="objective-card">
+                            <div class="objective-number-badge">4</div>
+                            <p class="objective-content">Be introduced to key issues in software implementation, including software reuse and open-source development</p>
+                        </div>
                     </div>
                 </section>
   
@@ -357,13 +357,51 @@ This is shown in Figure 7.3, which describes the Report weather use case from
 Figure 7.2. Examples of some other use cases are on the Web.   
                 </p>
 
-                <div class="flex flex-col items-center my-18" id="figure7.3">
-                    <img 
-                        src="/media/figure7.3.png"
-                        class="max-w-full h-auto rounded-lg shadow-lg border-2 border-dark-spring-green transition-transform duration-300 hover:scale-105"
-                    >
-                    <p class=" text-sm text-space-cadet mt-2 italic">Figure 7.3: Use Case Description — Report Weather</p>
+                <div class="info-box">
+                    <div class="info-row">
+                        <span class="info-label">System</span>
+                        <span class="info-content">Weather station</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Use case</span>
+                        <span class="info-content">Report weather</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Actors</span>
+                        <span class="info-content">Weather information system, Weather station</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Data</span>
+                        <span class="info-content">
+                        The weather station sends a summary of the weather data that has been collected from
+                        the instruments in the collection period to the weather information system. The data sent
+                        are the maximum, minimum, and average ground and air temperatures; the maximum, minimum,
+                        and average air pressures; the maximum, minimum, and average wind speeds; the total rainfall;
+                        and the wind direction as sampled at five-minute intervals.
+                        </span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Stimulus</span>
+                        <span class="info-content">
+                        The weather information system establishes a satellite communication link with the
+                        weather station and requests transmission of the data.
+                        </span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Response</span>
+                        <span class="info-content">
+                        The summarized data are sent to the weather information system.
+                        </span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Comments</span>
+                        <span class="info-content">
+                        Weather stations are usually asked to report once per hour but this frequency may differ
+                        from one station to another and may be modified in the future.
+                        </span>
+                    </div>
                 </div>
+
             </article>
 
 
