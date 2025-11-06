@@ -27,7 +27,9 @@
             </p>
   
                 <section class="objectives-section-container">
+                    <div class="flex flex-row items-center justify-center">
                     <h2 class="objectives-heading-display">Learning Objectives</h2>
+                    </div>
                     <div class="objectives-grid">
                         <div class="objective-card">
                             <div class="objective-number-badge">1</div>
@@ -47,11 +49,11 @@
                         </div>
                     </div>
                 </section>
-  
+
                 <section class="contents-section-container">
                     <h2 class="contents-heading-display">Chapter Contents</h2>
                     <ol class="contents-list-container">
-                    <li class="contents-list-item">
+                    <li class="contents-list-item group">
                         <span class="contents-item-number-badge">7.1</span>
                         <span class="contents-item-title"><a class="underline" href="#subchapter7.1">Object-oriented design using the UML</a></span>
                     </li>
@@ -196,7 +198,7 @@ UML rather than in a programming language such as Java or Python
         
         <section>    
             <article>
-                <h2 class="h2-subchapter" id="subchapter7.1">7.1 Object-oriented design using the UML</h2>
+                <h2 class="h2-subchapter group" id="subchapter7.1">7.1 Object-oriented design using the UML</h2>
 
                 <p class="p-paragraph">
                 An object-oriented system is made up of interacting objects that maintain their own
@@ -428,19 +430,19 @@ Figure 7.2. Examples of some other use cases are on the Web.
 
                 <div class="info-box" id="figure7.3">
                     <div class="info-row">
-                        <span class="info-label">System</span>
+                        <span class="info-label">System:</span>
                         <span class="info-content">Weather station</span>
                     </div>
                     <div class="info-row">
-                        <span class="info-label">Use case</span>
+                        <span class="info-label">Use Case:</span>
                         <span class="info-content">Report weather</span>
                     </div>
                     <div class="info-row">
-                        <span class="info-label">Actors</span>
+                        <span class="info-label">Actors:</span>
                         <span class="info-content">Weather information system, Weather station</span>
                     </div>
                     <div class="info-row">
-                        <span class="info-label">Data</span>
+                        <span class="info-label">Data:</span>
                         <span class="info-content">
                         The weather station sends a summary of the weather data that has been collected from
                         the instruments in the collection period to the weather information system. The data sent
@@ -450,20 +452,20 @@ Figure 7.2. Examples of some other use cases are on the Web.
                         </span>
                     </div>
                     <div class="info-row">
-                        <span class="info-label">Stimulus</span>
+                        <span class="info-label">Stimulus:</span>
                         <span class="info-content">
                         The weather information system establishes a satellite communication link with the
                         weather station and requests transmission of the data.
                         </span>
                     </div>
                     <div class="info-row">
-                        <span class="info-label">Response</span>
+                        <span class="info-label">Response:</span>
                         <span class="info-content">
                         The summarized data are sent to the weather information system.
                         </span>
                     </div>
                     <div class="info-row">
-                        <span class="info-label">Comments</span>
+                        <span class="info-label">Comments:</span>
                         <span class="info-content">
                         Weather stations are usually asked to report once per hour but this frequency may differ
                         from one station to another and may be modified in the future.
@@ -1012,7 +1014,7 @@ method, shown in <a class="underline" href="#figure7.6" target="_blank">Figure 7
         <section>
             <article>
 
-            <h2 class="h2-subchapter" id="subchapter7.2">7.2 Design patterns</h2>
+            <h2 class="h2-subchapter group" id="subchapter7.2">7.2 Design patterns</h2>
 
             <p class="p-paragraph">
             Design patterns were derived from ideas put forward by Christopher Alexander
@@ -1263,7 +1265,7 @@ have been proposed.
             Patterns are a great idea but you need experience of software design to use them
 effectively. You have to recognize situations where a pattern can be applied.
 Inexperienced programmers, even if they have read the pattern books, will always
-find it hard to decide whether they can reuse a pattern or need to develop a specialpurpose solution.
+find it hard to decide whether they can reuse a pattern or need to develop a special-purpose solution.
             </p>
 
             </article>
@@ -1274,7 +1276,7 @@ find it hard to decide whether they can reuse a pattern or need to develop a spe
         <section>
             <article>
                 
-            <h2 class="h2-subchapter" id="subchapter7.3">7.3 Implementation issues</h2>
+            <h2 class="h2-subchapter group" id="subchapter7.3">7.3 Implementation issues</h2>
             
             <p class="p-paragraph">
             Software engineering includes all of the activities involved in software development
@@ -1739,7 +1741,7 @@ operating system. I discuss embedded systems engineering in Chapter 20.
         <section>
             <article>
 
-            <h2 class="h2-subchapter" id="subchapter7.4">7.4 Open source development</h2>
+            <h2 class="h2-subchapter group" id="subchapter7.4">7.4 Open source development</h2>
 
             <p class="p-paragraph">
             Open source development is an approach to software development in which the
@@ -1992,63 +1994,63 @@ and with more and more software available in this form.
             <!-- KEY POINTS -->
             <div class="back-matter-div-green">
 
-            <article class="key-points mb-16">
+            <article class="key-points group mb-16">
                 <h2 class="back-matter-heading">KEY POINTS</h2>
 
                 <ul class="space-y-4 pl-6">
-                    <li class="key-points">
-                        <span class="key-points-span">•</span>
+                    <li class="key-points group">
+                        <span class="key-points group-span">•</span>
                         Software design and implementation are interleaved activities. The level of
     detail in the design depends on the type of system being developed and whether you are using a
     plan-driven or agile approach.
                     </li>
                     
-                    <li class="key-points">
-                        <span class="key-points-span">•</span>
+                    <li class="key-points group">
+                        <span class="key-points group-span">•</span>
                         The process of object-oriented design includes activities to design the system architecture,
     identify objects in the system, describe the design using different object models, and document
     the component interfaces.
                     </li>
                     
-                    <li class="key-points">
-                        <span class="key-points-span">•</span>
+                    <li class="key-points group">
+                        <span class="key-points group-span">•</span>
                         A range of different models may be produced during an object-oriented design process. These
     include static models (class models, generalization models, association models) and dynamic
     models (sequence models, state machine models).
                     </li>
                     
-                    <li class="key-points">
-                        <span class="key-points-span">•</span>
+                    <li class="key-points group">
+                        <span class="key-points group-span">•</span>
                         Component interfaces must be defined precisely so that other objects can use them. A UML
     interface stereotype may be used to define interfaces.
                     </li>
                     
-                    <li class="key-points">
-                        <span class="key-points-span">•</span>
+                    <li class="key-points group">
+                        <span class="key-points group-span">•</span>
                         When developing software, you should always consider the possibility of reusing existing
     software, either as components, services, or complete systems.
                     </li>
                     
-                    <li class="key-points">
-                        <span class="key-points-span">•</span>
+                    <li class="key-points group">
+                        <span class="key-points group-span">•</span>
                         Configuration management is the process of managing changes to an evolving software system.
     It is essential when a team of people are cooperating to develop software.
                     </li>
                     
-                    <li class="key-points">
-                        <span class="key-points-span">•</span>
+                    <li class="key-points group">
+                        <span class="key-points group-span">•</span>
                         Most software development is host-target development. You use an IDE on a host machine to
     develop the software, which is transferred to a target machine for execution.
                     </li>
                     
-                    <li class="key-points">
-                        <span class="key-points-span">•</span>
+                    <li class="key-points group">
+                        <span class="key-points group-span">•</span>
                         Open source development involves making the source code of a system publicly available. This
     means that many people can propose changes and improvements to the software.
                     </li>
                     
-                    <li class="key-points">
-                        <span class="key-points-span">•</span>
+                    <li class="key-points group">
+                        <span class="key-points group-span">•</span>
                         Open source development involves making the source code of a system publicly available. This
     means that many people can propose changes and improvements to the software.
                     </li>
