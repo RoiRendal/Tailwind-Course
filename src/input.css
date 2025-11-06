@@ -111,7 +111,7 @@
 
    /* Figure 7.3 */
    .info-box {
-       @apply bg-[#E6F3FA] p-6 rounded-md shadow-sm w-full md:w-3/4 mx-auto text-sm md:text-base leading-relaxed;
+       @apply bg-[#E6F3FA] p-6 mt-10 rounded-md shadow-sm w-full md:w-3/4 mx-auto leading-relaxed;
    }
 
    .info-row {
