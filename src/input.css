@@ -113,7 +113,8 @@
 
     /* Figure 7.3 & 7.10 */
    .info-box {
-       @apply bg-[#E6F3FA] p-6 mt-10 rounded-md shadow-sm w-full md:w-3/4 mx-auto leading-relaxed;
+       @apply bg-[#E6F3FA] p-6 mt-10 rounded-md shadow-sm w-full md:w-3/4 mx-auto leading-relaxed
+              transition-transform duration-300 hover:scale-95;
    }
 
    .info-row {
