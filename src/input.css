@@ -20,8 +20,9 @@
    }
     /* Fluid Text */
 
-    /* Front Matter Section */
 
+
+    /* Front Matter Section */
    .chapter-title-section {
        @apply mt-20 mb-16 text-center;
    }
@@ -104,7 +105,6 @@
    .contents-item-title {
        @apply font-semibold text-xl text-space-cadet;
    }
-
     /* Front Matter Section */
 
 
@@ -129,6 +129,7 @@
 
 
 
+   /* Subchapter & Sub Subchapter Labels */
    .h2-subchapter {
        @apply mt-32 mb-6 font-bold text-[2rem] text-dark-spring-green border-l-4 border-lime-green pl-3;
    }
@@ -137,7 +138,11 @@
        @apply font-semibold text-[1.4rem] mt-24 mb-4 ml-10 border-l-4 pl-9 text-space-cadet;
 
    }
+   /* Subchapter & Sub Subchapter Labels */
 
+
+
+   /* Paragraphs */
    .p-paragraph {
        @apply p-7
               ml-1 sm:ml-10 md:ml-20 lg:ml-25 xl:ml-30 2xl:ml-40
@@ -163,6 +168,9 @@
               transition-all duration-300
               transform hover:-translate-x-2.5;
    }
+   /* Paragraphs */
+
+
 
    /* List Elements */
    .ol-element {
