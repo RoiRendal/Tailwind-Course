@@ -132,6 +132,36 @@
 
 
 
+    /* Structured Card */
+   
+   .structured-card {
+       @apply border-l-[3px] border-r-[3px] border-t border-b border-lime-green
+              p-6 rounded-sm shadow-sm bg-dark-spring-green
+              w-full md:w-3/4 mx-auto mt-10 mb-18
+              transition-all duration-300
+              transform hover:-translate-x-4.5;
+   }
+
+   .structured-header {
+       @apply flex items-center space-x-3 mb-3;
+   }
+
+   .structured-title {
+       @apply font-bold text-[1.6rem] text-white;
+   }
+
+   .structured-content {
+       @apply text-[1.1rem] text-white leading-relaxed mb-4 pl-15;
+   }
+
+   .structured-link {
+       @apply text-white font-semibold underline hover:text-blanched-almon;
+   } 
+
+    /* Structured Card */
+
+
+
     /* Subchapter & Sub Subchapter Labels */
    .h2-subchapter {
        @apply mt-32 mb-6 font-bold text-[2rem] text-dark-spring-green border-l-4 border-lime-green pl-3;
