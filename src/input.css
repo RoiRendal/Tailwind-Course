@@ -1,16 +1,386 @@
 @import "tailwindcss";
 
-@font-face {
-    /* font-family: 'playfair'; */
-    font-family: 'lobsterTwo';
-    /* src: url('PlayfairDisplay.ttf'); */
-    src: url('LobsterTwo.ttf');
+@tailwind utilities;
+
+@keyframes pulse-once {
+  0% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.22); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
 @theme {
-    --color-grass: #39cf2f;
+  --font-display: "mono";
+
+  --color-bud-green:         #639D75;
+  --color-lime-green:        #0CDC2A;
+  --color-dark-spring-green: #0B735F;
+  --color-space-cadet:       #384166;
+  --color-blanched-almon:    #E3DBA9;
+  --color-almost-white:      #E6F3FA;
 }
 
-body {
-    font-family: 'lobsterTwo';
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-blanched-almon via-almost-white via-dark-spring-green/20 to-bud-green/20;
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+
+  .animate-pulse-once {
+    animation: pulse-once 1.5s cubic-bezier(0.4, 0, 0.6, 1) forwards;
+  }
+  @keyframes pulse {
+    0% { opacity: 0.8; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.02); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+
+  .cursor-context-menu {
+    cursor: context-menu;
+  }
+
+  .scale-102 {
+    transform: scale(1.02);
+  }
+
+  .drop-shadow-sm {
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.1));
+  }
+
+  .h2-subchapter::before {
+    content: '';
+    @apply absolute -left-10 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 
+            translate-x-2 group-hover:translate-x-0 transition-all duration-300 md:opacity-100;
+  }
+
+  .h2-subchapter::after {
+    content: '';
+    @apply absolute bottom-[-4px] left-0 w-0 h-1 bg-gradient-to-r from-transparent via-lime-green to-transparent;
+    transition: width 0.4s ease;
+  }
+
+  .h2-subchapter:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .h2-subchapter:hover::after {
+    @apply w-110;
+  }
+
+  .h2-subchapter {
+    @apply mt-32 mb-6 font-bold text-[2rem] text-dark-spring-green border-l-4 border-lime-green pl-3 relative hover:pl-4 transition-all duration-300;
+  }
+
+}
+
+
+
+@layer components {
+
+    /* Additional Effects */
+   .card-glass {
+       @apply relative backdrop-blur-sm bg-almost-white/60 dark:bg-black/20 
+              border border-lime-green/20 rounded-xl p-6 shadow-lg;
+   }
+    /* Additional Effects */
+
+
+
+    /* Fluid Text */
+   .text-fluid {
+       @apply text-[clamp(1.1rem,1.05vw,1.375rem)] leading-tight;
+   }   
+    /* Fluid Text */
+
+
+
+    /* Front Matter Section */
+   .chapter-title-section {
+       @apply mt-20 mb-16 text-center;
+   }
+  
+   .chapter-number-display {
+       @apply text-[5rem] sm:text-[6rem] md:text-[7rem] font-extrabold 
+              text-dark-spring-green leading-none mb-6 drop-shadow-lg;
+       animation: pulse-once 1.5s cubic-bezier(0.4, 0, 0.6, 1) forwards;
+   }
+  
+   .chapter-heading-display {
+       @apply text-4xl sm:text-5xl md:text-6xl font-bold text-space-cadet
+              tracking-tight mb-4 transition-transform duration-300
+              hover:scale-105;
+   }
+  
+   .chapter-subheading-display {
+       @apply text-lg sm:text-xl font-semibold text-blanched-almon
+              bg-dark-spring-green px-6 py-2 rounded-full inline-block
+              shadow-md hover:shadow-lg transform hover:-translate-y-0.5
+              transition-all duration-200;
+   }
+  
+   .chapter-intro {
+       @apply max-w-4xl mx-auto text-lg sm:text-xl text-space-cadet
+              mb-12 leading-relaxed italic opacity-95;
+   }
+  
+        /* Objectives section */
+   .objectives-section-container {
+       @apply bg-bud-green/30 rounded-full p-8 mb-14 border border-lime-green/20;
+   }
+  
+   .objectives-heading-display {
+       @apply text-2xl sm:text-3xl font-bold text-dark-spring-green
+              pl-4 mb-8 flex items-center gap-2;
+   }
+
+   .objectives-heading-display::before {
+       content: "🎯";
+   }
+  
+   .objectives-grid {
+       @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+   }
+  
+   .objective-card {
+       @apply bg-white p-6 rounded-xl shadow-sm border-l-4 border-lime-green
+              hover:shadow-lg hover:-translate-y-1 transition-all duration-300
+              md:hover:scale-105 md:hover:rotate-1 md:origin-bottom-left;
+   }
+  
+   .objective-number-badge {
+       @apply w-12 h-12 rounded-full bg-dark-spring-green text-blanched-almon
+              font-bold text-xl flex items-center justify-center mb-4;
+   }
+  
+   .objective-content {
+       @apply font-semibold text-space-cadet leading-relaxed;
+   }
+        /* Objectives section */
+  
+        /* Contents section */
+   .contents-section-container {
+       @apply bg-space-cadet/15 rounded-2xl p-8 my-12;   
+   }
+  
+   .contents-heading-display {
+       @apply text-2xl sm:text-3xl font-bold text-dark-spring-green
+              border-l-4 border-lime-green pl-4 mb-6 flex items-center gap-2;
+   }
+
+   .contents-heading-display::before {
+       content: "📚";
+   }
+  
+   .contents-list-container {
+       @apply space-y-5;
+   }
+  
+   .contents-list-item {
+       @apply pl-8 border-l-2 border-lime-green hover:border-lime-green/70
+              transition-colors duration-300 py-2 relative;
+   }
+  
+   .contents-item-number-badge {
+       @apply w-9 h-9 rounded-full bg-dark-spring-green text-blanched-almon
+              flex items-center justify-center font-bold mr-3 text-lg;
+   }
+  
+   .contents-item-title {
+       @apply font-semibold text-xl text-space-cadet group-hover:text-dark-spring-green
+              transition-colors duration-200;
+   }
+        /* Contents section */
+    /* Front Matter Section */
+
+
+
+    /* Figure 7.3 & 7.10 */
+   .info-box {
+       @apply bg-almost-white p-6 mt-10 rounded-lg shadow-lg
+              mx-auto max-w-4xl border border-lime-green/30
+              transform hover:scale-[0.98] transition-all duration-300;
+   }
+
+   .info-row {
+       @apply flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-5;
+   }
+
+   .info-label {
+       @apply font-bold w-32 text-dark-spring-green;
+   }
+
+   .info-content {
+       @apply text-space-cadet flex-1;
+   }
+    /* Figure 7.3 & 7.10 */
+
+
+
+    /* Structured Card */
+   
+   .structured-card {
+       @apply border-l-[3px] border-r-[3px] border-t border-b border-lime-green
+              p-6 rounded-md shadow-lg bg-gradient-to-br from-dark-spring-green to-green-900
+              max-w-4xl mx-auto mt-10 mb-16
+              transform hover:-translate-x-2 transition-all duration-300;
+   }
+
+   .structured-header {
+       @apply flex items-center space-x-3 mb-3;
+   }
+
+   .structured-title {
+       @apply text-[1.3rem] italic font-bold text-white drop-shadow-sm;
+   }
+
+   .structured-content {
+       @apply text-white font-semibold hover:text-blanched-almon
+              transition-colors duration-200;
+   }
+
+   .structured-link {
+       @apply text-white font-semibold underline hover:text-blanched-almon;
+   } 
+
+    /* Structured Card */
+
+
+
+    /* Subchapter & Sub Subchapter Labels */
+   /* .h2-subchapter {
+       @apply mt-20 mb-6 text-3xl font-bold text-dark-spring-green
+              border-l-4 border-lime-green pl-4 relative;
+   } */
+
+   .h3-sub-subchapter {
+       @apply mt-16 mb-4 text-xl font-semibold text-space-cadet ml-8 border-l-4
+              border-lime-green pl-6;
+
+   }
+    /* Subchapter & Sub Subchapter Labels */
+
+
+
+    /* Paragraphs */
+   .p-paragraph,
+   .div-paragraph {
+       @apply p-6 sm:p-7 md:p-8 ml-2 sm:ml-8 md:ml-16 lg:ml-24 xl:ml-32
+              rounded-xl bg-bud-green/15 shadow-sm border-l-4 border-dark-spring-green
+              font-medium text-space-cadet leading-relaxed
+              transform hover:-translate-x-1 transition-all duration-300
+              hover:shadow-md cursor-context-menu;
+   }
+    /* Paragraphs */
+
+
+
+    /* Image Placement */
+   .image-placement {
+       @apply flex flex-col items-center my-18;
+   }
+    /* Image Placement */
+
+
+
+    /* Figure Labels */
+   .figure-label {
+       @apply text-[0.9em] mt-2 italic;
+   }
+    /* Figure Labels */
+
+
+
+    /* List Elements */
+   .ol-element {
+       @apply ml-1 sm:ml-10 md:ml-20 lg:ml-25 xl:ml-30 2xl:ml-40 
+              space-y-4 mt-5 mb-18;
+   }
+
+   .ol-element-inside {
+       @apply space-y-4 mt-5 mb-18;
+   }
+
+   .ol-li-element {
+       @apply flex gap-4 items-start
+              px-1 sm:px-5 md:px-9 lg:px-18
+              text-[0.9em] font-semibold
+              transition-all duration-300
+              transform hover:-translate-x-2.5;
+   }
+
+   .ol-li-span-element-number {
+       @apply flex-shrink-0 w-8 h-8 rounded-full bg-dark-spring-green
+              text-blanched-almon font-bold flex items-center justify-center
+              shadow-md mt-0.5;
+   }
+
+   .ol-li-span-element-paragraph {
+       @apply leading-relaxed p-3 rounded-lg bg-space-cadet/90 text-blanched-almon
+              shadow-inner;
+   }
+    /* List Elements */
+
+
+
+   /* Back Matter Section */
+  .back-matter-div-green {
+    @apply mt-20 pt-12 pb-6 rounded-xl border-t-8 border-t-lime-green/40
+           bg-white/70 backdrop-blur-sm;
+  }
+
+  .back-matter-div-blue {
+    @apply mt-20 pt-12 pb-6 rounded-xl border-t-8 border-t-space-cadet/50
+           bg-white/70 backdrop-blur-sm;
+  }
+  
+  .back-matter-heading {
+    @apply text-3xl font-bold text-dark-spring-green border-l-4
+           border-lime-green pl-4 mb-6 flex items-center gap-2;
+  }
+
+  .back-matter-heading::before {
+    content: "🔖";
+  }
+  
+  .key-points li {
+    @apply flex items-start gap-3 p-4 rounded-lg hover:bg-bud-green/20
+           transition-all duration-200;
+  }
+  
+  .key-points-span {
+    @apply flex-shrink-0 w-8 h-8 rounded-full bg-dark-spring-green
+           text-blanched-almon flex items-center justify-center font-bold;
+  }
+  
+  .further-reading .reading-item {
+    @apply bg-bud-green/10 p-5 rounded-xl border-l-4 border-dark-spring-green hover:shadow-md transition-shadow;
+  }
+  
+  .exercises .exercise-item {
+    @apply bg-bud-green/10 p-5 rounded-xl border-l-4 border-dark-spring-green
+           hover:shadow-lg transition-all duration-200 cursor-pointer;
+  }
+
+  .exercise-item:hover {
+    @apply bg-lime-green/10 scale-102;
+  }
+  
+  .exercises .nested-exercise li {
+    @apply flex items-start gap-2;
+  }
+  
+  .exercises .nested-exercise span {
+    @apply flex-shrink-0 w-4 h-4 rounded-full bg-dark-spring-green text-blanched-almon 
+        flex items-center justify-center text-xs mt-1;
+  }
+  
+  .references .reference-item {
+    @apply p-4 rounded-lg hover:bg-bud-green/10 transition-colors
+           border-l-2 border-lime-green/50 hover:border-lime-green pl-3;
+  }
+  /* Back Matter Section */
+ 
 }
